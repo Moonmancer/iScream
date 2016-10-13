@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9C7062DE-BD53-418B-9E38-831BDE600023}</ProjectGuid>
+    <ProjectGuid>{1DBDA91C-BAF1-42D3-AEA3-4324512B05A8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>iScream</RootNamespace>
