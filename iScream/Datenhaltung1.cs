@@ -21,6 +21,7 @@ namespace iScream
             }
         }
 
+        #region Standardwerte
         static string defaultServer = ".";
 
         static string defaultDB = "iScream";
@@ -30,6 +31,7 @@ namespace iScream
         static bool useWinAuth = true;
 
         static string defaultUsername = "sa";
+        #endregion
 
         static string CONNECTIONSTRING;
 
@@ -78,8 +80,8 @@ namespace iScream
                 querry += "CREATE DATABASE [iScream] ";
                 querry += "USE [iScream] GO ";
                 querry += "CREATE TABLE [dbo].[DBVersion]([Version] [varchar](50) NULL) ON [PRIMARY] ";
-                querry += "CREATE TABLE [dbo].[Nutzer]([Nutzer_id] [int] NULL,[Vorname] [varchar](max) NULL,[Nachname] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY] ";
-                querry += "CREATE TABLE [dbo].[Spiele]([Spiel_id] [int] NULL,[Name] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY] ";
+                querry += "CREATE TABLE [dbo].[Nutzer]([Nutzer_id] [int] NULL, [Vorname] [varchar](max) NULL, [Nachname] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY] ";
+                querry += "CREATE TABLE [dbo].[Spiele]([Spiel_id] [int] NULL, [Name] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY] ";
                 querry += "INSERT INTO [dbo].[DBVersion] ([Version]) VALUES ('1.0')";
 
                 using (SqlCommand cmd = new SqlCommand(querry, tmpCon))
@@ -90,6 +92,8 @@ namespace iScream
                 tmpCon.Close();
             }
             #endregion
+
+            tmpCon.Dispose();
 
             //Datenbank zu CONNECTIONSTRING hinzufügen
             CONNECTIONSTRING += "Initial Catalog=" + defaultDB + ";";
