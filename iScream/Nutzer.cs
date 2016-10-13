@@ -76,6 +76,5 @@ namespace iScream
             this.nutzer_id = nutzer_id;
         }
         #endregion
-        //test
     }
 }
