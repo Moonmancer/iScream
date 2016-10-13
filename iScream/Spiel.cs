@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    interface IFachkonzept
+    class Spiel
     {
-
     }
 }
