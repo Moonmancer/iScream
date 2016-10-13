@@ -6,40 +6,75 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    class Nutzer
+    public class Nutzer
     {
-
-        private string Vorname
+        #region Attributes
+        private string vorname;
+        public string Vorname
         {
             get
             {
-                throw new System.NotImplementedException();
+                return vorname;
             }
             set
             {
+                vorname = value;
             }
         }
 
-        private String Nachname
+        private string nachname;
+        public string Nachname
         {
             get
             {
-                throw new System.NotImplementedException();
+                return nachname;
             }
             set
             {
+                nachname = value;
             }
         }
 
-        private int Nutzer_id
+        public string Name
         {
             get
             {
-                throw new System.NotImplementedException();
+                return Vorname + " " + Nachname;
+            }
+        }
+
+        private int nutzer_id;
+        public int Nutzer_id
+        {
+            get
+            {
+                return nutzer_id;
             }
             set
             {
+                nutzer_id = value;
             }
         }
+        #endregion
+
+        #region Constructors
+        public Nutzer()
+        {
+
+        }
+
+        public Nutzer(string vorname, string nachname)
+        {
+            this.vorname = vorname;
+            this.nachname = nachname;
+        }
+
+        public Nutzer(string vorname, string nachname, int nutzer_id)
+        {
+            this.vorname = vorname;
+            this.nachname = nachname;
+            this.nutzer_id = nutzer_id;
+        }
+        #endregion
     }
 }
