@@ -10,10 +10,21 @@ namespace iScream
 {
     class Datenhaltung1 : IDatenhaltung
     {
+        public Datenhaltung1()
+        {
+            SQL.Init();
+        }
+
+        public void Dispose()
+        {
+            SQL.Dispose();
+        }
     }
 
     static class SQL
     {
+        static bool WRITE_LOG = true;
+
         public static string DB_VERSION
         {
             get
@@ -38,8 +49,6 @@ namespace iScream
 
         static SqlConnection SQL_CONNECTION;
 
-        static bool WRITE_LOG = true;
-
         static List<string> logLines = new List<string>();
 
         private static void Log(string text)
@@ -58,6 +67,8 @@ namespace iScream
 
         public static bool Init()
         {
+            if (SQL_CONNECTION != null)
+                return true;
             Log("SQL initializing...");
             #region Standard ConnectionString erstellen
 
@@ -155,6 +166,14 @@ namespace iScream
             Log("SQL closed!");
         }
 
+        public static void Dispose()
+        {
+            if (SQL_CONNECTION != null)
+                SQL_CONNECTION.Close();
+            SQL_CONNECTION.Dispose();
+            Log("SQL disposed!");
+        }
+
         private static bool CheckIfDBExists()
         {
             Log("Check started...");
@@ -189,7 +208,7 @@ namespace iScream
             }
             catch (Exception ex)
             {
-                Log("Test failed!\n\t" + ex.Message);
+                Log("Check failed!\n\t" + ex.Message);
                 result = false;
             }
 
