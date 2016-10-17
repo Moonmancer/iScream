@@ -15,10 +15,115 @@ namespace iScream
             SQL.Init();
         }
 
-        public void Dispose()
+        #region Holen
+        public int HoleNächsteNutzer_id()
         {
-            SQL.Dispose();
+            throw new NotImplementedException();
         }
+
+        public int HoleNächsteSpiel_id()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Nutzer HoleNutzer(int nutzer_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Nutzer> HoleNutzer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Spiel HoleSpiel(int spiel_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Spiel> HoleSpiel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Verknüpfung> HoleVerknüpfung()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Spiel> HoleSpieleVonNutzer(int nutzer_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Spiel> HoleSpieleVonNutzer(Nutzer nutzer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Nutzer> HoleNutzerVonSpiel(int spiel_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Nutzer> HoleNutzerVonSpiel(Spiel spiel)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region Hinzufügen
+        public bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FügeNutzerHinzu(Nutzer nutzer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FügeNutzerHinzu(List<Nutzer> nutzer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FügeSpielHinzu(string name, int spiel_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FügeSpielHinzu(Spiel spiel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FügeSpielHinzu(List<Spiel> spiele)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region Löschen
+        #endregion
+
+        #region Ändern
+        #endregion
     }
 
     static class SQL
@@ -51,12 +156,20 @@ namespace iScream
 
         static List<string> logLines = new List<string>();
 
+        /// <summary>
+        /// Fügt dem SQL Log den angegebenen Text hinzu
+        /// </summary>
+        /// <param name="text"></param>
         private static void Log(string text)
         {
             if (WRITE_LOG)
                 logLines.Add(text);
         }
 
+        /// <summary>
+        /// Speichert das Log in die angegebene Datei
+        /// </summary>
+        /// <param name="path"></param>
         public static void SaveLogToFile(string path)
         {
             Directory.CreateDirectory(Path.GetDirectoryName(path));
@@ -65,6 +178,10 @@ namespace iScream
             System.Diagnostics.Process.Start(fileName);
         }
 
+        /// <summary>
+        /// Initialisiert die SQL Verbindung
+        /// </summary>
+        /// <returns></returns>
         public static bool Init()
         {
             if (SQL_CONNECTION != null)
@@ -159,6 +276,9 @@ namespace iScream
             return true;
         }
 
+        /// <summary>
+        /// Schließt die SQL Verbindung
+        /// </summary>
         public static void Close()
         {
             if (SQL_CONNECTION != null)
@@ -166,6 +286,9 @@ namespace iScream
             Log("SQL closed!");
         }
 
+        /// <summary>
+        /// Gibt die von SQL belegten Resourcen frei
+        /// </summary>
         public static void Dispose()
         {
             if (SQL_CONNECTION != null)
@@ -174,6 +297,10 @@ namespace iScream
             Log("SQL disposed!");
         }
 
+        /// <summary>
+        /// Überprüft ob die iScream Datenbank auf dem verbundenen SQL Server existiert
+        /// </summary>
+        /// <returns></returns>
         private static bool CheckIfDBExists()
         {
             Log("Check started...");
