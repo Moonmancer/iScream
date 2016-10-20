@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Datenhaltung1.cs" />
     <Compile Include="Datenhaltung2.cs" />
+    <Compile Include="Kryptographie.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Tests\DatenhaltungTests.cs" />
     <Compile Include="Fachkonzept1.cs" />
     <Compile Include="Fachkonzept2.cs" />
