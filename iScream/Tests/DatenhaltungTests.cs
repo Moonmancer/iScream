@@ -8,7 +8,7 @@ namespace iScream.Tests
 {
     static class DatenhaltungTests
     {
-        private static bool TestDatenhaltung1 = true;
+        private static bool TestDatenhaltung1 = false;
         private static bool TestDatenhaltung2 = true;
 
         private static bool ReadLineAfterEachTest = true;
@@ -45,18 +45,30 @@ namespace iScream.Tests
         {
             if (ReadLineAfterEachTest)
             {
-                Console.Write("Eingabe zum Fortfahren...");
+                Console.WriteLine("Eingabe zum Fortfahren...");
                 Console.ReadLine();
-                Console.WriteLine();
+
+                int currentLineCursor = Console.CursorTop - 1;
+                Console.SetCursorPosition(0, Console.CursorTop - 2);
+                Console.Write(new string(' ', Console.WindowWidth));
+                Console.SetCursorPosition(0, currentLineCursor);
             }
             else
                 Console.WriteLine();
         }
 
+        public static void Run(bool _ReadLineAfterEachTest)
+        {
+            ReadLineAfterEachTest = _ReadLineAfterEachTest;
+            Run();
+        }
+
         public static void Run()
         {
             Console.WriteLine("Starte DatenhaltungsTests!");
-            Next();
+            Console.Write("Eingabe zum Fortfahren...");
+            Console.ReadLine();
+            Console.WriteLine();
             if (TestDatenhaltung1)
             {
                 Console.WriteLine("Teste Datenhaltung1...");
@@ -66,7 +78,10 @@ namespace iScream.Tests
 
                 Console.WriteLine("Tests für Datenhaltung1 beendet! Ergebnis:");
                 Console.WriteLine("\t" + successCount + " von " + testCount + " Tests erfolgreich abgeschlossen");
-                Next();
+
+                Console.Write("Eingabe zum Fortfahren...");
+                Console.ReadLine();
+                Console.WriteLine();
             }
 
             if (TestDatenhaltung2)
@@ -81,8 +96,15 @@ namespace iScream.Tests
 
                 Console.WriteLine("Tests für Datenhaltung2 beendet! Ergebnis:");
                 Console.WriteLine("\t" + successCount + " von " + testCount + " Tests erfolgreich abgeschlossen");
-                Next();
+
+                Console.Write("Eingabe zum Fortfahren...");
+                Console.ReadLine();
+                Console.WriteLine();
             }
+
+            Console.WriteLine("DatenhaltungsTests abgeschlossen!");
+            Console.Write("Eingabe zum Fortfahren...");
+            Console.ReadLine();
         }
 
         public static void Datenhaltung2Test()
@@ -97,16 +119,17 @@ namespace iScream.Tests
             if (createdBackup)
             {
                 Console.Write("Erstelle Backup der vorhandenen Datenbank...");
+                System.IO.File.Delete(databasePath.Replace(".", ".BACKUP."));
                 System.IO.File.Move(databasePath, databasePath.Replace(".", ".BACKUP."));
                 Console.WriteLine(" fertig.");
             }
 
             //test storing of data
             TestDataStoring(datenhaltung2);
-
+            Next();
             //check stored data
             ValidateStoredData(datenhaltung2);
-
+            Next();
 
             //restore backup of database if exists
             if (createdBackup)
@@ -146,7 +169,7 @@ namespace iScream.Tests
         public static bool ValidateStoredData(IDatenhaltung datenhaltung)
         {
             testCount++;
-            Console.Write("Prüfe Daten aus Datenbank... ");
+            Console.WriteLine("Prüfe Daten aus Datenbank... ");
             Next();
             try
             {

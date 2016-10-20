@@ -15,6 +15,7 @@ namespace iScream
         {
             database = new XMLDatabase();
             database.Load();
+
         }
 
         #region Holen
@@ -164,8 +165,7 @@ namespace iScream
 
     public class XMLDatabase
     {
-        private static string FILEPATH = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "iScream");
-        private static string FILENAME = "XMLDatabase.xml";
+        private static string FILEPATH = Settings.CurrentSettings.XmlDatabaseLocation;
 
         private List<Nutzer> nutzerDaten;
         public List<Nutzer> NutzerDaten
@@ -190,7 +190,7 @@ namespace iScream
 
         public XMLDatabase()
         {
-            System.IO.Directory.CreateDirectory(System.IO.Path.Combine(System.IO.Path.GetTempPath(), "iScream"));
+            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Settings.CurrentSettings.XmlDatabaseLocation));
 
             nutzerDaten = new List<Nutzer>();
             spielDaten = new List<Spiel>();
@@ -201,7 +201,7 @@ namespace iScream
         {
             try
             {
-                using (System.IO.FileStream fs = new System.IO.FileStream(System.IO.Path.Combine(FILEPATH, FILENAME), System.IO.FileMode.Open))
+                using (System.IO.FileStream fs = new System.IO.FileStream(FILEPATH, System.IO.FileMode.Open))
                 {
                     XmlSerializer xs = new XmlSerializer(typeof(XMLDatabase));
                     XMLDatabase tmp = (XMLDatabase)xs.Deserialize(fs);
@@ -220,7 +220,7 @@ namespace iScream
 
         public void Save()
         {
-            using (System.IO.FileStream fs = new System.IO.FileStream(System.IO.Path.Combine(FILEPATH, FILENAME), System.IO.FileMode.Create))
+            using (System.IO.FileStream fs = new System.IO.FileStream(FILEPATH, System.IO.FileMode.Create))
             {
                 XmlSerializer xs = new XmlSerializer(typeof(XMLDatabase));
                 xs.Serialize(fs, this);
