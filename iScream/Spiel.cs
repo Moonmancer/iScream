@@ -45,6 +45,7 @@ namespace iScream
         public Spiel(string name)
         {
             this.name = name;
+            this.spiel_id = -1;
         }
 
         public Spiel(string name, int spiel_id)

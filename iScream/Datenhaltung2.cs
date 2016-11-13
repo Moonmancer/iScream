@@ -49,6 +49,16 @@ namespace iScream
             return database.SpielDaten;
         }
 
+        public Verknüpfung HoleVerknüpfung(int nutzer_id, int spiel_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Verknüpfung HoleVerknüpfung(Verknüpfung verknüpfung)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Verknüpfung> HoleVerknüpfung()
         {
             return database.Verknüpfungen;
@@ -85,13 +95,21 @@ namespace iScream
         #endregion
 
         #region Hinzufügen
-        public bool FügeNutzerHinzu(string vorname, string nachname, int id)
+        public bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id)
         {
-            return FügeNutzerHinzu(new Nutzer(vorname, nachname, id));
+            return FügeNutzerHinzu(new Nutzer(vorname, nachname, nutzer_id));
+        }
+
+        public bool FügeNutzerHinzu(string vorname, string nachname)
+        {
+            return FügeNutzerHinzu(new Nutzer(vorname, nachname, HoleNächsteNutzer_id()));
         }
 
         public bool FügeNutzerHinzu(Nutzer nutzer)
         {
+            if (nutzer.Nutzer_id == -1)
+                nutzer.Nutzer_id = HoleNächsteNutzer_id();
+
             if (!database.NutzerDaten.Exists(x => x.Nutzer_id == nutzer.Nutzer_id))
             {
                 database.NutzerDaten.Add(nutzer);
@@ -113,8 +131,16 @@ namespace iScream
             return FügeSpielHinzu(new Spiel(name, id));
         }
 
+        public bool FügeSpielHinzu(string name)
+        {
+            return FügeSpielHinzu(new Spiel(name, HoleNächsteSpiel_id()));
+        }
+
         public bool FügeSpielHinzu(Spiel spiel)
         {
+            if (spiel.Spiel_id == -1)
+                spiel.Spiel_id = HoleNächsteSpiel_id();
+
             if (!database.SpielDaten.Exists(x => x.Spiel_id == spiel.Spiel_id))
             {
                 database.SpielDaten.Add(spiel);
@@ -152,14 +178,115 @@ namespace iScream
         public void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen)
         {
             foreach (Verknüpfung cur in verknüpfungen)
-                FügeVerknüpfungHinzu(cur.Nutzer_id, cur.Spiel_id);
+                FügeVerknüpfungHinzu(cur);
         }
         #endregion
 
         #region Löschen
+        public bool LöscheNutzer(int nutzer_id)
+        {
+            return LöscheNutzer(database.NutzerDaten.Find(x => x.Nutzer_id == nutzer_id));
+        }
+
+        public bool LöscheNutzer(Nutzer nutzer)
+        {
+            if (database.NutzerDaten.Remove(nutzer))
+            {
+                foreach (Verknüpfung cur in database.Verknüpfungen.FindAll(x => x.Nutzer_id == nutzer.Nutzer_id))
+                    LöscheVerknüpfung(cur);
+                database.Save();
+
+                return true;
+            }
+            else
+                return false;
+        }
+        public void LöscheNutzer(List<Nutzer> nutzer)
+        {
+            foreach (Nutzer cur in nutzer)
+                LöscheNutzer(cur);
+        }
+
+        public bool LöscheSpiel(int spiel_id)
+        {
+            return LöscheSpiel(database.SpielDaten.Find(x => x.Spiel_id == spiel_id));
+        }
+        public bool LöscheSpiel(Spiel spiel)
+        {
+            if (database.SpielDaten.Remove(spiel))
+            {
+                foreach (Verknüpfung cur in database.Verknüpfungen.FindAll(x => x.Spiel_id == spiel.Spiel_id))
+                    LöscheVerknüpfung(cur);
+                database.Save();
+
+                return true;
+            }
+            else
+                return false;
+        }
+        public void LöscheSpiel(List<Spiel> spiele)
+        {
+            foreach (Spiel cur in spiele)
+                LöscheSpiel(cur);
+        }
+
+        public bool LöscheVerknüpfung(int nutzer_id, int spiel_id)
+        {
+            return LöscheVerknüpfung(database.Verknüpfungen.Find(x => x.Nutzer_id == nutzer_id && x.Spiel_id == spiel_id));
+        }
+        public bool LöscheVerknüpfung(Verknüpfung verknüpfung)
+        {
+            if (database.Verknüpfungen.Remove(verknüpfung))
+            {
+                database.Save();
+
+                return true;
+            }
+            else
+                return false;
+
+        }
         #endregion
 
         #region Ändern
+        public bool ÄndereNutzer(int nutzer_id, string vorname, string nachname)
+        {
+            try
+            {
+                database.NutzerDaten.Where(x => x.Nutzer_id == nutzer_id).First().Vorname = vorname;
+                database.NutzerDaten.Where(x => x.Nutzer_id == nutzer_id).First().Nachname = nachname;
+                database.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool ÄndereNutzer(Nutzer nutzer)
+        {
+            return ÄndereNutzer(nutzer.Nutzer_id, nutzer.Vorname, nutzer.Nachname);
+        }
+
+        public bool ÄndereSpiel(int spiel_id, string name)
+        {
+            try
+            {
+                database.SpielDaten.Where(x => x.Spiel_id == spiel_id).First().Name = name;
+                database.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public bool ÄndereSpiel(Spiel spiel)
+        {
+            return ÄndereSpiel(spiel.Spiel_id, spiel.Name);
+        }
         #endregion
     }
 

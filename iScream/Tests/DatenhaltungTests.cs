@@ -15,15 +15,15 @@ namespace iScream.Tests
 
         private static List<Nutzer> testnutzer = new List<Nutzer>
         {
-            new Nutzer("Klara","Himmel",1),
-            new Nutzer("Mike", "Rohsoft",2),
-            new Nutzer("Martin Router", "King", 3)
+            new Nutzer("Mike", "Rohsoft"),//,1),
+            new Nutzer("Ann", "Droid"),//, 2),
+            new Nutzer("Sam","Sung")//,3)
         };
 
         private static List<Spiel> testspiele = new List<Spiel>
         {
-            new Spiel("Tetris", 1),
-            new Spiel("Minecraft", 2)
+            new Spiel("Tetris"),//, 1),
+            new Spiel("Minecraft")//, 2)
         };
 
         public static List<Verknüpfung> testverknüpfungen = new List<Verknüpfung>

@@ -43,7 +43,7 @@ namespace iScream
             }
         }
 
-        private int nutzer_id;
+        private int nutzer_id = -1;
         public int Nutzer_id
         {
             get

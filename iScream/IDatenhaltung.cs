@@ -18,6 +18,8 @@ namespace iScream
         Spiel HoleSpiel(int spiel_id);
         List<Spiel> HoleSpiel();
 
+        Verknüpfung HoleVerknüpfung(int nutzer_id, int spiel_id);
+        Verknüpfung HoleVerknüpfung(Verknüpfung verknüpfung);
         List<Verknüpfung> HoleVerknüpfung();
 
         List<Spiel> HoleSpieleVonNutzer(int nutzer_id);
@@ -29,10 +31,12 @@ namespace iScream
 
         #region Hinzufügen
         bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id);
+        bool FügeNutzerHinzu(string vorname, string nachname);
         bool FügeNutzerHinzu(Nutzer nutzer);
         void FügeNutzerHinzu(List<Nutzer> nutzer);
 
         bool FügeSpielHinzu(string name, int spiel_id);
+        bool FügeSpielHinzu(string name);
         bool FügeSpielHinzu(Spiel spiel);
         void FügeSpielHinzu(List<Spiel> spiele);
 
@@ -42,9 +46,24 @@ namespace iScream
         #endregion
 
         #region Löschen
+        bool LöscheNutzer(int nutzer_id);
+        bool LöscheNutzer(Nutzer nutzer);
+        void LöscheNutzer(List<Nutzer> nutzer);
+
+        bool LöscheSpiel(int spiel_id);
+        bool LöscheSpiel(Spiel spiel);
+        void LöscheSpiel(List<Spiel> spiele);
+
+        bool LöscheVerknüpfung(int nutzer_id, int spiel_id);
+        bool LöscheVerknüpfung(Verknüpfung verknüpfung);
         #endregion
 
         #region Ändern
+        bool ÄndereNutzer(int nutzer_id, string vorname, string nachname);
+        bool ÄndereNutzer(Nutzer nutzer);
+
+        bool ÄndereSpiel(int spiel_id, string name);
+        bool ÄndereSpiel(Spiel spiel);
         #endregion
     }
 }
