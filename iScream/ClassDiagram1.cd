@@ -17,7 +17,7 @@
   <Class Name="iScream.Datenhaltung1" Collapsed="true">
     <Position X="5.5" Y="10.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>BCAAgAAAAAAAAABAEACAIAAgABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BiAAgAQAAAAAAABAEACAIAAgABAACAAAAQAAAAAAACA=</HashCode>
       <FileName>Datenhaltung1.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="2.467" Collapsed="true" />
@@ -25,14 +25,14 @@
   <Class Name="iScream.SQL" Collapsed="true">
     <Position X="3.5" Y="10.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAABEAACAACIAAIAABAAIACAhhAAAAAAACAACAAAA=</HashCode>
+      <HashCode>AAQAAFEAACAACIAAIAABEAIACAlhAAAAAAACQACAAAA=</HashCode>
       <FileName>Datenhaltung1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.Datenhaltung2" Collapsed="true">
     <Position X="8.75" Y="10.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>BCAAgAAAAAAAAABAEACAIAAgABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BiAAgAQAAAAAAABAEACAIAAgABAACAAAAQAAAAAAACA=</HashCode>
       <FileName>Datenhaltung2.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.1" Collapsed="true" />
@@ -40,7 +40,7 @@
   <Class Name="iScream.XMLDatabase" Collapsed="true">
     <Position X="11.5" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgIAACAAAAAggAAAAIAAAAAAAAAQAAABEAABAAAA=</HashCode>
+      <HashCode>AAAAgIAACAAAAAggAAAAIAAAAAAAAAQAAABEAAAAAAA=</HashCode>
       <FileName>Datenhaltung2.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -51,10 +51,10 @@
       <FileName>Verknüpfung.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="iScream.IDatenhaltung">
-    <Position X="7.25" Y="8" Width="2.5" />
+  <Interface Name="iScream.IDatenhaltung" Collapsed="true">
+    <Position X="7.25" Y="10" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>BCAAgAAAAAAAAABAEACAIAAgABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BiAAgAQAAAAAAABAEACAIAAgABAACAAAAQAAAAAAACA=</HashCode>
       <FileName>IDatenhaltung.cs</FileName>
     </TypeIdentifier>
   </Interface>
