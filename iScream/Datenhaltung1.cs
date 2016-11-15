@@ -331,6 +331,47 @@ namespace iScream
             return ÄndereSpiel(spiel.Spiel_id, spiel.Name);
         }
         #endregion
+
+        #region Suchen
+        public List<Nutzer> SucheNutzer(string vorname, string nachname)
+        {
+            List<Nutzer> result = new List<Nutzer>();
+
+            string cmdText = "SELECT * FROM Nutzer WHERE ";
+
+            if(!String.IsNullOrEmpty(vorname))
+                cmdText += "Vorname like '%"+vorname+"%'";
+
+            if(!String.IsNullOrEmpty(nachname))
+                if(!String.IsNullOrEmpty(vorname))
+                    cmdText+= " && Nachname like '%"+nachname+"%'";
+                else 
+                    cmdText += "Nachname like '%"+nachname+"%'";
+
+            DataRowCollection rows = SQL.Select(cmdText);
+
+            foreach (DataRow row in rows)
+                result.Add(new Nutzer(Convert.ToString(row["Vorname"]), Convert.ToString(row["Nachname"]), Convert.ToInt32(row["Nutzer_id"])));
+
+            return result;
+        }
+
+        public List<Spiel> SucheSpiel(string name)
+        {
+            List<Spiel> result = new List<Spiel>();
+
+            string cmdText = "SELECT * FROM Spiele WHERE ";
+            if (!String.IsNullOrEmpty(name))
+                cmdText += "Name like '%" + name + "%'";
+
+            DataRowCollection rows = SQL.Select(cmdText);
+
+            foreach (DataRow row in rows)
+                result.Add(new Spiel(Convert.ToString(row["Name"]), Convert.ToInt32(row["Nutzer_id"])));
+
+            return result;
+        }
+        #endregion
     }
 
     static class SQL

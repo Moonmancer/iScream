@@ -293,6 +293,24 @@ namespace iScream
             return ÄndereSpiel(spiel.Spiel_id, spiel.Name);
         }
         #endregion
+
+        #region Suchen
+        public List<Nutzer> SucheNutzer(string vorname, string nachname)
+        {
+            if (String.IsNullOrEmpty(vorname) && String.IsNullOrEmpty(nachname))
+                return HoleNutzer();
+            else 
+                return database.NutzerDaten.FindAll(x => x.Vorname.Contains(vorname) && x.Nachname.Contains(nachname));
+        }
+
+        public List<Spiel> SucheSpiel(string name)
+        {
+            if (String.IsNullOrEmpty(name))
+                return HoleSpiel();
+            else
+                return database.SpielDaten.FindAll(x => x.Name.Contains(name));
+        }
+        #endregion
     }
 
     public class XMLDatabase

@@ -65,5 +65,10 @@ namespace iScream
         bool ÄndereSpiel(int spiel_id, string name);
         bool ÄndereSpiel(Spiel spiel);
         #endregion
+
+        #region Suchen
+        List<Nutzer> SucheNutzer(string vorname, string nachname);
+        List<Spiel> SucheSpiel(string name);
+        #endregion
     }
 }
