@@ -15,18 +15,23 @@ namespace iScream
         {
             database = new XMLDatabase();
             database.Load();
-
         }
 
         #region Holen
         public int HoleNächsteNutzer_id()
         {
-            return database.NutzerDaten.Last().Nutzer_id + 1;
+            if (database.NutzerDaten.Count > 0)
+                return database.NutzerDaten.Last().Nutzer_id + 1;
+            else
+                return 1;
         }
 
         public int HoleNächsteSpiel_id()
         {
-            return database.SpielDaten.Last().Spiel_id + 1;
+            if (database.SpielDaten.Count > 0)
+                return database.SpielDaten.Last().Spiel_id + 1;
+            else
+                return 1;
         }
 
         public Nutzer HoleNutzer(int nutzer_id)
