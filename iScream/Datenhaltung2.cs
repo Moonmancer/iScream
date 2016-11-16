@@ -170,6 +170,9 @@ namespace iScream
 
         public bool AddLink(Link link)
         {
+            if (GetUser(link.User_id).Equals(null) || GetGame(link.Game_id).Equals(null))
+                return false;
+
             if (!database.Links.Exists(x => x.User_id == link.User_id && x.Game_id == link.Game_id))
             {
                 database.Links.Add(link);
