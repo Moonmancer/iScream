@@ -36,7 +36,7 @@ namespace iScream
                 new Link(3,1)
             };
 
-            IDatenhaltung dh = new Datenhaltung1();
+            IDatenhaltung dh = new Datenhaltung2();
 
             dh.AddUser(nutzers);
             dh.AddGame(spiele);
@@ -55,7 +55,15 @@ namespace iScream
             Console.WriteLine();
             DisplayUsers(dh);
 
+            Console.WriteLine();
             dh.AddLink(verknüpfungen);
+            DisplayLinks(dh);
+
+            Console.WriteLine("\nLösche Nutzer 2...");
+            dh.DeleteUser(2);
+
+            Console.WriteLine();
+            DisplayLinks(dh);
 
             Console.ReadLine();
         }
@@ -77,6 +85,13 @@ namespace iScream
             Console.WriteLine("Nutzer:");
             foreach (User nutzer in dh.GetUser())
                 Console.WriteLine("\tID: " + nutzer.User_id + "\tVorname: " + nutzer.Firstname + "\tNachname: " + nutzer.Lastname);
+        }
+
+        public static void DisplayLinks(IDatenhaltung dh)
+        {
+            Console.WriteLine("Verknüpfungen:");
+            foreach (Link link in dh.GetLink())
+                Console.WriteLine("\tNutzer: " + dh.GetUser(link.User_id) + "\tSpiel: " + dh.GetGame(link.Game_id));
         }
     }
 }
