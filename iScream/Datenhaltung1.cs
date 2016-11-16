@@ -217,7 +217,7 @@ namespace iScream
             if (game.Game_id == -1)
                 game.Game_id = GetNextGame_id();
 
-            if (!GetGame(game.Game_id).Equals(null))
+            if (!GetGame(game.Game_id).Equals(null) || SearchGame(game.Name).Count > 0)
                 return false;
             else
                 return SQL.Insert("Games", new string[] { "Name", "Game_id" }, new object[] { game.Name, game.Game_id });

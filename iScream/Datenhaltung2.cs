@@ -146,7 +146,7 @@ namespace iScream
             if (game.Game_id == -1)
                 game.Game_id = GetNextGame_id();
 
-            if (!database.GameData.Exists(x => x.Game_id == game.Game_id))
+            if (!database.GameData.Exists(x => x.Game_id == game.Game_id || x.Name == game.Name))
             {
                 database.GameData.Add(game);
                 database.Save();
