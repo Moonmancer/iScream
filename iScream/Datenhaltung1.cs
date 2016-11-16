@@ -483,9 +483,12 @@ namespace iScream
                     "CREATE DATABASE [iScream]",
                     "CREATE TABLE [iScream].[dbo].[DBVersion]([Version] [varchar](50) NULL) ON [PRIMARY]",
                     "INSERT INTO [iScream].[dbo].[DBVersion] ([Version]) VALUES ('1.0')",
-                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id),[Game_id] [int]  FOREIGN KEY REFERENCES Games(Game_id)) ON [PRIMARY]"
+                    //"CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    //"CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    //"CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id),[Game_id] [int]  FOREIGN KEY REFERENCES Games(Game_id)) ON [PRIMARY]"
+                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] NOT NULL,[Game_id] [int] NOT NULL) ON [PRIMARY]"
                 };
 
 

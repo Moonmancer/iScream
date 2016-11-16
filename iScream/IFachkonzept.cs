@@ -10,7 +10,7 @@ namespace iScream
     {
         #region Details
 
-        Container detailsUser(User user);
+        //Container detailsUser(User user);
 
         #endregion
 

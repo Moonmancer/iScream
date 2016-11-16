@@ -54,5 +54,10 @@ namespace iScream
             this.game_id = game_id;
         }
         #endregion
+
+        override public string ToString()
+        {
+            return Name;
+        }
     }
 }

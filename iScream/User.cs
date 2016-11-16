@@ -67,6 +67,7 @@ namespace iScream
         {
             this.firstname = firstname;
             this.lastname = lastname;
+            this.user_id = -1;
         }
 
         public User(string firstname, string lastname, int user_id)
@@ -76,5 +77,10 @@ namespace iScream
             this.user_id = user_id;
         }
         #endregion
+
+        override public string ToString()
+        {
+            return Name;
+        }
     }
 }

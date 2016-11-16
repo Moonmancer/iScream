@@ -92,9 +92,9 @@ namespace iScream
             return result;
         }
         #region HoleNutzerVonSpiel-Overloads
-        public List<User> GetUserOfGame(Game spiel)
+        public List<User> GetUserOfGame(Game game)
         {
-            return GetUserOfGame(spiel.Game_id);
+            return GetUserOfGame(game.Game_id);
         }
         #endregion
         #endregion
@@ -141,14 +141,14 @@ namespace iScream
             return AddGame(new Game(name, GetNextGame_id()));
         }
 
-        public bool AddGame(Game spiel)
+        public bool AddGame(Game game)
         {
-            if (spiel.Game_id == -1)
-                spiel.Game_id = GetNextGame_id();
+            if (game.Game_id == -1)
+                game.Game_id = GetNextGame_id();
 
-            if (!database.GameData.Exists(x => x.Game_id == spiel.Game_id))
+            if (!database.GameData.Exists(x => x.Game_id == game.Game_id))
             {
-                database.GameData.Add(spiel);
+                database.GameData.Add(game);
                 database.Save();
                 return true;
             }
@@ -157,9 +157,9 @@ namespace iScream
 
         }
 
-        public void AddGame(List<Game> spiele)
+        public void AddGame(List<Game> games)
         {
-            foreach (Game cur in spiele)
+            foreach (Game cur in games)
                 AddGame(cur);
         }
 
@@ -216,11 +216,11 @@ namespace iScream
         {
             return DeleteGame(database.GameData.Find(x => x.Game_id == game_id));
         }
-        public bool DeleteGame(Game spiel)
+        public bool DeleteGame(Game game)
         {
-            if (database.GameData.Remove(spiel))
+            if (database.GameData.Remove(game))
             {
-                foreach (Link cur in database.Links.FindAll(x => x.Game_id == spiel.Game_id))
+                foreach (Link cur in database.Links.FindAll(x => x.Game_id == game.Game_id))
                     DeleteLink(cur);
                 database.Save();
 
@@ -229,9 +229,10 @@ namespace iScream
             else
                 return false;
         }
-        public void DeleteGame(List<Game> spiele)
+
+        public void DeleteGame(List<Game> games)
         {
-            foreach (Game cur in spiele)
+            foreach (Game cur in games)
                 DeleteGame(cur);
         }
 
@@ -239,6 +240,7 @@ namespace iScream
         {
             return DeleteLink(database.Links.Find(x => x.User_id == user_id && x.Game_id == game_id));
         }
+
         public bool DeleteLink(Link link)
         {
             if (database.Links.Remove(link))
