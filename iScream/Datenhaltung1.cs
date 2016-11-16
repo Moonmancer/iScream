@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Data;
 
 namespace iScream
 {
@@ -16,113 +17,420 @@ namespace iScream
         }
 
         #region Holen
-        public int HoleNächsteNutzer_id()
+        public int GetNextUser_id()
         {
-            throw new NotImplementedException();
+            DataRowCollection rows = SQL.Select("TOP 1 User_id", "[User]", "", "User_id DESC");
+            if (rows.Count == 0)
+                return 1;
+            else
+                return Convert.ToInt32(rows[0]["User_id"]) + 1;
         }
 
-        public int HoleNächsteSpiel_id()
+        public int GetNextGame_id()
         {
-            throw new NotImplementedException();
+            DataRowCollection rows = SQL.Select("TOP 1 Game_id", "Games", "", "Game_id DESC");
+            if (rows.Count == 0)
+                return 1;
+            else
+                return Convert.ToInt32(rows[0]["Game_id"]) + 1;
         }
 
+        public User GetUser(int user_id)
+        {
+            DataRowCollection rows = SQL.Select("*", "[User]", "User_id = " + user_id);
+            if (rows.Count == 0)
+                return null;
+            else
+                return new User(
+                    Convert.ToString(rows[0]["Firstname"]),
+                    Convert.ToString(rows[0]["Lastname"]),
+                    Convert.ToInt32(rows[0]["User_id"])
+                );
+        }
+
+        public List<User> GetUser()
+        {
+            DataRowCollection rows = SQL.Select("*", "[User]");
+            if (rows.Count == 0)
+                return null;
+            else
+            {
+                List<User> result = new List<User>();
+
+                foreach (DataRow row in rows)
+                    result.Add(new User(
+                        Convert.ToString(row["Firstname"]),
+                        Convert.ToString(row["Lastname"]),
+                        Convert.ToInt32(row["User_id"])
+                    ));
+                return result;
+            }
+        }
+
+<<<<<<< HEAD
         public User HoleNutzer(int nutzer_id)
+=======
+        public Game GetGame(int game_id)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            DataRowCollection rows = SQL.Select("*", "Games", "Game_id = " + game_id);
+            if (rows.Count == 0)
+                return null;
+            else
+                return new Game(
+                    Convert.ToString(rows[0]["Name"]),
+                    Convert.ToInt32(rows[0]["Game_id"])
+                );
         }
 
+<<<<<<< HEAD
         public List<User> HoleNutzer()
+=======
+        public List<Game> GetGame()
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            DataRowCollection rows = SQL.Select("*", "Games");
+            if (rows.Count == 0)
+                return null;
+            else
+            {
+                List<Game> result = new List<Game>();
+
+                foreach (DataRow row in rows)
+                    result.Add(new Game(
+                        Convert.ToString(row["Name"]),
+                        Convert.ToInt32(row["Game_id"])
+                    ));
+                return result;
+            }
         }
 
+<<<<<<< HEAD
         public Game HoleSpiel(int spiel_id)
+=======
+        public Link GetLink(int user_id, int game_id)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            DataRowCollection rows = SQL.Select("*", "Links", "User_id = " + user_id + "AND Game_id = " + game_id);
+            if (rows.Count == 0)
+                return null;
+            else
+                return new Link(
+                    Convert.ToInt32(rows[0]["User_id"]),
+                    Convert.ToInt32(rows[0]["Game_id"])
+                );
         }
 
+<<<<<<< HEAD
         public List<Game> HoleSpiel()
+=======
+        public Link GetLink(Link verknüpfung)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            return GetLink(verknüpfung.User_id, verknüpfung.Game_id);
         }
 
+<<<<<<< HEAD
         public List<Link> HoleVerknüpfung()
+=======
+        public List<Link> GetLink()
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+
+            DataRowCollection rows = SQL.Select("*", "Links");
+            if (rows.Count == 0)
+                return null;
+            else
+            {
+                List<Link> result = new List<Link>();
+
+                foreach (DataRow row in rows)
+                    result.Add(new Link(
+                        Convert.ToInt32(row["User_id"]),
+                        Convert.ToInt32(row["Game_id"])
+                    ));
+                return result;
+            }
         }
 
+<<<<<<< HEAD
         public List<Game> HoleSpieleVonNutzer(int nutzer_id)
+=======
+        public List<Game> GetGamesOfUser(int user_id)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            DataRowCollection rows = SQL.Select("Game_id", "Links", "User_id = " + user_id);
+            if (rows.Count == 0)
+                return null;
+            else
+            {
+                List<Game> result = new List<Game>();
+
+                foreach (DataRow row in rows)
+                    result.Add(GetGame(Convert.ToInt32(row[0])));
+
+                return result;
+            }
         }
 
+<<<<<<< HEAD
         public List<Game> HoleSpieleVonNutzer(User nutzer)
+=======
+        public List<Game> GetGamesOfUser(User user)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            return GetGamesOfUser(user.User_id);
         }
 
+<<<<<<< HEAD
         public List<User> HoleNutzerVonSpiel(int spiel_id)
+=======
+        public List<User> GetUserOfGame(int game_id)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            DataRowCollection rows = SQL.Select("User_id", "Links", "Game_id = " + game_id);
+            if (rows.Count == 0)
+                return null;
+            else
+            {
+                List<User> result = new List<User>();
+
+                foreach (DataRow row in rows)
+                    result.Add(GetUser(Convert.ToInt32(row[0])));
+
+                return result;
+            }
         }
 
+<<<<<<< HEAD
         public List<User> HoleNutzerVonSpiel(Game spiel)
+=======
+        public List<User> GetUserOfGame(Game game)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            return GetUserOfGame(game.Game_id);
         }
         #endregion
 
         #region Hinzufügen
-        public bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id)
+        public bool AddUser(string vorname, string nachname, int user_id)
         {
-            throw new NotImplementedException();
+            return AddUser(new User(vorname, nachname, user_id));
         }
 
+        public bool AddUser(string vorname, string nachname)
+        {
+            return AddUser(new User(vorname, nachname, GetNextUser_id()));
+        }
+
+        public bool AddUser(User user)
+        {
+            if (user.User_id == -1)
+                user.User_id = GetNextUser_id();
+
+            return SQL.Insert("[User]", new string[] { "Firstname", "Lastname", "User_id" }, new object[] { user.Firstname, user.Lastname, user.User_id });
+        }
+
+<<<<<<< HEAD
         public bool FügeNutzerHinzu(User nutzer)
+=======
+        public void AddUser(List<User> user)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            foreach (User cur in user)
+                AddUser(cur);
         }
 
+<<<<<<< HEAD
         public void FügeNutzerHinzu(List<User> nutzer)
+=======
+        public bool AddGame(string name, int game_id)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            return AddGame(new Game(name, game_id));
         }
 
-        public bool FügeSpielHinzu(string name, int spiel_id)
+        public bool AddGame(string name)
         {
-            throw new NotImplementedException();
+            return AddGame(new Game(name, GetNextGame_id()));
         }
 
+<<<<<<< HEAD
         public bool FügeSpielHinzu(Game spiel)
+=======
+        public bool AddGame(Game game)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            if (game.Game_id == -1)
+                game.Game_id = GetNextGame_id();
+
+            return SQL.Insert("Games", new string[] { "Name", "Game_id" }, new object[] { game.Name, game.Game_id });
         }
 
+<<<<<<< HEAD
         public void FügeSpielHinzu(List<Game> spiele)
+=======
+        public void AddGame(List<Game> spiele)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            foreach (Game cur in spiele)
+                AddGame(cur);
         }
 
-        public bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id)
+        public bool AddLink(int user_id, int game_id)
         {
-            throw new NotImplementedException();
+            return AddLink(new Link(user_id, game_id));
         }
 
+<<<<<<< HEAD
         public bool FügeVerknüpfungHinzu(Link verknüpfung)
+=======
+        public bool AddLink(Link verknüpfung)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            return SQL.Insert("Links", new string[] { "User_id", "Game_id" }, new object[] { verknüpfung.User_id, verknüpfung.Game_id });
         }
 
+<<<<<<< HEAD
         public void FügeVerknüpfungHinzu(List<Link> verknüpfungen)
+=======
+        public void AddLink(List<Link> verknüpfungen)
+>>>>>>> refs/remotes/origin/Datenhaltung
         {
-            throw new NotImplementedException();
+            foreach (Link cur in verknüpfungen)
+                AddLink(cur);
         }
         #endregion
 
         #region Löschen
+        public bool DeleteUser(int user_id)
+        {
+            if (Convert.ToInt32(SQL.Delete("[User]", "User_id = " + user_id)) > 0)
+            {
+                SQL.Delete("Links", "User_id = " + user_id);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public bool DeleteUser(User user)
+        {
+            return DeleteUser(user.User_id);
+        }
+
+        public void DeleteUser(List<User> user)
+        {
+            foreach (User cur in user)
+                DeleteUser(cur.User_id);
+        }
+
+        public bool DeleteGame(int game_id)
+        {
+
+            if (Convert.ToInt32(SQL.Delete("Games", "Game_id = " + game_id)) > 0)
+            {
+                SQL.Delete("Links", "Game_id = " + game_id);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public bool DeleteGame(Game game)
+        {
+            return DeleteGame(game.Game_id);
+        }
+
+        public void DeleteGame(List<Game> spiele)
+        {
+            foreach (Game cur in spiele)
+                DeleteUser(cur.Game_id);
+        }
+
+        public bool DeleteLink(int user_id, int game_id)
+        {
+            return Convert.ToInt32(SQL.Delete("Links", "User_id = " + user_id + " AND Game_id = " + game_id)) > 0;
+        }
+
+        public bool DeleteLink(Link verknüpfung)
+        {
+            return DeleteLink(verknüpfung.User_id, verknüpfung.Game_id);
+        }
         #endregion
 
         #region Ändern
+        public bool UpdateUser(int user_id, string vorname, string nachname)
+        {
+            if (SQL.Select("User_id", "[User]", "User_id = " + user_id).Count == 0)
+                return false;
+
+            SQL.Update("[User]", new string[] { "Firstname", "Lastname" }, new object[] { vorname, nachname }, "User_id = " + user_id);
+
+            return true;
+        }
+
+        public bool UpdateUser(User user)
+        {
+            return UpdateUser(user.User_id, user.Firstname, user.Lastname);
+        }
+
+
+        public bool UpdateGame(int game_id, string name)
+        {
+            if (SQL.Select("Game_id", "Games", "Game_id = " + game_id).Count > 0)
+                return false;
+
+            SQL.Update("Games", new string[] { "Name" }, new object[] { name }, "Game_id = " + game_id);
+
+            return true;
+        }
+
+        public bool UpdateGame(Game game)
+        {
+            return UpdateGame(game.Game_id, game.Name);
+        }
+        #endregion
+
+        #region Suchen
+        public List<User> SearchUser(string vorname, string nachname)
+        {
+            List<User> result = new List<User>();
+
+            string cmdText = "SELECT * FROM User WHERE ";
+
+            if (!String.IsNullOrEmpty(vorname))
+                cmdText += "Firstname like '%" + vorname + "%'";
+
+            if (!String.IsNullOrEmpty(nachname))
+                if (!String.IsNullOrEmpty(vorname))
+                    cmdText += " && Lastname like '%" + nachname + "%'";
+                else
+                    cmdText += "Lastname like '%" + nachname + "%'";
+
+            DataRowCollection rows = SQL.Select(cmdText);
+
+            foreach (DataRow row in rows)
+                result.Add(new User(Convert.ToString(row["Firstname"]), Convert.ToString(row["Lastname"]), Convert.ToInt32(row["User_id"])));
+
+            return result;
+        }
+
+        public List<Game> SearchGame(string name)
+        {
+            List<Game> result = new List<Game>();
+
+            string cmdText = "SELECT * FROM Games WHERE ";
+            if (!String.IsNullOrEmpty(name))
+                cmdText += "Name like '%" + name + "%'";
+
+            DataRowCollection rows = SQL.Select(cmdText);
+
+            foreach (DataRow row in rows)
+                result.Add(new Game(Convert.ToString(row["Name"]), Convert.ToInt32(row["User_id"])));
+
+            return result;
+        }
         #endregion
     }
 
@@ -139,15 +447,17 @@ namespace iScream
         }
 
         #region Standardwerte
-        static string defaultServer = ".";
+        static string defaultServer = Settings.CurrentSettings.SqlServerLocation;
 
-        static string defaultDB = "iScream";
+        static string defaultDB = Settings.CurrentSettings.SqlDatabaseName;
 
         static string defaultInstance;
 
-        static bool useWinAuth = true;
+        static bool useWinAuth = Settings.CurrentSettings.UseWinAuth;
 
-        static string defaultUsername = "sa";
+        static string defaultUsername = Kryptographie.Entschlüsseln(Settings.CurrentSettings.SqlServerUsername);
+
+        static string defaultPassword = Kryptographie.Entschlüsseln(Settings.CurrentSettings.SqlServerPassword);
         #endregion
 
         static string CONNECTIONSTRING;
@@ -235,8 +545,9 @@ namespace iScream
                     "CREATE DATABASE [iScream]",
                     "CREATE TABLE [iScream].[dbo].[DBVersion]([Version] [varchar](50) NULL) ON [PRIMARY]",
                     "INSERT INTO [iScream].[dbo].[DBVersion] ([Version]) VALUES ('1.0')",
-                    "CREATE TABLE [iScream].[dbo].[Nutzer]([Nutzer_id] [int] NULL, [Vorname] [varchar](max) NULL, [Nachname] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[Spiele]([Spiel_id] [int] NULL, [Name] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]"
+                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id),[Game_id] [int]  FOREIGN KEY REFERENCES Games(Game_id)) ON [PRIMARY]"
                 };
 
 
@@ -340,6 +651,118 @@ namespace iScream
             }
 
             return result;
+        }
+
+        public static bool Insert(string table, string[] columns, object[] values)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = SQL_CONNECTION;
+
+            if (columns.Count() != values.Count())
+                return false;
+            string cmdText = "INSERT INTO " + table + " (";
+            string cmdValues = "VALUES (";
+            int curVal = 0;
+            foreach (string col in columns)
+            {
+                if (col != columns.First())
+                {
+                    cmdText += ", " + col;
+                    cmdValues += ", @" + col;
+                }
+                else
+                {
+                    cmdText += col;
+                    cmdValues += "@" + col;
+                }
+                cmd.Parameters.AddWithValue("@" + col, values[curVal++]);
+            }
+            cmdText += ") ";
+            cmdValues += ")";
+
+            cmd.CommandText = cmdText + cmdValues;
+            return Convert.ToBoolean(cmd.ExecuteNonQuery());
+        }
+
+        public static DataRowCollection Select(string select, string from, string where)
+        {
+            string cmdText = "SELECT " + select + " ";
+            cmdText += "FROM " + from;
+            if (!String.IsNullOrEmpty(where))
+                cmdText += " WHERE " + where;
+
+            return Select(cmdText);
+        }
+
+        public static DataRowCollection Select(string select, string from, string where, string orderBy)
+        {
+            string cmdText = "SELECT " + select + " ";
+            cmdText += "FROM " + from;
+            if (!String.IsNullOrEmpty(where))
+                cmdText += " WHERE " + where;
+            if (!String.IsNullOrEmpty(orderBy))
+                cmdText += " ORDER BY " + orderBy;
+
+            return Select(cmdText);
+        }
+
+        public static DataRowCollection Select(string select, string from)
+        {
+            string cmdText = "SELECT " + select + " ";
+            cmdText += "FROM " + from;
+
+            return Select(cmdText);
+        }
+
+        public static DataRowCollection Select(string cmdText)
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand(cmdText, SQL_CONNECTION);
+
+            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                sda.Fill(dt);
+
+            return dt.Rows;
+        }
+
+        public static int Delete(string from, string where)
+        {
+            string cmdText = "DELETE FROM " + from;
+            if (!String.IsNullOrEmpty(where))
+                cmdText += " WHERE " + where;
+
+            using (SqlCommand cmd = new SqlCommand(cmdText, SQL_CONNECTION))
+                return cmd.ExecuteNonQuery();
+        }
+
+        public static int Update(string update, string[] set, object[] values)
+        {
+            return Update(update, set, values, "");
+        }
+
+        public static int Update(string update, string[] set, object[] values, string where)
+        {
+            if (set.Count() == 0 || (set.Count() != values.Count()))
+                return -1;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = SQL_CONNECTION;
+
+            string cmdText = "UPDATE " + update + " SET " + set[0] + " = @" + set[0];
+            cmd.Parameters.AddWithValue("@" + set[0], values[0]);
+
+            for (int i = 1; i < set.Count(); i++)
+            {
+                cmdText += ", " + set[i] + " = @" + set[i];
+                cmd.Parameters.AddWithValue("@" + set[i], values[i]);
+            }
+
+            if (!String.IsNullOrEmpty(where))
+                cmdText += " WHERE " + where;
+
+            cmd.CommandText = cmdText;
+
+            return cmd.ExecuteNonQuery();
         }
     }
 }

@@ -58,11 +58,11 @@
     </Compile>
     <Compile Include="IDatenhaltung.cs" />
     <Compile Include="IFachkonzept.cs" />
-    <Compile Include="Nutzer.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spiel.cs" />
-    <Compile Include="Verknüpfung.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Link.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

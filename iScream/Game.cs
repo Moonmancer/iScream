@@ -22,16 +22,16 @@ namespace iScream
             }
         }
 
-        private int spiel_id;
-        public int Spiel_id
+        private int game_id;
+        public int Game_id
         {
             get
             {
-                return spiel_id;
+                return game_id;
             }
             set
             {
-                spiel_id = value;
+                game_id = value;
             }
         }
         #endregion
@@ -45,12 +45,17 @@ namespace iScream
         public Game(string name)
         {
             this.name = name;
+            this.game_id = -1;
         }
 
+<<<<<<< HEAD:iScream/Game.cs
         public Game(string name, int spiel_id)
+=======
+        public Game(string name, int game_id)
+>>>>>>> refs/remotes/origin/Datenhaltung:iScream/Game.cs
         {
             this.name = name;
-            this.spiel_id = spiel_id;
+            this.game_id = game_id;
         }
         #endregion
     }

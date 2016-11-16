@@ -15,15 +15,26 @@ namespace iScream.Tests
 
         private static List<User> testnutzer = new List<User>
         {
+<<<<<<< HEAD
             new User("Klara","Himmel",1),
             new User("Mike", "Rohsoft",2),
             new User("Martin Router", "King", 3)
+=======
+            new User("Mike", "Rohsoft"),//,1),
+            new User("Ann", "Droid"),//, 2),
+            new User("Sam","Sung")//,3)
+>>>>>>> refs/remotes/origin/Datenhaltung
         };
 
         private static List<Game> testspiele = new List<Game>
         {
+<<<<<<< HEAD
             new Game("Tetris", 1),
             new Game("Minecraft", 2)
+=======
+            new Game("Tetris"),//, 1),
+            new Game("Minecraft")//, 2)
+>>>>>>> refs/remotes/origin/Datenhaltung
         };
 
         public static List<Link> testverknüpfungen = new List<Link>
@@ -149,11 +160,11 @@ namespace iScream.Tests
             try
             {
                 Console.Write("Schreibe in Datenbank... ");
-                datenhaltung.FügeNutzerHinzu(testnutzer);
+                datenhaltung.AddUser(testnutzer);
 
-                datenhaltung.FügeSpielHinzu(testspiele);
+                datenhaltung.AddGame(testspiele);
 
-                datenhaltung.FügeVerknüpfungHinzu(testverknüpfungen);
+                datenhaltung.AddLink(testverknüpfungen);
 
                 Console.WriteLine("erfolg!");
                 successCount++;
@@ -174,9 +185,15 @@ namespace iScream.Tests
             try
             {
                 Console.Write("Lade Daten...");
+<<<<<<< HEAD
                 List<User> tmpNutzer = datenhaltung.HoleNutzer();
                 List<Game> tmpSpiele = datenhaltung.HoleSpiel();
                 List<Link> tmpVerknüpfung = datenhaltung.HoleVerknüpfung();
+=======
+                List<User> tmpNutzer = datenhaltung.GetUser();
+                List<Game> tmpSpiele = datenhaltung.GetGame();
+                List<Link> tmpVerknüpfung = datenhaltung.GetLink();
+>>>>>>> refs/remotes/origin/Datenhaltung
                 Console.WriteLine(" fertig.");
                 Next();
 
@@ -208,35 +225,35 @@ namespace iScream.Tests
                 #region Inhaltcheck
                 Console.WriteLine("Nutzer:");
                 for (int i = 0; i < testnutzer.Count; i++)
-                    if (tmpNutzer[i].Name != testnutzer[i].Name || tmpNutzer[i].Nutzer_id != testnutzer[i].Nutzer_id)
+                    if (tmpNutzer[i].Name != testnutzer[i].Name || tmpNutzer[i].User_id != testnutzer[i].User_id)
                     {
-                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Nutzer(" + tmpNutzer[i].Vorname + "," + tmpNutzer[i].Nachname + "," + tmpNutzer[i].Nutzer_id + "), gefordert: Nutzer(" + testnutzer[i].Vorname + "," + testnutzer[i].Nachname + "," + testnutzer[i].Nutzer_id + ")");
+                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Nutzer(" + tmpNutzer[i].Firstname + "," + tmpNutzer[i].Lastname + "," + tmpNutzer[i].User_id + "), gefordert: Nutzer(" + testnutzer[i].Firstname + "," + testnutzer[i].Lastname + "," + testnutzer[i].User_id + ")");
                         failed = true;
                     }
                     else
-                        Console.WriteLine("Datensatz korrekt! Nutzer(" + testnutzer[i].Vorname + "," + testnutzer[i].Nachname + "," + testnutzer[i].Nutzer_id + ")");
+                        Console.WriteLine("Datensatz korrekt! Nutzer(" + testnutzer[i].Firstname + "," + testnutzer[i].Lastname + "," + testnutzer[i].User_id + ")");
                 Next();
 
                 Console.WriteLine("Spiele:");
                 for (int i = 0; i < testspiele.Count; i++)
-                    if (tmpSpiele[i].Name != testspiele[i].Name || tmpSpiele[i].Spiel_id != testspiele[i].Spiel_id)
+                    if (tmpSpiele[i].Name != testspiele[i].Name || tmpSpiele[i].Game_id != testspiele[i].Game_id)
                     {
-                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Spiel(" + tmpSpiele[i].Name + "," + tmpSpiele[i].Spiel_id + "), gefordert: Spiel(" + testspiele[i].Name + "," + testspiele[i].Spiel_id + ")");
+                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Spiel(" + tmpSpiele[i].Name + "," + tmpSpiele[i].Game_id + "), gefordert: Spiel(" + testspiele[i].Name + "," + testspiele[i].Game_id + ")");
                         failed = true;
                     }
                     else
-                        Console.WriteLine("Datensatz korrekt! Spiel(" + testspiele[i].Name + "," + testspiele[i].Spiel_id + ")");
+                        Console.WriteLine("Datensatz korrekt! Spiel(" + testspiele[i].Name + "," + testspiele[i].Game_id + ")");
                 Next();
 
                 Console.WriteLine("Verknüpfungen:");
                 for (int i = 0; i < testverknüpfungen.Count; i++)
-                    if (tmpVerknüpfung[i].Nutzer_id != testverknüpfungen[i].Nutzer_id || tmpVerknüpfung[i].Spiel_id != testverknüpfungen[i].Spiel_id)
+                    if (tmpVerknüpfung[i].User_id != testverknüpfungen[i].User_id || tmpVerknüpfung[i].Game_id != testverknüpfungen[i].Game_id)
                     {
-                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Verknüpfung(" + tmpVerknüpfung[i].Nutzer_id + "," + tmpVerknüpfung[i].Spiel_id + "), gefordert: Verknüpfung(" + testverknüpfungen[i].Nutzer_id + "," + testverknüpfungen[i].Spiel_id + ")");
+                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Verknüpfung(" + tmpVerknüpfung[i].User_id + "," + tmpVerknüpfung[i].Game_id + "), gefordert: Verknüpfung(" + testverknüpfungen[i].User_id + "," + testverknüpfungen[i].Game_id + ")");
                         failed = true;
                     }
                     else
-                        Console.WriteLine("Datensatz korrekt! Verknüpfung(" + testverknüpfungen[i].Nutzer_id + "," + testverknüpfungen[i].Spiel_id + ")");
+                        Console.WriteLine("Datensatz korrekt! Verknüpfung(" + testverknüpfungen[i].User_id + "," + testverknüpfungen[i].Game_id + ")");
                 Next();
 
                 if (failed)
