@@ -339,14 +339,14 @@ namespace iScream
 
             string cmdText = "SELECT * FROM Nutzer WHERE ";
 
-            if(!String.IsNullOrEmpty(vorname))
-                cmdText += "Vorname like '%"+vorname+"%'";
+            if (!String.IsNullOrEmpty(vorname))
+                cmdText += "Vorname like '%" + vorname + "%'";
 
-            if(!String.IsNullOrEmpty(nachname))
-                if(!String.IsNullOrEmpty(vorname))
-                    cmdText+= " && Nachname like '%"+nachname+"%'";
-                else 
-                    cmdText += "Nachname like '%"+nachname+"%'";
+            if (!String.IsNullOrEmpty(nachname))
+                if (!String.IsNullOrEmpty(vorname))
+                    cmdText += " && Nachname like '%" + nachname + "%'";
+                else
+                    cmdText += "Nachname like '%" + nachname + "%'";
 
             DataRowCollection rows = SQL.Select(cmdText);
 
@@ -667,7 +667,7 @@ namespace iScream
 
         public static int Delete(string from, string where)
         {
-            string cmdText = "FROM " + from;
+            string cmdText = "DELETE FROM " + from;
             if (!String.IsNullOrEmpty(where))
                 cmdText += " WHERE " + where;
 
