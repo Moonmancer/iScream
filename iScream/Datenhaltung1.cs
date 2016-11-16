@@ -191,7 +191,10 @@ namespace iScream
             if (user.User_id == -1)
                 user.User_id = GetNextUser_id();
 
-            return SQL.Insert("[User]", new string[] { "Firstname", "Lastname", "User_id" }, new object[] { user.Firstname, user.Lastname, user.User_id });
+            if (!GetUser(user.User_id).Equals(null))
+                return false;
+            else
+                return SQL.Insert("[User]", new string[] { "Firstname", "Lastname", "User_id" }, new object[] { user.Firstname, user.Lastname, user.User_id });
         }
 
         public void AddUser(List<User> user)
@@ -214,7 +217,10 @@ namespace iScream
             if (game.Game_id == -1)
                 game.Game_id = GetNextGame_id();
 
-            return SQL.Insert("Games", new string[] { "Name", "Game_id" }, new object[] { game.Name, game.Game_id });
+            if (!GetGame(game.Game_id).Equals(null))
+                return false;
+            else
+                return SQL.Insert("Games", new string[] { "Name", "Game_id" }, new object[] { game.Name, game.Game_id });
         }
 
         public void AddGame(List<Game> spiele)
@@ -228,14 +234,17 @@ namespace iScream
             return AddLink(new Link(user_id, game_id));
         }
 
-        public bool AddLink(Link verknüpfung)
+        public bool AddLink(Link link)
         {
-            return SQL.Insert("Links", new string[] { "User_id", "Game_id" }, new object[] { verknüpfung.User_id, verknüpfung.Game_id });
+            if (GetUser(link.User_id).Equals(null) || GetGame(link.User_id).Equals(null))
+                return false;
+            else
+                return SQL.Insert("Links", new string[] { "User_id", "Game_id" }, new object[] { link.User_id, link.Game_id });
         }
 
-        public void AddLink(List<Link> verknüpfungen)
+        public void AddLink(List<Link> links)
         {
-            foreach (Link cur in verknüpfungen)
+            foreach (Link cur in links)
                 AddLink(cur);
         }
         #endregion
@@ -300,7 +309,7 @@ namespace iScream
         #region Ändern
         public bool UpdateUser(int user_id, string vorname, string nachname)
         {
-            if (SQL.Select("User_id", "[User]", "User_id = " + user_id).Count == 0)
+            if (!GetUser(user_id).Equals(null))
                 return false;
 
             SQL.Update("[User]", new string[] { "Firstname", "Lastname" }, new object[] { vorname, nachname }, "User_id = " + user_id);
@@ -316,7 +325,7 @@ namespace iScream
 
         public bool UpdateGame(int game_id, string name)
         {
-            if (SQL.Select("Game_id", "Games", "Game_id = " + game_id).Count > 0)
+            if (!GetGame(game_id).Equals(null))
                 return false;
 
             SQL.Update("Games", new string[] { "Name" }, new object[] { name }, "Game_id = " + game_id);
