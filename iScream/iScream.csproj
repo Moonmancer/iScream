@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container.cs" />
     <Compile Include="Datenhaltung1.cs" />
     <Compile Include="Datenhaltung2.cs" />
     <Compile Include="Kryptographie.cs" />
