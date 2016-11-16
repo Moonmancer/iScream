@@ -12,35 +12,6 @@ namespace iScream
         int GetNextUser_id();
         int GetNextGame_id();
 
-<<<<<<< HEAD
-        User HoleNutzer(int nutzer_id);
-        List<User> HoleNutzer();
-
-        Game HoleSpiel(int spiel_id);
-        List<Game> HoleSpiel();
-
-        List<Link> HoleVerknüpfung();
-
-        List<Game> HoleSpieleVonNutzer(int nutzer_id);
-        List<Game> HoleSpieleVonNutzer(User nutzer);
-
-        List<User> HoleNutzerVonSpiel(int spiel_id);
-        List<User> HoleNutzerVonSpiel(Game spiel);
-        #endregion
-
-        #region Hinzufügen
-        bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id);
-        bool FügeNutzerHinzu(User nutzer);
-        void FügeNutzerHinzu(List<User> nutzer);
-
-        bool FügeSpielHinzu(string name, int spiel_id);
-        bool FügeSpielHinzu(Game spiel);
-        void FügeSpielHinzu(List<Game> spiele);
-
-        bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id);
-        bool FügeVerknüpfungHinzu(Link verknüpfung);
-        void FügeVerknüpfungHinzu(List<Link> verknüpfungen);
-=======
         User GetUser(int user_id);
         List<User> GetUser();
 
@@ -72,7 +43,6 @@ namespace iScream
         bool AddLink(int user_id, int game_id);
         bool AddLink(Link link);
         void AddLink(List<Link> links);
->>>>>>> refs/remotes/origin/Datenhaltung
         #endregion
 
         #region Delete

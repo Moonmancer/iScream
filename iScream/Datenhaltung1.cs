@@ -67,11 +67,7 @@ namespace iScream
             }
         }
 
-<<<<<<< HEAD
-        public User HoleNutzer(int nutzer_id)
-=======
         public Game GetGame(int game_id)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             DataRowCollection rows = SQL.Select("*", "Games", "Game_id = " + game_id);
             if (rows.Count == 0)
@@ -83,11 +79,7 @@ namespace iScream
                 );
         }
 
-<<<<<<< HEAD
-        public List<User> HoleNutzer()
-=======
         public List<Game> GetGame()
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             DataRowCollection rows = SQL.Select("*", "Games");
             if (rows.Count == 0)
@@ -104,12 +96,7 @@ namespace iScream
                 return result;
             }
         }
-
-<<<<<<< HEAD
-        public Game HoleSpiel(int spiel_id)
-=======
         public Link GetLink(int user_id, int game_id)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             DataRowCollection rows = SQL.Select("*", "Links", "User_id = " + user_id + "AND Game_id = " + game_id);
             if (rows.Count == 0)
@@ -121,20 +108,12 @@ namespace iScream
                 );
         }
 
-<<<<<<< HEAD
-        public List<Game> HoleSpiel()
-=======
         public Link GetLink(Link verknüpfung)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             return GetLink(verknüpfung.User_id, verknüpfung.Game_id);
         }
 
-<<<<<<< HEAD
-        public List<Link> HoleVerknüpfung()
-=======
         public List<Link> GetLink()
->>>>>>> refs/remotes/origin/Datenhaltung
         {
 
             DataRowCollection rows = SQL.Select("*", "Links");
@@ -153,11 +132,7 @@ namespace iScream
             }
         }
 
-<<<<<<< HEAD
-        public List<Game> HoleSpieleVonNutzer(int nutzer_id)
-=======
         public List<Game> GetGamesOfUser(int user_id)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             DataRowCollection rows = SQL.Select("Game_id", "Links", "User_id = " + user_id);
             if (rows.Count == 0)
@@ -173,20 +148,12 @@ namespace iScream
             }
         }
 
-<<<<<<< HEAD
-        public List<Game> HoleSpieleVonNutzer(User nutzer)
-=======
         public List<Game> GetGamesOfUser(User user)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             return GetGamesOfUser(user.User_id);
         }
 
-<<<<<<< HEAD
-        public List<User> HoleNutzerVonSpiel(int spiel_id)
-=======
         public List<User> GetUserOfGame(int game_id)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             DataRowCollection rows = SQL.Select("User_id", "Links", "Game_id = " + game_id);
             if (rows.Count == 0)
@@ -202,11 +169,7 @@ namespace iScream
             }
         }
 
-<<<<<<< HEAD
-        public List<User> HoleNutzerVonSpiel(Game spiel)
-=======
         public List<User> GetUserOfGame(Game game)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             return GetUserOfGame(game.Game_id);
         }
@@ -231,21 +194,13 @@ namespace iScream
             return SQL.Insert("[User]", new string[] { "Firstname", "Lastname", "User_id" }, new object[] { user.Firstname, user.Lastname, user.User_id });
         }
 
-<<<<<<< HEAD
-        public bool FügeNutzerHinzu(User nutzer)
-=======
         public void AddUser(List<User> user)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             foreach (User cur in user)
                 AddUser(cur);
         }
 
-<<<<<<< HEAD
-        public void FügeNutzerHinzu(List<User> nutzer)
-=======
         public bool AddGame(string name, int game_id)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             return AddGame(new Game(name, game_id));
         }
@@ -254,12 +209,7 @@ namespace iScream
         {
             return AddGame(new Game(name, GetNextGame_id()));
         }
-
-<<<<<<< HEAD
-        public bool FügeSpielHinzu(Game spiel)
-=======
         public bool AddGame(Game game)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             if (game.Game_id == -1)
                 game.Game_id = GetNextGame_id();
@@ -267,11 +217,7 @@ namespace iScream
             return SQL.Insert("Games", new string[] { "Name", "Game_id" }, new object[] { game.Name, game.Game_id });
         }
 
-<<<<<<< HEAD
-        public void FügeSpielHinzu(List<Game> spiele)
-=======
         public void AddGame(List<Game> spiele)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             foreach (Game cur in spiele)
                 AddGame(cur);
@@ -282,20 +228,12 @@ namespace iScream
             return AddLink(new Link(user_id, game_id));
         }
 
-<<<<<<< HEAD
-        public bool FügeVerknüpfungHinzu(Link verknüpfung)
-=======
         public bool AddLink(Link verknüpfung)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             return SQL.Insert("Links", new string[] { "User_id", "Game_id" }, new object[] { verknüpfung.User_id, verknüpfung.Game_id });
         }
 
-<<<<<<< HEAD
-        public void FügeVerknüpfungHinzu(List<Link> verknüpfungen)
-=======
         public void AddLink(List<Link> verknüpfungen)
->>>>>>> refs/remotes/origin/Datenhaltung
         {
             foreach (Link cur in verknüpfungen)
                 AddLink(cur);

@@ -48,11 +48,7 @@ namespace iScream
             this.game_id = -1;
         }
 
-<<<<<<< HEAD:iScream/Game.cs
-        public Game(string name, int spiel_id)
-=======
         public Game(string name, int game_id)
->>>>>>> refs/remotes/origin/Datenhaltung:iScream/Game.cs
         {
             this.name = name;
             this.game_id = game_id;

@@ -8,30 +8,30 @@ namespace iScream
 {
     public class Link
     {
-        private int nutzer_id;
-        public int Nutzer_id
+        private int user_id;
+        public int User_id
         {
-            get { return nutzer_id; }
-            set { nutzer_id = value; }
+            get { return user_id; }
+            set { user_id = value; }
         }
 
-        private int spiel_id;
-        public int Spiel_id
+        private int game_id;
+        public int Game_id
         {
-            get { return spiel_id; }
-            set { spiel_id = value; }
+            get { return game_id; }
+            set { game_id = value; }
         }
 
         public Link()
         {
-            nutzer_id = new int();
-            spiel_id = new int();
+            user_id = new int();
+            game_id = new int();
         }
 
-        public Link(int nutzer_id, int spiel_id)
+        public Link(int user_id, int game_id)
         {
-            this.nutzer_id = nutzer_id;
-            this.spiel_id = spiel_id;
+            this.user_id = user_id;
+            this.game_id = game_id;
         }
     }
 }

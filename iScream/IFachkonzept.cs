@@ -9,9 +9,9 @@ namespace iScream
     interface IFachkonzept
     {
         #region Details
-           
-        Container detailsUser (User user);
-        
+
+        Container detailsUser(User user);
+
         #endregion
 
         #region Create

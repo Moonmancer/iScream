@@ -9,29 +9,29 @@ namespace iScream
     public class User
     {
         #region Attributes
-        private string vorname;
-        public string Vorname
+        private string firstname;
+        public string Firstname
         {
             get
             {
-                return vorname;
+                return firstname;
             }
             set
             {
-                vorname = value;
+                firstname = value;
             }
         }
 
-        private string nachname;
-        public string Nachname
+        private string lastname;
+        public string Lastname
         {
             get
             {
-                return nachname;
+                return lastname;
             }
             set
             {
-                nachname = value;
+                lastname = value;
             }
         }
 
@@ -39,20 +39,20 @@ namespace iScream
         {
             get
             {
-                return Vorname + " " + Nachname;
+                return Firstname + " " + Lastname;
             }
         }
 
-        private int nutzer_id;
-        public int Nutzer_id
+        private int user_id;
+        public int User_id
         {
             get
             {
-                return nutzer_id;
+                return user_id;
             }
             set
             {
-                nutzer_id = value;
+                user_id = value;
             }
         }
         #endregion
@@ -63,17 +63,17 @@ namespace iScream
 
         }
 
-        public User(string vorname, string nachname)
+        public User(string firstname, string lastname)
         {
-            this.vorname = vorname;
-            this.nachname = nachname;
+            this.firstname = firstname;
+            this.lastname = lastname;
         }
 
-        public User(string vorname, string nachname, int nutzer_id)
+        public User(string firstname, string lastname, int user_id)
         {
-            this.vorname = vorname;
-            this.nachname = nachname;
-            this.nutzer_id = nutzer_id;
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.user_id = user_id;
         }
         #endregion
     }
