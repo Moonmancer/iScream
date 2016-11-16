@@ -29,22 +29,22 @@ namespace iScream
             return database.SpielDaten.Last().Spiel_id + 1;
         }
 
-        public Nutzer HoleNutzer(int nutzer_id)
+        public User HoleNutzer(int nutzer_id)
         {
             return database.NutzerDaten.Find(x => x.Nutzer_id == nutzer_id);
         }
 
-        public List<Nutzer> HoleNutzer()
+        public List<User> HoleNutzer()
         {
             return database.NutzerDaten;
         }
 
-        public Spiel HoleSpiel(int spiel_id)
+        public Game HoleSpiel(int spiel_id)
         {
             return database.SpielDaten.Find(x => x.Spiel_id == spiel_id);
         }
 
-        public List<Spiel> HoleSpiel()
+        public List<Game> HoleSpiel()
         {
             return database.SpielDaten;
         }
@@ -54,30 +54,30 @@ namespace iScream
             return database.Verknüpfungen;
         }
 
-        public List<Spiel> HoleSpieleVonNutzer(int nutzer_id)
+        public List<Game> HoleSpieleVonNutzer(int nutzer_id)
         {
-            List<Spiel> result = new List<Spiel>();
+            List<Game> result = new List<Game>();
             List<Verknüpfung> tmp = database.Verknüpfungen.FindAll(x => x.Nutzer_id == nutzer_id);
             foreach (Verknüpfung verknüpfung in tmp)
                 result.Add(HoleSpiel(verknüpfung.Spiel_id));
             return result;
         }
         #region HoleSpieleVonNutzer-Overloads
-        public List<Spiel> HoleSpieleVonNutzer(Nutzer nutzer)
+        public List<Game> HoleSpieleVonNutzer(User nutzer)
         {
             return HoleSpieleVonNutzer(nutzer.Nutzer_id);
         }
         #endregion
 
-        public List<Nutzer> HoleNutzerVonSpiel(int spiel_id)
+        public List<User> HoleNutzerVonSpiel(int spiel_id)
         {
-            List<Nutzer> result = new List<Nutzer>();
+            List<User> result = new List<User>();
             foreach (Verknüpfung verknüpfung in database.Verknüpfungen.FindAll(x => x.Spiel_id == spiel_id))
                 result.Add(HoleNutzer(verknüpfung.Nutzer_id));
             return result;
         }
         #region HoleNutzerVonSpiel-Overloads
-        public List<Nutzer> HoleNutzerVonSpiel(Spiel spiel)
+        public List<User> HoleNutzerVonSpiel(Game spiel)
         {
             return HoleNutzerVonSpiel(spiel.Spiel_id);
         }
@@ -87,10 +87,10 @@ namespace iScream
         #region Hinzufügen
         public bool FügeNutzerHinzu(string vorname, string nachname, int id)
         {
-            return FügeNutzerHinzu(new Nutzer(vorname, nachname, id));
+            return FügeNutzerHinzu(new User(vorname, nachname, id));
         }
 
-        public bool FügeNutzerHinzu(Nutzer nutzer)
+        public bool FügeNutzerHinzu(User nutzer)
         {
             if (!database.NutzerDaten.Exists(x => x.Nutzer_id == nutzer.Nutzer_id))
             {
@@ -102,18 +102,18 @@ namespace iScream
                 return false;
         }
 
-        public void FügeNutzerHinzu(List<Nutzer> nutzer)
+        public void FügeNutzerHinzu(List<User> nutzer)
         {
-            foreach (Nutzer cur in nutzer)
+            foreach (User cur in nutzer)
                 FügeNutzerHinzu(cur);
         }
 
         public bool FügeSpielHinzu(string name, int id)
         {
-            return FügeSpielHinzu(new Spiel(name, id));
+            return FügeSpielHinzu(new Game(name, id));
         }
 
-        public bool FügeSpielHinzu(Spiel spiel)
+        public bool FügeSpielHinzu(Game spiel)
         {
             if (!database.SpielDaten.Exists(x => x.Spiel_id == spiel.Spiel_id))
             {
@@ -126,9 +126,9 @@ namespace iScream
 
         }
 
-        public void FügeSpielHinzu(List<Spiel> spiele)
+        public void FügeSpielHinzu(List<Game> spiele)
         {
-            foreach (Spiel cur in spiele)
+            foreach (Game cur in spiele)
                 FügeSpielHinzu(cur);
         }
 
@@ -167,15 +167,15 @@ namespace iScream
     {
         private static string FILEPATH = Settings.CurrentSettings.XmlDatabaseLocation;
 
-        private List<Nutzer> nutzerDaten;
-        public List<Nutzer> NutzerDaten
+        private List<User> nutzerDaten;
+        public List<User> NutzerDaten
         {
             get { return nutzerDaten; }
             set { nutzerDaten = value; }
         }
 
-        private List<Spiel> spielDaten;
-        public List<Spiel> SpielDaten
+        private List<Game> spielDaten;
+        public List<Game> SpielDaten
         {
             get { return spielDaten; }
             set { spielDaten = value; }
@@ -192,8 +192,8 @@ namespace iScream
         {
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Settings.CurrentSettings.XmlDatabaseLocation));
 
-            nutzerDaten = new List<Nutzer>();
-            spielDaten = new List<Spiel>();
+            nutzerDaten = new List<User>();
+            spielDaten = new List<Game>();
             verknüpfungen = new List<Verknüpfung>();
         }
 

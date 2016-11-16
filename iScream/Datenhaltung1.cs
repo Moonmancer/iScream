@@ -26,22 +26,22 @@ namespace iScream
             throw new NotImplementedException();
         }
 
-        public Nutzer HoleNutzer(int nutzer_id)
+        public User HoleNutzer(int nutzer_id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Nutzer> HoleNutzer()
+        public List<User> HoleNutzer()
         {
             throw new NotImplementedException();
         }
 
-        public Spiel HoleSpiel(int spiel_id)
+        public Game HoleSpiel(int spiel_id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Spiel> HoleSpiel()
+        public List<Game> HoleSpiel()
         {
             throw new NotImplementedException();
         }
@@ -51,22 +51,22 @@ namespace iScream
             throw new NotImplementedException();
         }
 
-        public List<Spiel> HoleSpieleVonNutzer(int nutzer_id)
+        public List<Game> HoleSpieleVonNutzer(int nutzer_id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Spiel> HoleSpieleVonNutzer(Nutzer nutzer)
+        public List<Game> HoleSpieleVonNutzer(User nutzer)
         {
             throw new NotImplementedException();
         }
 
-        public List<Nutzer> HoleNutzerVonSpiel(int spiel_id)
+        public List<User> HoleNutzerVonSpiel(int spiel_id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Nutzer> HoleNutzerVonSpiel(Spiel spiel)
+        public List<User> HoleNutzerVonSpiel(Game spiel)
         {
             throw new NotImplementedException();
         }
@@ -78,12 +78,12 @@ namespace iScream
             throw new NotImplementedException();
         }
 
-        public bool FügeNutzerHinzu(Nutzer nutzer)
+        public bool FügeNutzerHinzu(User nutzer)
         {
             throw new NotImplementedException();
         }
 
-        public void FügeNutzerHinzu(List<Nutzer> nutzer)
+        public void FügeNutzerHinzu(List<User> nutzer)
         {
             throw new NotImplementedException();
         }
@@ -93,12 +93,12 @@ namespace iScream
             throw new NotImplementedException();
         }
 
-        public bool FügeSpielHinzu(Spiel spiel)
+        public bool FügeSpielHinzu(Game spiel)
         {
             throw new NotImplementedException();
         }
 
-        public void FügeSpielHinzu(List<Spiel> spiele)
+        public void FügeSpielHinzu(List<Game> spiele)
         {
             throw new NotImplementedException();
         }

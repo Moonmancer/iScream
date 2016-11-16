@@ -16,17 +16,17 @@ namespace iScream
 
         #region Create
 
-        bool createUser(Nutzer user);
-        bool createGame(Spiel game);
+        bool createUser(User user);
+        bool createGame(Game game);
 
         #endregion
 
         #region Delete
 
-        bool deleteUser(Nutzer user);
+        bool deleteUser(User user);
         bool deleteUser(int user_id);
 
-        bool deleteGame(Spiel game);
+        bool deleteGame(Game game);
         bool deleteGame(int spiel_id)
         #endregion
 

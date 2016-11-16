@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    public class Nutzer
+    public class User
     {
         #region Attributes
         private string vorname;
@@ -58,18 +58,18 @@ namespace iScream
         #endregion
 
         #region Constructors
-        public Nutzer()
+        public User()
         {
 
         }
 
-        public Nutzer(string vorname, string nachname)
+        public User(string vorname, string nachname)
         {
             this.vorname = vorname;
             this.nachname = nachname;
         }
 
-        public Nutzer(string vorname, string nachname, int nutzer_id)
+        public User(string vorname, string nachname, int nutzer_id)
         {
             this.vorname = vorname;
             this.nachname = nachname;

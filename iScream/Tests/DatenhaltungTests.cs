@@ -13,17 +13,17 @@ namespace iScream.Tests
 
         private static bool ReadLineAfterEachTest = true;
 
-        private static List<Nutzer> testnutzer = new List<Nutzer>
+        private static List<User> testnutzer = new List<User>
         {
-            new Nutzer("Klara","Himmel",1),
-            new Nutzer("Mike", "Rohsoft",2),
-            new Nutzer("Martin Router", "King", 3)
+            new User("Klara","Himmel",1),
+            new User("Mike", "Rohsoft",2),
+            new User("Martin Router", "King", 3)
         };
 
-        private static List<Spiel> testspiele = new List<Spiel>
+        private static List<Game> testspiele = new List<Game>
         {
-            new Spiel("Tetris", 1),
-            new Spiel("Minecraft", 2)
+            new Game("Tetris", 1),
+            new Game("Minecraft", 2)
         };
 
         public static List<Verknüpfung> testverknüpfungen = new List<Verknüpfung>
@@ -174,8 +174,8 @@ namespace iScream.Tests
             try
             {
                 Console.Write("Lade Daten...");
-                List<Nutzer> tmpNutzer = datenhaltung.HoleNutzer();
-                List<Spiel> tmpSpiele = datenhaltung.HoleSpiel();
+                List<User> tmpNutzer = datenhaltung.HoleNutzer();
+                List<Game> tmpSpiele = datenhaltung.HoleSpiel();
                 List<Verknüpfung> tmpVerknüpfung = datenhaltung.HoleVerknüpfung();
                 Console.WriteLine(" fertig.");
                 Next();

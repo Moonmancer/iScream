@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    public class Spiel
+    public class Game
     {
         #region Attributes
         private string name;
@@ -37,17 +37,17 @@ namespace iScream
         #endregion
 
         #region Constructors
-        public Spiel()
+        public Game()
         {
 
         }
 
-        public Spiel(string name)
+        public Game(string name)
         {
             this.name = name;
         }
 
-        public Spiel(string name, int spiel_id)
+        public Game(string name, int spiel_id)
         {
             this.name = name;
             this.spiel_id = spiel_id;

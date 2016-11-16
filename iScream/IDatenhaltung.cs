@@ -12,29 +12,29 @@ namespace iScream
         int HoleNächsteNutzer_id();
         int HoleNächsteSpiel_id();
 
-        Nutzer HoleNutzer(int nutzer_id);
-        List<Nutzer> HoleNutzer();
+        User HoleNutzer(int nutzer_id);
+        List<User> HoleNutzer();
 
-        Spiel HoleSpiel(int spiel_id);
-        List<Spiel> HoleSpiel();
+        Game HoleSpiel(int spiel_id);
+        List<Game> HoleSpiel();
 
         List<Verknüpfung> HoleVerknüpfung();
 
-        List<Spiel> HoleSpieleVonNutzer(int nutzer_id);
-        List<Spiel> HoleSpieleVonNutzer(Nutzer nutzer);
+        List<Game> HoleSpieleVonNutzer(int nutzer_id);
+        List<Game> HoleSpieleVonNutzer(User nutzer);
 
-        List<Nutzer> HoleNutzerVonSpiel(int spiel_id);
-        List<Nutzer> HoleNutzerVonSpiel(Spiel spiel);
+        List<User> HoleNutzerVonSpiel(int spiel_id);
+        List<User> HoleNutzerVonSpiel(Game spiel);
         #endregion
 
         #region Hinzufügen
         bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id);
-        bool FügeNutzerHinzu(Nutzer nutzer);
-        void FügeNutzerHinzu(List<Nutzer> nutzer);
+        bool FügeNutzerHinzu(User nutzer);
+        void FügeNutzerHinzu(List<User> nutzer);
 
         bool FügeSpielHinzu(string name, int spiel_id);
-        bool FügeSpielHinzu(Spiel spiel);
-        void FügeSpielHinzu(List<Spiel> spiele);
+        bool FügeSpielHinzu(Game spiel);
+        void FügeSpielHinzu(List<Game> spiele);
 
         bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id);
         bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung);
