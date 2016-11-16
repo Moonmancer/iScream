@@ -10,7 +10,7 @@ namespace iScream
     {
         #region Details
            
-        // container detailsUser (Nutzer user);
+        Container detailsUser (User user);
         
         #endregion
 
@@ -27,11 +27,13 @@ namespace iScream
         bool deleteUser(int user_id);
 
         bool deleteGame(Game game);
-        bool deleteGame(int spiel_id)
+        bool deleteGame(int game_id);
         #endregion
 
         #region Search
 
+        List<Game> searchGame(int game_id);
+        List<User> searchUser(int user_id);
         #endregion
 
     }

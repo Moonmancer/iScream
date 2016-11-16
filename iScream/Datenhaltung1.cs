@@ -46,7 +46,7 @@ namespace iScream
             throw new NotImplementedException();
         }
 
-        public List<Verknüpfung> HoleVerknüpfung()
+        public List<Link> HoleVerknüpfung()
         {
             throw new NotImplementedException();
         }
@@ -108,12 +108,12 @@ namespace iScream
             throw new NotImplementedException();
         }
 
-        public bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung)
+        public bool FügeVerknüpfungHinzu(Link verknüpfung)
         {
             throw new NotImplementedException();
         }
 
-        public void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen)
+        public void FügeVerknüpfungHinzu(List<Link> verknüpfungen)
         {
             throw new NotImplementedException();
         }

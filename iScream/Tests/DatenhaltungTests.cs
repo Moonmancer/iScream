@@ -26,13 +26,13 @@ namespace iScream.Tests
             new Game("Minecraft", 2)
         };
 
-        public static List<Verknüpfung> testverknüpfungen = new List<Verknüpfung>
+        public static List<Link> testverknüpfungen = new List<Link>
         {
-            new Verknüpfung(1,1),
-            new Verknüpfung(2,1),
-            new Verknüpfung(3,1),
-            new Verknüpfung(1,2),
-            new Verknüpfung(3,2)
+            new Link(1,1),
+            new Link(2,1),
+            new Link(3,1),
+            new Link(1,2),
+            new Link(3,2)
         };
 
         private static Datenhaltung1 datenhaltung1;
@@ -176,7 +176,7 @@ namespace iScream.Tests
                 Console.Write("Lade Daten...");
                 List<User> tmpNutzer = datenhaltung.HoleNutzer();
                 List<Game> tmpSpiele = datenhaltung.HoleSpiel();
-                List<Verknüpfung> tmpVerknüpfung = datenhaltung.HoleVerknüpfung();
+                List<Link> tmpVerknüpfung = datenhaltung.HoleVerknüpfung();
                 Console.WriteLine(" fertig.");
                 Next();
 

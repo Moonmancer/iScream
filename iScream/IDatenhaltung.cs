@@ -18,7 +18,7 @@ namespace iScream
         Game HoleSpiel(int spiel_id);
         List<Game> HoleSpiel();
 
-        List<Verknüpfung> HoleVerknüpfung();
+        List<Link> HoleVerknüpfung();
 
         List<Game> HoleSpieleVonNutzer(int nutzer_id);
         List<Game> HoleSpieleVonNutzer(User nutzer);
@@ -37,8 +37,8 @@ namespace iScream
         void FügeSpielHinzu(List<Game> spiele);
 
         bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id);
-        bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung);
-        void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen);
+        bool FügeVerknüpfungHinzu(Link verknüpfung);
+        void FügeVerknüpfungHinzu(List<Link> verknüpfungen);
         #endregion
 
         #region Löschen

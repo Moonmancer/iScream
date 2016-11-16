@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    public class Verknüpfung
+    public class Link
     {
         private int nutzer_id;
         public int Nutzer_id
@@ -22,13 +22,13 @@ namespace iScream
             set { spiel_id = value; }
         }
 
-        public Verknüpfung()
+        public Link()
         {
             nutzer_id = new int();
             spiel_id = new int();
         }
 
-        public Verknüpfung(int nutzer_id, int spiel_id)
+        public Link(int nutzer_id, int spiel_id)
         {
             this.nutzer_id = nutzer_id;
             this.spiel_id = spiel_id;

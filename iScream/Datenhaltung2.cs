@@ -49,7 +49,7 @@ namespace iScream
             return database.SpielDaten;
         }
 
-        public List<Verknüpfung> HoleVerknüpfung()
+        public List<Link> HoleVerknüpfung()
         {
             return database.Verknüpfungen;
         }
@@ -57,8 +57,8 @@ namespace iScream
         public List<Game> HoleSpieleVonNutzer(int nutzer_id)
         {
             List<Game> result = new List<Game>();
-            List<Verknüpfung> tmp = database.Verknüpfungen.FindAll(x => x.Nutzer_id == nutzer_id);
-            foreach (Verknüpfung verknüpfung in tmp)
+            List<Link> tmp = database.Verknüpfungen.FindAll(x => x.Nutzer_id == nutzer_id);
+            foreach (Link verknüpfung in tmp)
                 result.Add(HoleSpiel(verknüpfung.Spiel_id));
             return result;
         }
@@ -72,7 +72,7 @@ namespace iScream
         public List<User> HoleNutzerVonSpiel(int spiel_id)
         {
             List<User> result = new List<User>();
-            foreach (Verknüpfung verknüpfung in database.Verknüpfungen.FindAll(x => x.Spiel_id == spiel_id))
+            foreach (Link verknüpfung in database.Verknüpfungen.FindAll(x => x.Spiel_id == spiel_id))
                 result.Add(HoleNutzer(verknüpfung.Nutzer_id));
             return result;
         }
@@ -134,10 +134,10 @@ namespace iScream
 
         public bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id)
         {
-            return FügeVerknüpfungHinzu(new Verknüpfung(nutzer_id, spiel_id));
+            return FügeVerknüpfungHinzu(new Link(nutzer_id, spiel_id));
         }
 
-        public bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung)
+        public bool FügeVerknüpfungHinzu(Link verknüpfung)
         {
             if (!database.Verknüpfungen.Exists(x => x.Nutzer_id == verknüpfung.Nutzer_id && x.Spiel_id == verknüpfung.Spiel_id))
             {
@@ -149,9 +149,9 @@ namespace iScream
                 return false;
         }
 
-        public void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen)
+        public void FügeVerknüpfungHinzu(List<Link> verknüpfungen)
         {
-            foreach (Verknüpfung cur in verknüpfungen)
+            foreach (Link cur in verknüpfungen)
                 FügeVerknüpfungHinzu(cur.Nutzer_id, cur.Spiel_id);
         }
         #endregion
@@ -181,8 +181,8 @@ namespace iScream
             set { spielDaten = value; }
         }
 
-        private List<Verknüpfung> verknüpfungen;
-        public List<Verknüpfung> Verknüpfungen
+        private List<Link> verknüpfungen;
+        public List<Link> Verknüpfungen
         {
             get { return verknüpfungen; }
             set { verknüpfungen = value; }
@@ -194,7 +194,7 @@ namespace iScream
 
             nutzerDaten = new List<User>();
             spielDaten = new List<Game>();
-            verknüpfungen = new List<Verknüpfung>();
+            verknüpfungen = new List<Link>();
         }
 
         public bool Load()

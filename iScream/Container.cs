@@ -8,8 +8,15 @@ namespace iScream
 {
     class Container
     {
-        List<User> Users();
+        List<User> Users;
 
-        List<Game> Games();
+        List<Game> Games;
+
+        Container(List<User> users, List<Game> games)
+        {
+            this.Users = users;
+
+            this.Games = games;
+        }
     }
 }
