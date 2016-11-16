@@ -13,26 +13,26 @@ namespace iScream.Tests
 
         private static bool ReadLineAfterEachTest = true;
 
-        private static List<Nutzer> testnutzer = new List<Nutzer>
+        private static List<User> testnutzer = new List<User>
         {
-            new Nutzer("Mike", "Rohsoft"),//,1),
-            new Nutzer("Ann", "Droid"),//, 2),
-            new Nutzer("Sam","Sung")//,3)
+            new User("Mike", "Rohsoft"),//,1),
+            new User("Ann", "Droid"),//, 2),
+            new User("Sam","Sung")//,3)
         };
 
-        private static List<Spiel> testspiele = new List<Spiel>
+        private static List<Game> testspiele = new List<Game>
         {
-            new Spiel("Tetris"),//, 1),
-            new Spiel("Minecraft")//, 2)
+            new Game("Tetris"),//, 1),
+            new Game("Minecraft")//, 2)
         };
 
-        public static List<Verknüpfung> testverknüpfungen = new List<Verknüpfung>
+        public static List<Link> testverknüpfungen = new List<Link>
         {
-            new Verknüpfung(1,1),
-            new Verknüpfung(2,1),
-            new Verknüpfung(3,1),
-            new Verknüpfung(1,2),
-            new Verknüpfung(3,2)
+            new Link(1,1),
+            new Link(2,1),
+            new Link(3,1),
+            new Link(1,2),
+            new Link(3,2)
         };
 
         private static Datenhaltung1 datenhaltung1;
@@ -149,11 +149,11 @@ namespace iScream.Tests
             try
             {
                 Console.Write("Schreibe in Datenbank... ");
-                datenhaltung.FügeNutzerHinzu(testnutzer);
+                datenhaltung.AddUser(testnutzer);
 
-                datenhaltung.FügeSpielHinzu(testspiele);
+                datenhaltung.AddGame(testspiele);
 
-                datenhaltung.FügeVerknüpfungHinzu(testverknüpfungen);
+                datenhaltung.AddLink(testverknüpfungen);
 
                 Console.WriteLine("erfolg!");
                 successCount++;
@@ -174,9 +174,9 @@ namespace iScream.Tests
             try
             {
                 Console.Write("Lade Daten...");
-                List<Nutzer> tmpNutzer = datenhaltung.HoleNutzer();
-                List<Spiel> tmpSpiele = datenhaltung.HoleSpiel();
-                List<Verknüpfung> tmpVerknüpfung = datenhaltung.HoleVerknüpfung();
+                List<User> tmpNutzer = datenhaltung.GetUser();
+                List<Game> tmpSpiele = datenhaltung.GetGame();
+                List<Link> tmpVerknüpfung = datenhaltung.GetLink();
                 Console.WriteLine(" fertig.");
                 Next();
 
@@ -208,35 +208,35 @@ namespace iScream.Tests
                 #region Inhaltcheck
                 Console.WriteLine("Nutzer:");
                 for (int i = 0; i < testnutzer.Count; i++)
-                    if (tmpNutzer[i].Name != testnutzer[i].Name || tmpNutzer[i].Nutzer_id != testnutzer[i].Nutzer_id)
+                    if (tmpNutzer[i].Name != testnutzer[i].Name || tmpNutzer[i].User_id != testnutzer[i].User_id)
                     {
-                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Nutzer(" + tmpNutzer[i].Vorname + "," + tmpNutzer[i].Nachname + "," + tmpNutzer[i].Nutzer_id + "), gefordert: Nutzer(" + testnutzer[i].Vorname + "," + testnutzer[i].Nachname + "," + testnutzer[i].Nutzer_id + ")");
+                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Nutzer(" + tmpNutzer[i].Firstname + "," + tmpNutzer[i].Lastname + "," + tmpNutzer[i].User_id + "), gefordert: Nutzer(" + testnutzer[i].Firstname + "," + testnutzer[i].Lastname + "," + testnutzer[i].User_id + ")");
                         failed = true;
                     }
                     else
-                        Console.WriteLine("Datensatz korrekt! Nutzer(" + testnutzer[i].Vorname + "," + testnutzer[i].Nachname + "," + testnutzer[i].Nutzer_id + ")");
+                        Console.WriteLine("Datensatz korrekt! Nutzer(" + testnutzer[i].Firstname + "," + testnutzer[i].Lastname + "," + testnutzer[i].User_id + ")");
                 Next();
 
                 Console.WriteLine("Spiele:");
                 for (int i = 0; i < testspiele.Count; i++)
-                    if (tmpSpiele[i].Name != testspiele[i].Name || tmpSpiele[i].Spiel_id != testspiele[i].Spiel_id)
+                    if (tmpSpiele[i].Name != testspiele[i].Name || tmpSpiele[i].Game_id != testspiele[i].Game_id)
                     {
-                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Spiel(" + tmpSpiele[i].Name + "," + tmpSpiele[i].Spiel_id + "), gefordert: Spiel(" + testspiele[i].Name + "," + testspiele[i].Spiel_id + ")");
+                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Spiel(" + tmpSpiele[i].Name + "," + tmpSpiele[i].Game_id + "), gefordert: Spiel(" + testspiele[i].Name + "," + testspiele[i].Game_id + ")");
                         failed = true;
                     }
                     else
-                        Console.WriteLine("Datensatz korrekt! Spiel(" + testspiele[i].Name + "," + testspiele[i].Spiel_id + ")");
+                        Console.WriteLine("Datensatz korrekt! Spiel(" + testspiele[i].Name + "," + testspiele[i].Game_id + ")");
                 Next();
 
                 Console.WriteLine("Verknüpfungen:");
                 for (int i = 0; i < testverknüpfungen.Count; i++)
-                    if (tmpVerknüpfung[i].Nutzer_id != testverknüpfungen[i].Nutzer_id || tmpVerknüpfung[i].Spiel_id != testverknüpfungen[i].Spiel_id)
+                    if (tmpVerknüpfung[i].User_id != testverknüpfungen[i].User_id || tmpVerknüpfung[i].Game_id != testverknüpfungen[i].Game_id)
                     {
-                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Verknüpfung(" + tmpVerknüpfung[i].Nutzer_id + "," + tmpVerknüpfung[i].Spiel_id + "), gefordert: Verknüpfung(" + testverknüpfungen[i].Nutzer_id + "," + testverknüpfungen[i].Spiel_id + ")");
+                        Console.WriteLine("Daten stimmen nicht überein! Geladen: Verknüpfung(" + tmpVerknüpfung[i].User_id + "," + tmpVerknüpfung[i].Game_id + "), gefordert: Verknüpfung(" + testverknüpfungen[i].User_id + "," + testverknüpfungen[i].Game_id + ")");
                         failed = true;
                     }
                     else
-                        Console.WriteLine("Datensatz korrekt! Verknüpfung(" + testverknüpfungen[i].Nutzer_id + "," + testverknüpfungen[i].Spiel_id + ")");
+                        Console.WriteLine("Datensatz korrekt! Verknüpfung(" + testverknüpfungen[i].User_id + "," + testverknüpfungen[i].Game_id + ")");
                 Next();
 
                 if (failed)

@@ -8,67 +8,67 @@ namespace iScream
 {
     interface IDatenhaltung
     {
-        #region Holen
-        int HoleNächsteNutzer_id();
-        int HoleNächsteSpiel_id();
+        #region Get
+        int GetNextUser_id();
+        int GetNextGame_id();
 
-        Nutzer HoleNutzer(int nutzer_id);
-        List<Nutzer> HoleNutzer();
+        User GetUser(int user_id);
+        List<User> GetUser();
 
-        Spiel HoleSpiel(int spiel_id);
-        List<Spiel> HoleSpiel();
+        Game GetGame(int game_id);
+        List<Game> GetGame();
 
-        Verknüpfung HoleVerknüpfung(int nutzer_id, int spiel_id);
-        Verknüpfung HoleVerknüpfung(Verknüpfung verknüpfung);
-        List<Verknüpfung> HoleVerknüpfung();
+        Link GetLink(int user_id, int game_id);
+        Link GetLink(Link link);
+        List<Link> GetLink();
 
-        List<Spiel> HoleSpieleVonNutzer(int nutzer_id);
-        List<Spiel> HoleSpieleVonNutzer(Nutzer nutzer);
+        List<Game> GetGamesOfUser(int user_id);
+        List<Game> GetGamesOfUser(User user);
 
-        List<Nutzer> HoleNutzerVonSpiel(int spiel_id);
-        List<Nutzer> HoleNutzerVonSpiel(Spiel spiel);
+        List<User> GetUserOfGame(int game_id);
+        List<User> GetUserOfGame(Game game);
         #endregion
 
-        #region Hinzufügen
-        bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id);
-        bool FügeNutzerHinzu(string vorname, string nachname);
-        bool FügeNutzerHinzu(Nutzer nutzer);
-        void FügeNutzerHinzu(List<Nutzer> nutzer);
+        #region Add
+        bool AddUser(string firstname, string lastname, int user_id);
+        bool AddUser(string firstname, string lastname);
+        bool AddUser(User user);
+        void AddUser(List<User> user);
 
-        bool FügeSpielHinzu(string name, int spiel_id);
-        bool FügeSpielHinzu(string name);
-        bool FügeSpielHinzu(Spiel spiel);
-        void FügeSpielHinzu(List<Spiel> spiele);
+        bool AddGame(string name, int game_id);
+        bool AddGame(string name);
+        bool AddGame(Game game);
+        void AddGame(List<Game> games);
 
-        bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id);
-        bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung);
-        void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen);
+        bool AddLink(int user_id, int game_id);
+        bool AddLink(Link link);
+        void AddLink(List<Link> links);
         #endregion
 
-        #region Löschen
-        bool LöscheNutzer(int nutzer_id);
-        bool LöscheNutzer(Nutzer nutzer);
-        void LöscheNutzer(List<Nutzer> nutzer);
+        #region Delete
+        bool DeleteUser(int user_id);
+        bool DeleteUser(User user);
+        void DeleteUser(List<User> user);
 
-        bool LöscheSpiel(int spiel_id);
-        bool LöscheSpiel(Spiel spiel);
-        void LöscheSpiel(List<Spiel> spiele);
+        bool DeleteGame(int game_id);
+        bool DeleteGame(Game game);
+        void DeleteGame(List<Game> games);
 
-        bool LöscheVerknüpfung(int nutzer_id, int spiel_id);
-        bool LöscheVerknüpfung(Verknüpfung verknüpfung);
+        bool DeleteLink(int user_id, int game_id);
+        bool DeleteLink(Link link);
         #endregion
 
-        #region Ändern
-        bool ÄndereNutzer(int nutzer_id, string vorname, string nachname);
-        bool ÄndereNutzer(Nutzer nutzer);
+        #region Update
+        bool UpdateUser(int user_id, string firstname, string lastname);
+        bool UpdateUser(User user);
 
-        bool ÄndereSpiel(int spiel_id, string name);
-        bool ÄndereSpiel(Spiel spiel);
+        bool UpdateGame(int game_id, string name);
+        bool UpdateGame(Game game);
         #endregion
 
-        #region Suchen
-        List<Nutzer> SucheNutzer(string vorname, string nachname);
-        List<Spiel> SucheSpiel(string name);
+        #region Search
+        List<User> SearchUser(string firstname, string lastname);
+        List<Game> SearchGame(string name);
         #endregion
     }
 }

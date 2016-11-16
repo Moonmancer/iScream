@@ -17,357 +17,357 @@ namespace iScream
         }
 
         #region Holen
-        public int HoleNächsteNutzer_id()
+        public int GetNextUser_id()
         {
-            DataRowCollection rows = SQL.Select("TOP 1 Nutzer_id", "Nutzer", "", "Nutzer_id DESC");
+            DataRowCollection rows = SQL.Select("TOP 1 User_id", "[User]", "", "User_id DESC");
             if (rows.Count == 0)
                 return 1;
             else
-                return Convert.ToInt32(rows[0]["Nutzer_id"]) + 1;
+                return Convert.ToInt32(rows[0]["User_id"]) + 1;
         }
 
-        public int HoleNächsteSpiel_id()
+        public int GetNextGame_id()
         {
-            DataRowCollection rows = SQL.Select("TOP 1 Spiel_id", "Spiele", "", "Spiel_id DESC");
+            DataRowCollection rows = SQL.Select("TOP 1 Game_id", "Games", "", "Game_id DESC");
             if (rows.Count == 0)
                 return 1;
             else
-                return Convert.ToInt32(rows[0]["Spiel_id"]) + 1;
+                return Convert.ToInt32(rows[0]["Game_id"]) + 1;
         }
 
-        public Nutzer HoleNutzer(int nutzer_id)
+        public User GetUser(int user_id)
         {
-            DataRowCollection rows = SQL.Select("*", "Nutzer", "Nutzer_id = " + nutzer_id);
+            DataRowCollection rows = SQL.Select("*", "[User]", "User_id = " + user_id);
             if (rows.Count == 0)
                 return null;
             else
-                return new Nutzer(
-                    Convert.ToString(rows[0]["Vorname"]),
-                    Convert.ToString(rows[0]["Nachname"]),
-                    Convert.ToInt32(rows[0]["Nutzer_id"])
+                return new User(
+                    Convert.ToString(rows[0]["Firstname"]),
+                    Convert.ToString(rows[0]["Lastname"]),
+                    Convert.ToInt32(rows[0]["User_id"])
                 );
         }
 
-        public List<Nutzer> HoleNutzer()
+        public List<User> GetUser()
         {
-            DataRowCollection rows = SQL.Select("*", "Nutzer");
+            DataRowCollection rows = SQL.Select("*", "[User]");
             if (rows.Count == 0)
                 return null;
             else
             {
-                List<Nutzer> result = new List<Nutzer>();
+                List<User> result = new List<User>();
 
                 foreach (DataRow row in rows)
-                    result.Add(new Nutzer(
-                        Convert.ToString(row["Vorname"]),
-                        Convert.ToString(row["Nachname"]),
-                        Convert.ToInt32(row["Nutzer_id"])
+                    result.Add(new User(
+                        Convert.ToString(row["Firstname"]),
+                        Convert.ToString(row["Lastname"]),
+                        Convert.ToInt32(row["User_id"])
                     ));
                 return result;
             }
         }
 
-        public Spiel HoleSpiel(int spiel_id)
+        public Game GetGame(int game_id)
         {
-            DataRowCollection rows = SQL.Select("*", "Spiele", "Spiel_id = " + spiel_id);
+            DataRowCollection rows = SQL.Select("*", "Games", "Game_id = " + game_id);
             if (rows.Count == 0)
                 return null;
             else
-                return new Spiel(
+                return new Game(
                     Convert.ToString(rows[0]["Name"]),
-                    Convert.ToInt32(rows[0]["Spiel_id"])
+                    Convert.ToInt32(rows[0]["Game_id"])
                 );
         }
 
-        public List<Spiel> HoleSpiel()
+        public List<Game> GetGame()
         {
-            DataRowCollection rows = SQL.Select("*", "Spiele");
+            DataRowCollection rows = SQL.Select("*", "Games");
             if (rows.Count == 0)
                 return null;
             else
             {
-                List<Spiel> result = new List<Spiel>();
+                List<Game> result = new List<Game>();
 
                 foreach (DataRow row in rows)
-                    result.Add(new Spiel(
+                    result.Add(new Game(
                         Convert.ToString(row["Name"]),
-                        Convert.ToInt32(row["Spiel_id"])
+                        Convert.ToInt32(row["Game_id"])
                     ));
                 return result;
             }
         }
 
-        public Verknüpfung HoleVerknüpfung(int nutzer_id, int spiel_id)
+        public Link GetLink(int user_id, int game_id)
         {
-            DataRowCollection rows = SQL.Select("*", "Verknüpfungen", "Nutzer_id = " + nutzer_id + "AND Spiel_id = " + spiel_id);
+            DataRowCollection rows = SQL.Select("*", "Links", "User_id = " + user_id + "AND Game_id = " + game_id);
             if (rows.Count == 0)
                 return null;
             else
-                return new Verknüpfung(
-                    Convert.ToInt32(rows[0]["Nutzer_id"]),
-                    Convert.ToInt32(rows[0]["Spiel_id"])
+                return new Link(
+                    Convert.ToInt32(rows[0]["User_id"]),
+                    Convert.ToInt32(rows[0]["Game_id"])
                 );
         }
 
-        public Verknüpfung HoleVerknüpfung(Verknüpfung verknüpfung)
+        public Link GetLink(Link verknüpfung)
         {
-            return HoleVerknüpfung(verknüpfung.Nutzer_id, verknüpfung.Spiel_id);
+            return GetLink(verknüpfung.User_id, verknüpfung.Game_id);
         }
 
-        public List<Verknüpfung> HoleVerknüpfung()
+        public List<Link> GetLink()
         {
 
-            DataRowCollection rows = SQL.Select("*", "Verknüpfungen");
+            DataRowCollection rows = SQL.Select("*", "Links");
             if (rows.Count == 0)
                 return null;
             else
             {
-                List<Verknüpfung> result = new List<Verknüpfung>();
+                List<Link> result = new List<Link>();
 
                 foreach (DataRow row in rows)
-                    result.Add(new Verknüpfung(
-                        Convert.ToInt32(row["Nutzer_id"]),
-                        Convert.ToInt32(row["Spiel_id"])
+                    result.Add(new Link(
+                        Convert.ToInt32(row["User_id"]),
+                        Convert.ToInt32(row["Game_id"])
                     ));
                 return result;
             }
         }
 
-        public List<Spiel> HoleSpieleVonNutzer(int nutzer_id)
+        public List<Game> GetGamesOfUser(int user_id)
         {
-            DataRowCollection rows = SQL.Select("Spiel_id", "Verknüpfungen", "Nutzer_id = " + nutzer_id);
+            DataRowCollection rows = SQL.Select("Game_id", "Links", "User_id = " + user_id);
             if (rows.Count == 0)
                 return null;
             else
             {
-                List<Spiel> result = new List<Spiel>();
+                List<Game> result = new List<Game>();
 
                 foreach (DataRow row in rows)
-                    result.Add(HoleSpiel(Convert.ToInt32(row[0])));
+                    result.Add(GetGame(Convert.ToInt32(row[0])));
 
                 return result;
             }
         }
 
-        public List<Spiel> HoleSpieleVonNutzer(Nutzer nutzer)
+        public List<Game> GetGamesOfUser(User user)
         {
-            return HoleSpieleVonNutzer(nutzer.Nutzer_id);
+            return GetGamesOfUser(user.User_id);
         }
 
-        public List<Nutzer> HoleNutzerVonSpiel(int spiel_id)
+        public List<User> GetUserOfGame(int game_id)
         {
-            DataRowCollection rows = SQL.Select("Nutzer_id", "Verknüpfungen", "Spiel_id = " + spiel_id);
+            DataRowCollection rows = SQL.Select("User_id", "Links", "Game_id = " + game_id);
             if (rows.Count == 0)
                 return null;
             else
             {
-                List<Nutzer> result = new List<Nutzer>();
+                List<User> result = new List<User>();
 
                 foreach (DataRow row in rows)
-                    result.Add(HoleNutzer(Convert.ToInt32(row[0])));
+                    result.Add(GetUser(Convert.ToInt32(row[0])));
 
                 return result;
             }
         }
 
-        public List<Nutzer> HoleNutzerVonSpiel(Spiel spiel)
+        public List<User> GetUserOfGame(Game game)
         {
-            return HoleNutzerVonSpiel(spiel.Spiel_id);
+            return GetUserOfGame(game.Game_id);
         }
         #endregion
 
         #region Hinzufügen
-        public bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id)
+        public bool AddUser(string vorname, string nachname, int user_id)
         {
-            return FügeNutzerHinzu(new Nutzer(vorname, nachname, nutzer_id));
+            return AddUser(new User(vorname, nachname, user_id));
         }
 
-        public bool FügeNutzerHinzu(string vorname, string nachname)
+        public bool AddUser(string vorname, string nachname)
         {
-            return FügeNutzerHinzu(new Nutzer(vorname, nachname, HoleNächsteNutzer_id()));
+            return AddUser(new User(vorname, nachname, GetNextUser_id()));
         }
 
-        public bool FügeNutzerHinzu(Nutzer nutzer)
+        public bool AddUser(User user)
         {
-            if (nutzer.Nutzer_id == -1)
-                nutzer.Nutzer_id = HoleNächsteNutzer_id();
+            if (user.User_id == -1)
+                user.User_id = GetNextUser_id();
 
-            return SQL.Insert("Nutzer", new string[] { "Vorname", "Nachname", "Nutzer_id" }, new object[] { nutzer.Vorname, nutzer.Nachname, nutzer.Nutzer_id });
+            return SQL.Insert("[User]", new string[] { "Firstname", "Lastname", "User_id" }, new object[] { user.Firstname, user.Lastname, user.User_id });
         }
 
-        public void FügeNutzerHinzu(List<Nutzer> nutzer)
+        public void AddUser(List<User> user)
         {
-            foreach (Nutzer cur in nutzer)
-                FügeNutzerHinzu(cur);
+            foreach (User cur in user)
+                AddUser(cur);
         }
 
-        public bool FügeSpielHinzu(string name, int spiel_id)
+        public bool AddGame(string name, int game_id)
         {
-            return FügeSpielHinzu(new Spiel(name, spiel_id));
+            return AddGame(new Game(name, game_id));
         }
 
-        public bool FügeSpielHinzu(string name)
+        public bool AddGame(string name)
         {
-            return FügeSpielHinzu(new Spiel(name, HoleNächsteSpiel_id()));
+            return AddGame(new Game(name, GetNextGame_id()));
         }
 
-        public bool FügeSpielHinzu(Spiel spiel)
+        public bool AddGame(Game game)
         {
-            if (spiel.Spiel_id == -1)
-                spiel.Spiel_id = HoleNächsteSpiel_id();
+            if (game.Game_id == -1)
+                game.Game_id = GetNextGame_id();
 
-            return SQL.Insert("Spiele", new string[] { "Name", "Spiel_id" }, new object[] { spiel.Name, spiel.Spiel_id });
+            return SQL.Insert("Games", new string[] { "Name", "Game_id" }, new object[] { game.Name, game.Game_id });
         }
 
-        public void FügeSpielHinzu(List<Spiel> spiele)
+        public void AddGame(List<Game> spiele)
         {
-            foreach (Spiel cur in spiele)
-                FügeSpielHinzu(cur);
+            foreach (Game cur in spiele)
+                AddGame(cur);
         }
 
-        public bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id)
+        public bool AddLink(int user_id, int game_id)
         {
-            return FügeVerknüpfungHinzu(new Verknüpfung(nutzer_id, spiel_id));
+            return AddLink(new Link(user_id, game_id));
         }
 
-        public bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung)
+        public bool AddLink(Link verknüpfung)
         {
-            return SQL.Insert("Verknüpfungen", new string[] { "Nutzer_id", "Spiel_id" }, new object[] { verknüpfung.Nutzer_id, verknüpfung.Spiel_id });
+            return SQL.Insert("Links", new string[] { "User_id", "Game_id" }, new object[] { verknüpfung.User_id, verknüpfung.Game_id });
         }
 
-        public void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen)
+        public void AddLink(List<Link> verknüpfungen)
         {
-            foreach (Verknüpfung cur in verknüpfungen)
-                FügeVerknüpfungHinzu(cur);
+            foreach (Link cur in verknüpfungen)
+                AddLink(cur);
         }
         #endregion
 
         #region Löschen
-        public bool LöscheNutzer(int nutzer_id)
+        public bool DeleteUser(int user_id)
         {
-            if (Convert.ToInt32(SQL.Delete("Nutzer", "Nutzer_id = " + nutzer_id)) > 0)
+            if (Convert.ToInt32(SQL.Delete("[User]", "User_id = " + user_id)) > 0)
             {
-                SQL.Delete("Verknüpfungen", "Nutzer_id = " + nutzer_id);
+                SQL.Delete("Links", "User_id = " + user_id);
                 return true;
             }
             else
                 return false;
         }
 
-        public bool LöscheNutzer(Nutzer nutzer)
+        public bool DeleteUser(User user)
         {
-            return LöscheNutzer(nutzer.Nutzer_id);
+            return DeleteUser(user.User_id);
         }
 
-        public void LöscheNutzer(List<Nutzer> nutzer)
+        public void DeleteUser(List<User> user)
         {
-            foreach (Nutzer cur in nutzer)
-                LöscheNutzer(cur.Nutzer_id);
+            foreach (User cur in user)
+                DeleteUser(cur.User_id);
         }
 
-        public bool LöscheSpiel(int spiel_id)
+        public bool DeleteGame(int game_id)
         {
 
-            if (Convert.ToInt32(SQL.Delete("Spiele", "Spiel_id = " + spiel_id)) > 0)
+            if (Convert.ToInt32(SQL.Delete("Games", "Game_id = " + game_id)) > 0)
             {
-                SQL.Delete("Verknüpfungen", "Spiel_id = " + spiel_id);
+                SQL.Delete("Links", "Game_id = " + game_id);
                 return true;
             }
             else
                 return false;
         }
 
-        public bool LöscheSpiel(Spiel spiel)
+        public bool DeleteGame(Game game)
         {
-            return LöscheSpiel(spiel.Spiel_id);
+            return DeleteGame(game.Game_id);
         }
 
-        public void LöscheSpiel(List<Spiel> spiele)
+        public void DeleteGame(List<Game> spiele)
         {
-            foreach (Spiel cur in spiele)
-                LöscheNutzer(cur.Spiel_id);
+            foreach (Game cur in spiele)
+                DeleteUser(cur.Game_id);
         }
 
-        public bool LöscheVerknüpfung(int nutzer_id, int spiel_id)
+        public bool DeleteLink(int user_id, int game_id)
         {
-            return Convert.ToInt32(SQL.Delete("Verknüpfungen", "Nutzer_id = " + nutzer_id + " AND Spiel_id = " + spiel_id)) > 0;
+            return Convert.ToInt32(SQL.Delete("Links", "User_id = " + user_id + " AND Game_id = " + game_id)) > 0;
         }
 
-        public bool LöscheVerknüpfung(Verknüpfung verknüpfung)
+        public bool DeleteLink(Link verknüpfung)
         {
-            return LöscheVerknüpfung(verknüpfung.Nutzer_id, verknüpfung.Spiel_id);
+            return DeleteLink(verknüpfung.User_id, verknüpfung.Game_id);
         }
         #endregion
 
         #region Ändern
-        public bool ÄndereNutzer(int nutzer_id, string vorname, string nachname)
+        public bool UpdateUser(int user_id, string vorname, string nachname)
         {
-            if (SQL.Select("Nutzer_id", "Nutzer", "Nutzer_id = " + nutzer_id).Count == 0)
+            if (SQL.Select("User_id", "[User]", "User_id = " + user_id).Count == 0)
                 return false;
 
-            SQL.Update("Nutzer", new string[] { "Vorname", "Nachname" }, new object[] { vorname, nachname }, "Nutzer_id = " + nutzer_id);
+            SQL.Update("[User]", new string[] { "Firstname", "Lastname" }, new object[] { vorname, nachname }, "User_id = " + user_id);
 
             return true;
         }
 
-        public bool ÄndereNutzer(Nutzer nutzer)
+        public bool UpdateUser(User user)
         {
-            return ÄndereNutzer(nutzer.Nutzer_id, nutzer.Vorname, nutzer.Nachname);
+            return UpdateUser(user.User_id, user.Firstname, user.Lastname);
         }
 
 
-        public bool ÄndereSpiel(int spiel_id, string name)
+        public bool UpdateGame(int game_id, string name)
         {
-            if (SQL.Select("Spiel_id", "Spiele", "Spiel_id = " + spiel_id).Count > 0)
+            if (SQL.Select("Game_id", "Games", "Game_id = " + game_id).Count > 0)
                 return false;
 
-            SQL.Update("Spiele", new string[] { "Name" }, new object[] { name }, "Spiel_id = " + spiel_id);
+            SQL.Update("Games", new string[] { "Name" }, new object[] { name }, "Game_id = " + game_id);
 
             return true;
         }
 
-        public bool ÄndereSpiel(Spiel spiel)
+        public bool UpdateGame(Game game)
         {
-            return ÄndereSpiel(spiel.Spiel_id, spiel.Name);
+            return UpdateGame(game.Game_id, game.Name);
         }
         #endregion
 
         #region Suchen
-        public List<Nutzer> SucheNutzer(string vorname, string nachname)
+        public List<User> SearchUser(string vorname, string nachname)
         {
-            List<Nutzer> result = new List<Nutzer>();
+            List<User> result = new List<User>();
 
-            string cmdText = "SELECT * FROM Nutzer WHERE ";
+            string cmdText = "SELECT * FROM User WHERE ";
 
             if (!String.IsNullOrEmpty(vorname))
-                cmdText += "Vorname like '%" + vorname + "%'";
+                cmdText += "Firstname like '%" + vorname + "%'";
 
             if (!String.IsNullOrEmpty(nachname))
                 if (!String.IsNullOrEmpty(vorname))
-                    cmdText += " && Nachname like '%" + nachname + "%'";
+                    cmdText += " && Lastname like '%" + nachname + "%'";
                 else
-                    cmdText += "Nachname like '%" + nachname + "%'";
+                    cmdText += "Lastname like '%" + nachname + "%'";
 
             DataRowCollection rows = SQL.Select(cmdText);
 
             foreach (DataRow row in rows)
-                result.Add(new Nutzer(Convert.ToString(row["Vorname"]), Convert.ToString(row["Nachname"]), Convert.ToInt32(row["Nutzer_id"])));
+                result.Add(new User(Convert.ToString(row["Firstname"]), Convert.ToString(row["Lastname"]), Convert.ToInt32(row["User_id"])));
 
             return result;
         }
 
-        public List<Spiel> SucheSpiel(string name)
+        public List<Game> SearchGame(string name)
         {
-            List<Spiel> result = new List<Spiel>();
+            List<Game> result = new List<Game>();
 
-            string cmdText = "SELECT * FROM Spiele WHERE ";
+            string cmdText = "SELECT * FROM Games WHERE ";
             if (!String.IsNullOrEmpty(name))
                 cmdText += "Name like '%" + name + "%'";
 
             DataRowCollection rows = SQL.Select(cmdText);
 
             foreach (DataRow row in rows)
-                result.Add(new Spiel(Convert.ToString(row["Name"]), Convert.ToInt32(row["Nutzer_id"])));
+                result.Add(new Game(Convert.ToString(row["Name"]), Convert.ToInt32(row["User_id"])));
 
             return result;
         }
@@ -485,9 +485,9 @@ namespace iScream
                     "CREATE DATABASE [iScream]",
                     "CREATE TABLE [iScream].[dbo].[DBVersion]([Version] [varchar](50) NULL) ON [PRIMARY]",
                     "INSERT INTO [iScream].[dbo].[DBVersion] ([Version]) VALUES ('1.0')",
-                    "CREATE TABLE [iScream].[dbo].[Nutzer]([Nutzer_id] [int] NULL, [Vorname] [varchar](max) NULL, [Nachname] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[Spiele]([Spiel_id] [int] NULL, [Name] [varchar](max) NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[Verknüpfungen]([Nutzer_id] [int] NULL,[Spiel_id] [int] NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]"
+                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id),[Game_id] [int]  FOREIGN KEY REFERENCES Games(Game_id)) ON [PRIMARY]"
                 };
 
 

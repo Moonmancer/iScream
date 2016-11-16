@@ -18,106 +18,106 @@ namespace iScream
         }
 
         #region Holen
-        public int HoleNächsteNutzer_id()
+        public int GetNextUser_id()
         {
-            if (database.NutzerDaten.Count > 0)
-                return database.NutzerDaten.Last().Nutzer_id + 1;
+            if (database.UserData.Count > 0)
+                return database.UserData.Last().User_id + 1;
             else
                 return 1;
         }
 
-        public int HoleNächsteSpiel_id()
+        public int GetNextGame_id()
         {
-            if (database.SpielDaten.Count > 0)
-                return database.SpielDaten.Last().Spiel_id + 1;
+            if (database.GameData.Count > 0)
+                return database.GameData.Last().Game_id + 1;
             else
                 return 1;
         }
 
-        public Nutzer HoleNutzer(int nutzer_id)
+        public User GetUser(int user_id)
         {
-            return database.NutzerDaten.Find(x => x.Nutzer_id == nutzer_id);
+            return database.UserData.Find(x => x.User_id == user_id);
         }
 
-        public List<Nutzer> HoleNutzer()
+        public List<User> GetUser()
         {
-            return database.NutzerDaten;
+            return database.UserData;
         }
 
-        public Spiel HoleSpiel(int spiel_id)
+        public Game GetGame(int game_id)
         {
-            return database.SpielDaten.Find(x => x.Spiel_id == spiel_id);
+            return database.GameData.Find(x => x.Game_id == game_id);
         }
 
-        public List<Spiel> HoleSpiel()
+        public List<Game> GetGame()
         {
-            return database.SpielDaten;
+            return database.GameData;
         }
 
-        public Verknüpfung HoleVerknüpfung(int nutzer_id, int spiel_id)
+        public Link GetLink(int user_id, int game_id)
         {
             throw new NotImplementedException();
         }
 
-        public Verknüpfung HoleVerknüpfung(Verknüpfung verknüpfung)
+        public Link GetLink(Link link)
         {
             throw new NotImplementedException();
         }
 
-        public List<Verknüpfung> HoleVerknüpfung()
+        public List<Link> GetLink()
         {
-            return database.Verknüpfungen;
+            return database.Links;
         }
 
-        public List<Spiel> HoleSpieleVonNutzer(int nutzer_id)
+        public List<Game> GetGamesOfUser(int user_id)
         {
-            List<Spiel> result = new List<Spiel>();
-            List<Verknüpfung> tmp = database.Verknüpfungen.FindAll(x => x.Nutzer_id == nutzer_id);
-            foreach (Verknüpfung verknüpfung in tmp)
-                result.Add(HoleSpiel(verknüpfung.Spiel_id));
+            List<Game> result = new List<Game>();
+            List<Link> tmp = database.Links.FindAll(x => x.User_id == user_id);
+            foreach (Link link in tmp)
+                result.Add(GetGame(link.Game_id));
             return result;
         }
         #region HoleSpieleVonNutzer-Overloads
-        public List<Spiel> HoleSpieleVonNutzer(Nutzer nutzer)
+        public List<Game> GetGamesOfUser(User user)
         {
-            return HoleSpieleVonNutzer(nutzer.Nutzer_id);
+            return GetGamesOfUser(user.User_id);
         }
         #endregion
 
-        public List<Nutzer> HoleNutzerVonSpiel(int spiel_id)
+        public List<User> GetUserOfGame(int game_id)
         {
-            List<Nutzer> result = new List<Nutzer>();
-            foreach (Verknüpfung verknüpfung in database.Verknüpfungen.FindAll(x => x.Spiel_id == spiel_id))
-                result.Add(HoleNutzer(verknüpfung.Nutzer_id));
+            List<User> result = new List<User>();
+            foreach (Link link in database.Links.FindAll(x => x.Game_id == game_id))
+                result.Add(GetUser(link.User_id));
             return result;
         }
         #region HoleNutzerVonSpiel-Overloads
-        public List<Nutzer> HoleNutzerVonSpiel(Spiel spiel)
+        public List<User> GetUserOfGame(Game spiel)
         {
-            return HoleNutzerVonSpiel(spiel.Spiel_id);
+            return GetUserOfGame(spiel.Game_id);
         }
         #endregion
         #endregion
 
         #region Hinzufügen
-        public bool FügeNutzerHinzu(string vorname, string nachname, int nutzer_id)
+        public bool AddUser(string vorname, string nachname, int user_id)
         {
-            return FügeNutzerHinzu(new Nutzer(vorname, nachname, nutzer_id));
+            return AddUser(new User(vorname, nachname, user_id));
         }
 
-        public bool FügeNutzerHinzu(string vorname, string nachname)
+        public bool AddUser(string vorname, string nachname)
         {
-            return FügeNutzerHinzu(new Nutzer(vorname, nachname, HoleNächsteNutzer_id()));
+            return AddUser(new User(vorname, nachname, GetNextUser_id()));
         }
 
-        public bool FügeNutzerHinzu(Nutzer nutzer)
+        public bool AddUser(User user)
         {
-            if (nutzer.Nutzer_id == -1)
-                nutzer.Nutzer_id = HoleNächsteNutzer_id();
+            if (user.User_id == -1)
+                user.User_id = GetNextUser_id();
 
-            if (!database.NutzerDaten.Exists(x => x.Nutzer_id == nutzer.Nutzer_id))
+            if (!database.UserData.Exists(x => x.User_id == user.User_id))
             {
-                database.NutzerDaten.Add(nutzer);
+                database.UserData.Add(user);
                 database.Save();
                 return true;
             }
@@ -125,30 +125,30 @@ namespace iScream
                 return false;
         }
 
-        public void FügeNutzerHinzu(List<Nutzer> nutzer)
+        public void AddUser(List<User> user)
         {
-            foreach (Nutzer cur in nutzer)
-                FügeNutzerHinzu(cur);
+            foreach (User cur in user)
+                AddUser(cur);
         }
 
-        public bool FügeSpielHinzu(string name, int id)
+        public bool AddGame(string name, int id)
         {
-            return FügeSpielHinzu(new Spiel(name, id));
+            return AddGame(new Game(name, id));
         }
 
-        public bool FügeSpielHinzu(string name)
+        public bool AddGame(string name)
         {
-            return FügeSpielHinzu(new Spiel(name, HoleNächsteSpiel_id()));
+            return AddGame(new Game(name, GetNextGame_id()));
         }
 
-        public bool FügeSpielHinzu(Spiel spiel)
+        public bool AddGame(Game spiel)
         {
-            if (spiel.Spiel_id == -1)
-                spiel.Spiel_id = HoleNächsteSpiel_id();
+            if (spiel.Game_id == -1)
+                spiel.Game_id = GetNextGame_id();
 
-            if (!database.SpielDaten.Exists(x => x.Spiel_id == spiel.Spiel_id))
+            if (!database.GameData.Exists(x => x.Game_id == spiel.Game_id))
             {
-                database.SpielDaten.Add(spiel);
+                database.GameData.Add(spiel);
                 database.Save();
                 return true;
             }
@@ -157,22 +157,22 @@ namespace iScream
 
         }
 
-        public void FügeSpielHinzu(List<Spiel> spiele)
+        public void AddGame(List<Game> spiele)
         {
-            foreach (Spiel cur in spiele)
-                FügeSpielHinzu(cur);
+            foreach (Game cur in spiele)
+                AddGame(cur);
         }
 
-        public bool FügeVerknüpfungHinzu(int nutzer_id, int spiel_id)
+        public bool AddLink(int user_id, int game_id)
         {
-            return FügeVerknüpfungHinzu(new Verknüpfung(nutzer_id, spiel_id));
+            return AddLink(new Link(user_id, game_id));
         }
 
-        public bool FügeVerknüpfungHinzu(Verknüpfung verknüpfung)
+        public bool AddLink(Link link)
         {
-            if (!database.Verknüpfungen.Exists(x => x.Nutzer_id == verknüpfung.Nutzer_id && x.Spiel_id == verknüpfung.Spiel_id))
+            if (!database.Links.Exists(x => x.User_id == link.User_id && x.Game_id == link.Game_id))
             {
-                database.Verknüpfungen.Add(verknüpfung);
+                database.Links.Add(link);
                 database.Save();
                 return true;
             }
@@ -180,25 +180,25 @@ namespace iScream
                 return false;
         }
 
-        public void FügeVerknüpfungHinzu(List<Verknüpfung> verknüpfungen)
+        public void AddLink(List<Link> links)
         {
-            foreach (Verknüpfung cur in verknüpfungen)
-                FügeVerknüpfungHinzu(cur);
+            foreach (Link cur in links)
+                AddLink(cur);
         }
         #endregion
 
         #region Löschen
-        public bool LöscheNutzer(int nutzer_id)
+        public bool DeleteUser(int user_id)
         {
-            return LöscheNutzer(database.NutzerDaten.Find(x => x.Nutzer_id == nutzer_id));
+            return DeleteUser(database.UserData.Find(x => x.User_id == user_id));
         }
 
-        public bool LöscheNutzer(Nutzer nutzer)
+        public bool DeleteUser(User user)
         {
-            if (database.NutzerDaten.Remove(nutzer))
+            if (database.UserData.Remove(user))
             {
-                foreach (Verknüpfung cur in database.Verknüpfungen.FindAll(x => x.Nutzer_id == nutzer.Nutzer_id))
-                    LöscheVerknüpfung(cur);
+                foreach (Link cur in database.Links.FindAll(x => x.User_id == user.User_id))
+                    DeleteLink(cur);
                 database.Save();
 
                 return true;
@@ -206,22 +206,22 @@ namespace iScream
             else
                 return false;
         }
-        public void LöscheNutzer(List<Nutzer> nutzer)
+        public void DeleteUser(List<User> user)
         {
-            foreach (Nutzer cur in nutzer)
-                LöscheNutzer(cur);
+            foreach (User cur in user)
+                DeleteUser(cur);
         }
 
-        public bool LöscheSpiel(int spiel_id)
+        public bool DeleteGame(int game_id)
         {
-            return LöscheSpiel(database.SpielDaten.Find(x => x.Spiel_id == spiel_id));
+            return DeleteGame(database.GameData.Find(x => x.Game_id == game_id));
         }
-        public bool LöscheSpiel(Spiel spiel)
+        public bool DeleteGame(Game spiel)
         {
-            if (database.SpielDaten.Remove(spiel))
+            if (database.GameData.Remove(spiel))
             {
-                foreach (Verknüpfung cur in database.Verknüpfungen.FindAll(x => x.Spiel_id == spiel.Spiel_id))
-                    LöscheVerknüpfung(cur);
+                foreach (Link cur in database.Links.FindAll(x => x.Game_id == spiel.Game_id))
+                    DeleteLink(cur);
                 database.Save();
 
                 return true;
@@ -229,19 +229,19 @@ namespace iScream
             else
                 return false;
         }
-        public void LöscheSpiel(List<Spiel> spiele)
+        public void DeleteGame(List<Game> spiele)
         {
-            foreach (Spiel cur in spiele)
-                LöscheSpiel(cur);
+            foreach (Game cur in spiele)
+                DeleteGame(cur);
         }
 
-        public bool LöscheVerknüpfung(int nutzer_id, int spiel_id)
+        public bool DeleteLink(int user_id, int game_id)
         {
-            return LöscheVerknüpfung(database.Verknüpfungen.Find(x => x.Nutzer_id == nutzer_id && x.Spiel_id == spiel_id));
+            return DeleteLink(database.Links.Find(x => x.User_id == user_id && x.Game_id == game_id));
         }
-        public bool LöscheVerknüpfung(Verknüpfung verknüpfung)
+        public bool DeleteLink(Link link)
         {
-            if (database.Verknüpfungen.Remove(verknüpfung))
+            if (database.Links.Remove(link))
             {
                 database.Save();
 
@@ -254,12 +254,12 @@ namespace iScream
         #endregion
 
         #region Ändern
-        public bool ÄndereNutzer(int nutzer_id, string vorname, string nachname)
+        public bool UpdateUser(int user_id, string vorname, string nachname)
         {
             try
             {
-                database.NutzerDaten.Where(x => x.Nutzer_id == nutzer_id).First().Vorname = vorname;
-                database.NutzerDaten.Where(x => x.Nutzer_id == nutzer_id).First().Nachname = nachname;
+                database.UserData.Where(x => x.User_id == user_id).First().Firstname = vorname;
+                database.UserData.Where(x => x.User_id == user_id).First().Lastname = nachname;
                 database.Save();
 
                 return true;
@@ -269,16 +269,16 @@ namespace iScream
                 return false;
             }
         }
-        public bool ÄndereNutzer(Nutzer nutzer)
+        public bool UpdateUser(User user)
         {
-            return ÄndereNutzer(nutzer.Nutzer_id, nutzer.Vorname, nutzer.Nachname);
+            return UpdateUser(user.User_id, user.Firstname, user.Lastname);
         }
 
-        public bool ÄndereSpiel(int spiel_id, string name)
+        public bool UpdateGame(int game_id, string name)
         {
             try
             {
-                database.SpielDaten.Where(x => x.Spiel_id == spiel_id).First().Name = name;
+                database.GameData.Where(x => x.Game_id == game_id).First().Name = name;
                 database.Save();
 
                 return true;
@@ -288,27 +288,31 @@ namespace iScream
                 return false;
             }
         }
-        public bool ÄndereSpiel(Spiel spiel)
+        public bool UpdateGame(Game game)
         {
-            return ÄndereSpiel(spiel.Spiel_id, spiel.Name);
+            return UpdateGame(game.Game_id, game.Name);
         }
         #endregion
 
         #region Suchen
-        public List<Nutzer> SucheNutzer(string vorname, string nachname)
+        public List<User> SearchUser(string firstname, string lastname)
         {
-            if (String.IsNullOrEmpty(vorname) && String.IsNullOrEmpty(nachname))
-                return HoleNutzer();
-            else 
-                return database.NutzerDaten.FindAll(x => x.Vorname.Contains(vorname) && x.Nachname.Contains(nachname));
+            if (String.IsNullOrEmpty(firstname) && String.IsNullOrEmpty(lastname))
+                return GetUser();
+            else if (String.IsNullOrEmpty(firstname))
+                return database.UserData.FindAll(x => x.Lastname.Contains(lastname));
+            else if (String.IsNullOrEmpty(lastname))
+                return database.UserData.FindAll(x => x.Lastname.Contains(firstname));
+            else
+                return database.UserData.FindAll(x => x.Firstname.Contains(firstname) && x.Lastname.Contains(lastname));
         }
 
-        public List<Spiel> SucheSpiel(string name)
+        public List<Game> SearchGame(string name)
         {
             if (String.IsNullOrEmpty(name))
-                return HoleSpiel();
+                return GetGame();
             else
-                return database.SpielDaten.FindAll(x => x.Name.Contains(name));
+                return database.GameData.FindAll(x => x.Name.Contains(name));
         }
         #endregion
     }
@@ -317,34 +321,34 @@ namespace iScream
     {
         private static string FILEPATH = Settings.CurrentSettings.XmlDatabaseLocation;
 
-        private List<Nutzer> nutzerDaten;
-        public List<Nutzer> NutzerDaten
+        private List<User> userData;
+        public List<User> UserData
         {
-            get { return nutzerDaten; }
-            set { nutzerDaten = value; }
+            get { return userData; }
+            set { userData = value; }
         }
 
-        private List<Spiel> spielDaten;
-        public List<Spiel> SpielDaten
+        private List<Game> gameData;
+        public List<Game> GameData
         {
-            get { return spielDaten; }
-            set { spielDaten = value; }
+            get { return gameData; }
+            set { gameData = value; }
         }
 
-        private List<Verknüpfung> verknüpfungen;
-        public List<Verknüpfung> Verknüpfungen
+        private List<Link> links;
+        public List<Link> Links
         {
-            get { return verknüpfungen; }
-            set { verknüpfungen = value; }
+            get { return links; }
+            set { links = value; }
         }
 
         public XMLDatabase()
         {
             System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Settings.CurrentSettings.XmlDatabaseLocation));
 
-            nutzerDaten = new List<Nutzer>();
-            spielDaten = new List<Spiel>();
-            verknüpfungen = new List<Verknüpfung>();
+            userData = new List<User>();
+            gameData = new List<Game>();
+            links = new List<Link>();
         }
 
         public bool Load()
@@ -356,9 +360,9 @@ namespace iScream
                     XmlSerializer xs = new XmlSerializer(typeof(XMLDatabase));
                     XMLDatabase tmp = (XMLDatabase)xs.Deserialize(fs);
 
-                    this.nutzerDaten = tmp.nutzerDaten;
-                    this.spielDaten = tmp.spielDaten;
-                    this.verknüpfungen = tmp.verknüpfungen;
+                    this.userData = tmp.userData;
+                    this.gameData = tmp.gameData;
+                    this.links = tmp.links;
                 }
                 return true;
             }
