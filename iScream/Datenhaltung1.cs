@@ -191,7 +191,7 @@ namespace iScream
             if (user.User_id == -1)
                 user.User_id = GetNextUser_id();
 
-            if (!GetUser(user.User_id).Equals(null))
+            if (GetUser(user.User_id) != null)
                 return false;
             else
                 return SQL.Insert("[User]", new string[] { "Firstname", "Lastname", "User_id" }, new object[] { user.Firstname, user.Lastname, user.User_id });
@@ -217,7 +217,7 @@ namespace iScream
             if (game.Game_id == -1)
                 game.Game_id = GetNextGame_id();
 
-            if (!GetGame(game.Game_id).Equals(null) || SearchGame(game.Name).Count > 0)
+            if (GetGame(game.Game_id) != null || SearchGame(game.Name).Count > 0)
                 return false;
             else
                 return SQL.Insert("Games", new string[] { "Name", "Game_id" }, new object[] { game.Name, game.Game_id });
@@ -236,7 +236,7 @@ namespace iScream
 
         public bool AddLink(Link link)
         {
-            if (GetUser(link.User_id).Equals(null) || GetGame(link.User_id).Equals(null))
+            if (GetUser(link.User_id) == null || GetGame(link.Game_id) == null)
                 return false;
             else
                 return SQL.Insert("Links", new string[] { "User_id", "Game_id" }, new object[] { link.User_id, link.Game_id });
@@ -309,7 +309,7 @@ namespace iScream
         #region Ändern
         public bool UpdateUser(int user_id, string vorname, string nachname)
         {
-            if (!GetUser(user_id).Equals(null))
+            if (GetUser(user_id) == null)
                 return false;
 
             SQL.Update("[User]", new string[] { "Firstname", "Lastname" }, new object[] { vorname, nachname }, "User_id = " + user_id);
@@ -325,7 +325,7 @@ namespace iScream
 
         public bool UpdateGame(int game_id, string name)
         {
-            if (!GetGame(game_id).Equals(null))
+            if (GetGame(game_id) == null)
                 return false;
 
             SQL.Update("Games", new string[] { "Name" }, new object[] { name }, "Game_id = " + game_id);
