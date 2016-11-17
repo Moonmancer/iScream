@@ -33,10 +33,11 @@ namespace iScream
             {
                 new Link(2,1),
                 new Link(2,2),
-                new Link(3,1)
+                new Link(3,1),
+                new Link(3,2)
             };
 
-            IDatenhaltung dh = new Datenhaltung2();
+            IDatenhaltung dh = new Datenhaltung1();
 
             dh.AddUser(nutzers);
             dh.AddGame(spiele);
