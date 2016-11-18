@@ -254,7 +254,7 @@ namespace iScream
         {
             if (Convert.ToInt32(SQL.Delete("[User]", "User_id = " + user_id)) > 0)
             {
-                SQL.Delete("Links", "User_id = " + user_id);
+                //SQL.Delete("Links", "User_id = " + user_id);
                 return true;
             }
             else
@@ -277,7 +277,7 @@ namespace iScream
 
             if (Convert.ToInt32(SQL.Delete("Games", "Game_id = " + game_id)) > 0)
             {
-                SQL.Delete("Links", "Game_id = " + game_id);
+                //SQL.Delete("Links", "Game_id = " + game_id);
                 return true;
             }
             else
@@ -492,12 +492,12 @@ namespace iScream
                     "CREATE DATABASE [iScream]",
                     "CREATE TABLE [iScream].[dbo].[DBVersion]([Version] [varchar](50) NULL) ON [PRIMARY]",
                     "INSERT INTO [iScream].[dbo].[DBVersion] ([Version]) VALUES ('1.0')",
-                    //"CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
-                    //"CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL, [Name] [varchar](max) NULL) ON [PRIMARY]",
-                    //"CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id),[Game_id] [int]  FOREIGN KEY REFERENCES Games(Game_id)) ON [PRIMARY]"
-                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] NOT NULL,[Game_id] [int] NOT NULL) ON [PRIMARY]"
+                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    //"CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    //"CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id) ON DELETE CASCADE,[Game_id] [int] FOREIGN KEY REFERENCES Games(Game_id) ON DELETE CASCADE) ON [PRIMARY]"
+                    //"CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] NOT NULL,[Game_id] [int] NOT NULL) ON [PRIMARY]"
                 };
 
 

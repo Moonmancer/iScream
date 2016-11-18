@@ -39,8 +39,10 @@ namespace iScream
 
             IDatenhaltung dh = new Datenhaltung1();
 
+
             dh.AddUser(nutzers);
             dh.AddGame(spiele);
+            dh.AddLink(verknüpfungen);
 
             DisplayUsers(dh);
 
@@ -57,7 +59,6 @@ namespace iScream
             DisplayUsers(dh);
 
             Console.WriteLine();
-            dh.AddLink(verknüpfungen);
             DisplayLinks(dh);
 
             Console.WriteLine("\nLösche Nutzer 2...");
