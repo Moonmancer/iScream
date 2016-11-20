@@ -16,6 +16,7 @@ namespace iScream
         List<User> GetUser();
 
         Game GetGame(int game_id);
+        Game GetGame(string name);
         List<Game> GetGame();
 
         Link GetLink(int user_id, int game_id);

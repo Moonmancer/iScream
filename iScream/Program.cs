@@ -15,7 +15,7 @@ namespace iScream
 
             //Tests.DatenhaltungTests.Run(false);
 
-
+            /*
             List<User> nutzers = new List<User>
             {
                 new User("Mike", "Rohsoft"),
@@ -67,26 +67,36 @@ namespace iScream
             Console.WriteLine();
             DisplayLinks(dh);
 
-            Console.ReadLine();
+            Console.ReadLine();*/
+
+            DHTUI dhtui = new DHTUI(new Datenhaltung2());
+
+            dhtui.Run();
         }
-        public static void DisplayUsers(IDatenhaltung dh)
+
+        public static void DisplayUser(IDatenhaltung dh)
         {
             Console.WriteLine("Nutzer:");
             foreach (User nutzer in dh.GetUser())
                 Console.WriteLine("\tID: " + nutzer.User_id + "\tVorname: " + nutzer.Firstname + "\tNachname: " + nutzer.Lastname);
         }
 
-        public static void DisplayUser(IDatenhaltung dh, int nutzer_id)
+        public static void DisplayUser(IDatenhaltung dh, int user_id)
         {
-            User nutzer = dh.GetUser(nutzer_id);
-            Console.WriteLine("ID: " + nutzer.User_id + "\tVorname: " + nutzer.Firstname + "\tNachname: " + nutzer.Lastname);
+            User nutzer = dh.GetUser(user_id);
+            Console.WriteLine("ID: " + nutzer.User_id + "\n\tVorname: " + nutzer.Firstname + "\tNachname: " + nutzer.Lastname);
         }
 
-        public static void DisplayGames(IDatenhaltung dh)
+        public static void DisplayGame(IDatenhaltung dh)
         {
-            Console.WriteLine("Nutzer:");
-            foreach (User nutzer in dh.GetUser())
-                Console.WriteLine("\tID: " + nutzer.User_id + "\tVorname: " + nutzer.Firstname + "\tNachname: " + nutzer.Lastname);
+            Console.WriteLine("Spiele:");
+            foreach (Game game in dh.GetGame())
+                Console.WriteLine("\tID: " + game.Game_id + "\tname: " + game.Name);
+        }
+
+        public static void DisplayGame(IDatenhaltung dh, int game_id)
+        {
+            Console.WriteLine("ID: " + game_id + "\n\tname: " + dh.GetGame(game_id).Name);
         }
 
         public static void DisplayLinks(IDatenhaltung dh)
