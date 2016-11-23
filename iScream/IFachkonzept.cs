@@ -8,8 +8,8 @@ namespace iScream
 {
     interface IFachkonzept
     {
-
-        IFachkonzept(IDatenhaltung datenhaltung);
+        //doesnt work:
+        //IFachkonzept(IDatenhaltung datenhaltung);
 
         #region Details
 

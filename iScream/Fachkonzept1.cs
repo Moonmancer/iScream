@@ -10,30 +10,30 @@ namespace iScream
     {
 
         IDatenhaltung datenhaltung;
-        Fachkonzept1(IDatenhaltung datenhaltung)
+        public Fachkonzept1(IDatenhaltung datenhaltung)
         {
             this.datenhaltung = datenhaltung;
         }
 
         #region Details
 
-        Container detailsUser(User user)
+        public Container detailsUser(User user)
         {
             Container details;
-            List<User> users = new List<User>{user};
+            List<User> users = new List<User> { user };
             List<Game> games = new List<Game>();
 
             games = datenhaltung.GetGamesOfUser(user);
 
-            details = new Container( users , games); 
+            details = new Container(users, games);
 
             return details;
         }
-        Container detailsGame(Game game)
+        public Container detailsGame(Game game)
         {
             Container details;
             List<User> users = new List<User>();
-            List<Game> games = new List<Game>{game};
+            List<Game> games = new List<Game> { game };
 
             users = datenhaltung.GetUserOfGame(game);
 
@@ -46,11 +46,11 @@ namespace iScream
 
         #region Create
 
-        bool createUser(User user)
+        public bool createUser(User user)
         {
             return datenhaltung.AddUser(user);
         }
-        bool createGame(Game game)
+        public bool createGame(Game game)
         {
             return datenhaltung.AddGame(game);
         }
@@ -59,21 +59,21 @@ namespace iScream
 
         #region Delete
 
-        bool deleteUser(User user)
+        public bool deleteUser(User user)
         {
             return datenhaltung.DeleteUser(user);
         }
 
-        bool deleteUser(int user_id)
+        public bool deleteUser(int user_id)
         {
             return datenhaltung.DeleteUser(user_id);
         }
 
-        bool deleteGame(Game game)
+        public bool deleteGame(Game game)
         {
             return datenhaltung.DeleteGame(game);
         }
-        bool deleteGame(int game_id)
+        public bool deleteGame(int game_id)
         {
             return datenhaltung.DeleteGame(game_id);
         }
@@ -82,11 +82,11 @@ namespace iScream
 
         #region Search
 
-        List<Game> searchGame(String name)
+        public List<Game> searchGame(String name)
         {
             return datenhaltung.SearchGame(name);
         }
-        List<User> searchUser(String firstname , String lastname)
+        public List<User> searchUser(String firstname, String lastname)
         {
             return datenhaltung.SearchUser(firstname, lastname);
         }
