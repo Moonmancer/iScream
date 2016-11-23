@@ -218,7 +218,8 @@ namespace iScream
         {
             Console.WriteLine("Spiele von Nutzer anzeigen:");
             int userid = ShowUserSubMenu();
-            ShowGamesOfUser(userid);
+            if (userid != -1)
+                ShowGamesOfUser(userid);
         }
 
         private int ShowUserSubMenu()
@@ -300,19 +301,24 @@ namespace iScream
                 gameNames.Add(game.Name);
             }
 
+            gameIDs.Add("q");
+            gameNames.Add("q");
+
             switch (input)
             {
                 case '1':
                     Console.WriteLine("Spiel ID angeben:");
                     int gameid = -1;
-                    int.TryParse(GetInput(gameIDs), out gameid);
+                    string IDinput = GetInput(gameIDs);
+                    if (IDinput != "q")
+                        int.TryParse(IDinput, out gameid);
                     if (gameid <= 0)
                         return null;
                     return dh.GetGame(gameid);
                 case '2':
                     Console.WriteLine("Name angeben:");
                     string name = GetInput(gameNames);
-                    if (String.IsNullOrEmpty(name))
+                    if (String.IsNullOrEmpty(name) || name == "q")
                         return null;
                     else
                         return dh.GetGame(name);

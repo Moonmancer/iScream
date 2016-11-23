@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,68 +13,25 @@ namespace iScream
 
         static void Main(string[] args)
         {
-
-            //Tests.DatenhaltungTests.Run(false);
-
-            /*
-            List<User> nutzers = new List<User>
-            {
-                new User("Mike", "Rohsoft"),
-                new User("Ann", "Droid"),
-                new User("Sam", "Sung")
-            };
-
-            List<Game> spiele = new List<Game>
-            {
-                new Game("Tetris"),
-                new Game("Minecraft")
-            };
-
-            List<Link> verknüpfungen = new List<Link>
-            {
-                new Link(2,1),
-                new Link(2,2),
-                new Link(3,1),
-                new Link(3,2)
-            };
-
-            IDatenhaltung dh = new Datenhaltung1();
-
-
-            dh.AddUser(nutzers);
-            dh.AddGame(spiele);
-            dh.AddLink(verknüpfungen);
-
-            DisplayUsers(dh);
-
-            Console.WriteLine("\nÄndere Nutzer 1...");
-            dh.UpdateUser(1, "Maik", "Rosoft");
-
-            Console.WriteLine();
-            DisplayUsers(dh);
-
-            Console.WriteLine("\nLösche Nutzer 1...");
-            dh.DeleteUser(1);
-
-            Console.WriteLine();
-            DisplayUsers(dh);
-
-            Console.WriteLine();
-            DisplayLinks(dh);
-
-            Console.WriteLine("\nLösche Nutzer 2...");
-            dh.DeleteUser(2);
-
-            Console.WriteLine();
-            DisplayLinks(dh);
-
-            Console.ReadLine();*/
+            //Main should always start with Settings.Load()
+            Settings.Load();
 
             DHTUI dhtui = new DHTUI(new Datenhaltung2());
 
             dhtui.Run();
+
+            //Main should always end with Settings.Save()
+            Settings.Save();
         }
 
+        public static void CopyData(IDatenhaltung from, IDatenhaltung to)
+        {
+            to.AddUser(from.GetUser());
+            to.AddGame(from.GetGame());
+            to.AddLink(from.GetLink());
+        }
+
+        #region unused code to display data of IDatenhaltung
         public static void DisplayUser(IDatenhaltung dh)
         {
             Console.WriteLine("Nutzer:");
@@ -105,5 +63,6 @@ namespace iScream
             foreach (Link link in dh.GetLink())
                 Console.WriteLine("\tNutzer: " + dh.GetUser(link.User_id) + "\tSpiel: " + dh.GetGame(link.Game_id));
         }
+        #endregion
     }
 }

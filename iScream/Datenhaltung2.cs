@@ -274,7 +274,7 @@ namespace iScream
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -295,7 +295,7 @@ namespace iScream
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -331,7 +331,7 @@ namespace iScream
 
     public class XMLDatabase
     {
-        private static string FILEPATH = Settings.CurrentSettings.XmlDatabaseLocation;
+        private static string FILEPATH = Settings.XmlDatabaseLocation;
 
         private List<User> userData;
         public List<User> UserData
@@ -356,7 +356,7 @@ namespace iScream
 
         public XMLDatabase()
         {
-            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Settings.CurrentSettings.XmlDatabaseLocation));
+            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Settings.XmlDatabaseLocation));
 
             userData = new List<User>();
             gameData = new List<Game>();
@@ -378,7 +378,7 @@ namespace iScream
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

@@ -420,17 +420,17 @@ namespace iScream
         }
 
         #region Standardwerte
-        static string defaultServer = Settings.CurrentSettings.SqlServerLocation;
+        static string defaultServer = Settings.SqlInstance;
 
-        static string defaultDB = Settings.CurrentSettings.SqlDatabaseName;
+        static string defaultDB = Settings.SqlDatabaseName;
 
         static string defaultInstance;
 
-        static bool useWinAuth = Settings.CurrentSettings.UseWinAuth;
+        static bool useWinAuth = Settings.SqlUseWinAuth;
 
-        static string defaultUsername = Kryptographie.Entschlüsseln(Settings.CurrentSettings.SqlServerUsername);
+        static string defaultUsername = Kryptographie.Entschlüsseln(Settings.SqlUsername);
 
-        static string defaultPassword = Kryptographie.Entschlüsseln(Settings.CurrentSettings.SqlServerPassword);
+        static string defaultPassword = Kryptographie.Entschlüsseln(Settings.SqlPassword);
         #endregion
 
         static string CONNECTIONSTRING;
