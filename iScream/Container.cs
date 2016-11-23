@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    class Container
+    public class Container
     {
         List<User> Users;
 
         List<Game> Games;
 
-        Container(List<User> users, List<Game> games)
+        public Container(List<User> users, List<Game> games)
         {
             this.Users = users;
 

@@ -8,9 +8,13 @@ namespace iScream
 {
     interface IFachkonzept
     {
+
+        IFachkonzept(IDatenhaltung datenhaltung);
+
         #region Details
 
         Container detailsUser(User user);
+        Container detailsGame(Game game);
 
         #endregion
 
@@ -28,12 +32,14 @@ namespace iScream
 
         bool deleteGame(Game game);
         bool deleteGame(int game_id);
+
         #endregion
 
         #region Search
 
-        List<Game> searchGame(int game_id);
-        List<User> searchUser(int user_id);
+        List<Game> searchGame(String name);
+        List<User> searchUser(String firstname, String lastname);
+
         #endregion
 
     }
