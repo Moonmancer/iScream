@@ -17,7 +17,7 @@ namespace iScream
             database.Load();
         }
 
-        #region Holen
+        #region Get
         public int GetNextUser_id()
         {
             if (database.UserData.Count > 0)
@@ -49,6 +49,11 @@ namespace iScream
             return database.GameData.Find(x => x.Game_id == game_id);
         }
 
+        public Game GetGame(string name)
+        {
+            return database.GameData.Find(x => x.Name == name);
+        }
+
         public List<Game> GetGame()
         {
             return database.GameData;
@@ -56,12 +61,12 @@ namespace iScream
 
         public Link GetLink(int user_id, int game_id)
         {
-            throw new NotImplementedException();
+            return database.Links.Find(x => x.User_id == user_id && x.Game_id == game_id);
         }
 
         public Link GetLink(Link link)
         {
-            throw new NotImplementedException();
+            return GetLink(link.User_id, link.Game_id);
         }
 
         public List<Link> GetLink()
@@ -77,12 +82,11 @@ namespace iScream
                 result.Add(GetGame(link.Game_id));
             return result;
         }
-        #region HoleSpieleVonNutzer-Overloads
+
         public List<Game> GetGamesOfUser(User user)
         {
             return GetGamesOfUser(user.User_id);
         }
-        #endregion
 
         public List<User> GetUserOfGame(int game_id)
         {
@@ -91,15 +95,14 @@ namespace iScream
                 result.Add(GetUser(link.User_id));
             return result;
         }
-        #region HoleNutzerVonSpiel-Overloads
+
         public List<User> GetUserOfGame(Game game)
         {
             return GetUserOfGame(game.Game_id);
         }
         #endregion
-        #endregion
 
-        #region Hinzufügen
+        #region Add
         public bool AddUser(string vorname, string nachname, int user_id)
         {
             return AddUser(new User(vorname, nachname, user_id));
@@ -190,7 +193,7 @@ namespace iScream
         }
         #endregion
 
-        #region Löschen
+        #region Delete
         public bool DeleteUser(int user_id)
         {
             return DeleteUser(database.UserData.Find(x => x.User_id == user_id));
@@ -258,18 +261,20 @@ namespace iScream
         }
         #endregion
 
-        #region Ändern
+        #region Update
         public bool UpdateUser(int user_id, string vorname, string nachname)
         {
             try
             {
-                database.UserData.Where(x => x.User_id == user_id).First().Firstname = vorname;
-                database.UserData.Where(x => x.User_id == user_id).First().Lastname = nachname;
+                if (!String.IsNullOrEmpty(vorname))
+                    database.UserData.Where(x => x.User_id == user_id).First().Firstname = vorname;
+                if (!String.IsNullOrEmpty(nachname))
+                    database.UserData.Where(x => x.User_id == user_id).First().Lastname = nachname;
                 database.Save();
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -283,12 +288,14 @@ namespace iScream
         {
             try
             {
+                if (String.IsNullOrEmpty(name))
+                    return false;
                 database.GameData.Where(x => x.Game_id == game_id).First().Name = name;
                 database.Save();
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -299,7 +306,7 @@ namespace iScream
         }
         #endregion
 
-        #region Suchen
+        #region Search
         public List<User> SearchUser(string firstname, string lastname)
         {
             if (String.IsNullOrEmpty(firstname) && String.IsNullOrEmpty(lastname))
@@ -307,7 +314,7 @@ namespace iScream
             else if (String.IsNullOrEmpty(firstname))
                 return database.UserData.FindAll(x => x.Lastname.Contains(lastname));
             else if (String.IsNullOrEmpty(lastname))
-                return database.UserData.FindAll(x => x.Lastname.Contains(firstname));
+                return database.UserData.FindAll(x => x.Firstname.Contains(firstname));
             else
                 return database.UserData.FindAll(x => x.Firstname.Contains(firstname) && x.Lastname.Contains(lastname));
         }
@@ -324,7 +331,7 @@ namespace iScream
 
     public class XMLDatabase
     {
-        private static string FILEPATH = Settings.CurrentSettings.XmlDatabaseLocation;
+        private static string FILEPATH = Settings.XmlDatabaseLocation;
 
         private List<User> userData;
         public List<User> UserData
@@ -349,7 +356,7 @@ namespace iScream
 
         public XMLDatabase()
         {
-            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Settings.CurrentSettings.XmlDatabaseLocation));
+            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Settings.XmlDatabaseLocation));
 
             userData = new List<User>();
             gameData = new List<Game>();
@@ -371,7 +378,7 @@ namespace iScream
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

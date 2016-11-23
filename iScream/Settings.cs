@@ -1,109 +1,131 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace iScream
 {
-    public class Settings
+    public static class Settings
     {
-        private static Settings currentSettings;
-        [XmlIgnore]
-        public static Settings CurrentSettings
+        internal static string SettingsXmlPath = @".\iScream.cfg";
+
+        private static string sqlInstance = ".";
+        public static string SqlInstance
         {
-            get
-            {
-                if (currentSettings == null)
-                    return Load();
-                return currentSettings;
-            }
-            set { currentSettings = value; }
+            get { return sqlInstance; }
+            set { sqlInstance = value; }
         }
 
-        #region Datenhaltung1
-        private string sqlDatabaseName = "iScream";
-        public string SqlDatabaseName
+        private static string sqlDatabaseName = "iScream";
+        public static string SqlDatabaseName
         {
             get { return sqlDatabaseName; }
             set { sqlDatabaseName = value; }
         }
 
-        private string sqlServerLocation = ".";
-        public string SqlServerLocation
+        private static bool sqlUseWinAuth = true;
+        public static bool SqlUseWinAuth
         {
-            get { return sqlServerLocation; }
-            set { sqlServerLocation = value; }
+            get { return sqlUseWinAuth; }
+            set { sqlUseWinAuth = value; }
         }
 
-        private bool useWinAuth = true;
-        public bool UseWinAuth
+
+        private static string sqlUsername = Kryptographie.Verschlüsseln("sa");
+        public static string SqlUsername
         {
-            get { return useWinAuth; }
-            set { useWinAuth = value; }
+            get { return sqlUsername; }
+            set { sqlUsername = value; }
         }
 
-        private string sqlServerUsername = Kryptographie.Verschlüsseln("sa");
-        /// <summary>
-        /// Dieser Wert sollte mit der Kryptogrphie-Klasse Ver- und Entschlüsselt werden!
-        /// </summary>
-        public string SqlServerUsername
+        private static string sqlPassword;
+        public static string SqlPassword
         {
-            get { return sqlServerUsername; }
-            set { sqlServerUsername = value; }
+            get { return sqlPassword; }
+            set { sqlPassword = value; }
         }
 
-        private string sqlServerPassword;
-        /// <summary>
-        /// Dieser Wert sollte mit der Kryptogrphie-Klasse Ver- und Entschlüsselt werden!
-        /// </summary>
-        public string SqlServerPassword
-        {
-            get { return sqlServerPassword; }
-            set { sqlServerPassword = value; }
-        }
-        #endregion
-
-        #region Datenhaltung2
-        private string xmlDatabaseLocation = Path.Combine(Path.GetTempPath(), "iScream\\XMLDatabase.xml");
-        public string XmlDatabaseLocation
+        private static string xmlDatabaseLocation = System.IO.Path.Combine(System.IO.Path.GetTempPath(), @"iScream\XMLDatabase.xml");
+        public static string XmlDatabaseLocation
         {
             get { return xmlDatabaseLocation; }
             set { xmlDatabaseLocation = value; }
         }
-        #endregion
 
-        public event EventHandler<EventArgs> SettingsChanged;
-
-        public Settings() { }
-
-        public static Settings Load()
+        public static void Save()
         {
-            try
-            {
-                using (FileStream fs = new FileStream("iScream.cfg", FileMode.Open))
-                {
-                    XmlSerializer xs = new XmlSerializer(typeof(Settings));
-                    return (Settings)xs.Deserialize(fs);
-                }
-            }
-            catch (FileNotFoundException ex)
-            {
-                return new Settings();
-            }
+            DataSet ds = new DataSet("iScream");
+
+            DataTable dt = new DataTable("Settings");
+
+            System.Reflection.PropertyInfo[] props = typeof(Settings).GetProperties(System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+
+            foreach (System.Reflection.PropertyInfo pi in props)
+                dt.Columns.Add(pi.Name);
+
+            object[] data = new object[props.Length];
+
+            for (int i = 0; i < props.Length; i++)
+                if (props[i].Name != "XmlPath")
+                    data[i] = typeof(Settings).GetProperty(props[i].Name, System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public).GetValue(null, null);
+
+            dt.Rows.Add(data);
+            ds.Tables.Add(dt);
+
+            System.IO.File.WriteAllText(SettingsXmlPath, ds.GetXml());
         }
 
-        public void Save()
+        public static void Load()
         {
-            CurrentSettings = this;
-            using (FileStream fs = new FileStream("iScream.cfg", FileMode.Create))
+            DataTable dt = null;
+            string settingsString;
+
+            try
             {
-                XmlSerializer xs = new XmlSerializer(typeof(Settings));
-                xs.Serialize(fs, this);
+                settingsString = System.IO.File.ReadAllText(SettingsXmlPath);
+                dt = ToDataTable(settingsString);
+            }
+            catch (System.IO.FileNotFoundException) { }
+            catch (System.IO.DirectoryNotFoundException) { }
+
+            if (dt != null)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    foreach (DataColumn column in dt.Columns)
+                    {
+                        try
+                        {
+                            typeof(Settings).GetProperty(column.ColumnName, System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public).SetValue(null, row[column]);
+                        }
+                        catch { }
+                    }
+                }
+            }
+        }
+        internal static DataTable ToDataTable(string settingsString)
+        {
+            DataSet ds = null;
+            if (settingsString.Length > 0)
+            {
+                try
+                {
+                    ds = new DataSet();
+                    System.IO.TextReader tr = System.IO.TextReader.Null;
+                    settingsString = settingsString.Replace("\n", "");
+                    settingsString = settingsString.Replace("\r", "");
+                    System.Xml.XmlTextReader xmltr = new System.Xml.XmlTextReader(new System.IO.StringReader(settingsString));
+                    ds.ReadXml(xmltr);
+                }
+                catch
+                {
+                    ds = null;
+                }
             }
 
+            return ds.Tables["Settings"];
         }
     }
 }

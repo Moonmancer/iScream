@@ -16,7 +16,7 @@ namespace iScream
             SQL.Init();
         }
 
-        #region Holen
+        #region Get
         public int GetNextUser_id()
         {
             DataRowCollection rows = SQL.Select("TOP 1 User_id", "[User]", "", "User_id DESC");
@@ -70,6 +70,18 @@ namespace iScream
         public Game GetGame(int game_id)
         {
             DataRowCollection rows = SQL.Select("*", "Games", "Game_id = " + game_id);
+            if (rows.Count == 0)
+                return null;
+            else
+                return new Game(
+                    Convert.ToString(rows[0]["Name"]),
+                    Convert.ToInt32(rows[0]["Game_id"])
+                );
+        }
+
+        public Game GetGame(string name)
+        {
+            DataRowCollection rows = SQL.Select("*", "Games", "Name = " + name);
             if (rows.Count == 0)
                 return null;
             else
@@ -175,7 +187,7 @@ namespace iScream
         }
         #endregion
 
-        #region Hinzufügen
+        #region Add
         public bool AddUser(string vorname, string nachname, int user_id)
         {
             return AddUser(new User(vorname, nachname, user_id));
@@ -249,12 +261,12 @@ namespace iScream
         }
         #endregion
 
-        #region Löschen
+        #region Delete
         public bool DeleteUser(int user_id)
         {
             if (Convert.ToInt32(SQL.Delete("[User]", "User_id = " + user_id)) > 0)
             {
-                SQL.Delete("Links", "User_id = " + user_id);
+                //SQL.Delete("Links", "User_id = " + user_id);
                 return true;
             }
             else
@@ -277,7 +289,7 @@ namespace iScream
 
             if (Convert.ToInt32(SQL.Delete("Games", "Game_id = " + game_id)) > 0)
             {
-                SQL.Delete("Links", "Game_id = " + game_id);
+                //SQL.Delete("Links", "Game_id = " + game_id);
                 return true;
             }
             else
@@ -306,13 +318,27 @@ namespace iScream
         }
         #endregion
 
-        #region Ändern
+        #region Update
         public bool UpdateUser(int user_id, string vorname, string nachname)
         {
-            if (GetUser(user_id) == null)
+            if (GetUser(user_id) == null || (String.IsNullOrEmpty(vorname) && String.IsNullOrEmpty(nachname)))
                 return false;
 
-            SQL.Update("[User]", new string[] { "Firstname", "Lastname" }, new object[] { vorname, nachname }, "User_id = " + user_id);
+            List<string> cols = new List<string>();
+            List<object> values = new List<object>();
+
+            if (vorname != "")
+            {
+                cols.Add("Firstname");
+                values.Add(vorname);
+            }
+            if (nachname != "")
+            {
+                cols.Add("Lastname");
+                values.Add(nachname);
+            }
+
+            SQL.Update("[User]", cols.ToArray(), values.ToArray(), "User_id = " + user_id);
 
             return true;
         }
@@ -325,7 +351,7 @@ namespace iScream
 
         public bool UpdateGame(int game_id, string name)
         {
-            if (GetGame(game_id) == null)
+            if (GetGame(game_id) == null || String.IsNullOrEmpty(name))
                 return false;
 
             SQL.Update("Games", new string[] { "Name" }, new object[] { name }, "Game_id = " + game_id);
@@ -339,7 +365,7 @@ namespace iScream
         }
         #endregion
 
-        #region Suchen
+        #region Search
         public List<User> SearchUser(string vorname, string nachname)
         {
             List<User> result = new List<User>();
@@ -394,17 +420,17 @@ namespace iScream
         }
 
         #region Standardwerte
-        static string defaultServer = Settings.CurrentSettings.SqlServerLocation;
+        static string defaultServer = Settings.SqlInstance;
 
-        static string defaultDB = Settings.CurrentSettings.SqlDatabaseName;
+        static string defaultDB = Settings.SqlDatabaseName;
 
         static string defaultInstance;
 
-        static bool useWinAuth = Settings.CurrentSettings.UseWinAuth;
+        static bool useWinAuth = Settings.SqlUseWinAuth;
 
-        static string defaultUsername = Kryptographie.Entschlüsseln(Settings.CurrentSettings.SqlServerUsername);
+        static string defaultUsername = Kryptographie.Entschlüsseln(Settings.SqlUsername);
 
-        static string defaultPassword = Kryptographie.Entschlüsseln(Settings.CurrentSettings.SqlServerPassword);
+        static string defaultPassword = Kryptographie.Entschlüsseln(Settings.SqlPassword);
         #endregion
 
         static string CONNECTIONSTRING;
@@ -492,12 +518,12 @@ namespace iScream
                     "CREATE DATABASE [iScream]",
                     "CREATE TABLE [iScream].[dbo].[DBVersion]([Version] [varchar](50) NULL) ON [PRIMARY]",
                     "INSERT INTO [iScream].[dbo].[DBVersion] ([Version]) VALUES ('1.0')",
-                    //"CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
-                    //"CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
-                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL, [Name] [varchar](max) NULL) ON [PRIMARY]",
-                    //"CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id),[Game_id] [int]  FOREIGN KEY REFERENCES Games(Game_id)) ON [PRIMARY]"
-                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] NOT NULL,[Game_id] [int] NOT NULL) ON [PRIMARY]"
+                    "CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL PRIMARY KEY, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    //"CREATE TABLE [iScream].[dbo].[User]([User_id] [int] NOT NULL, [Firstname] [varchar](max) NULL, [Lastname] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL PRIMARY KEY, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    //"CREATE TABLE [iScream].[dbo].[Games]([Game_id] [int] NOT NULL, [Name] [varchar](max) NULL) ON [PRIMARY]",
+                    "CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] FOREIGN KEY REFERENCES [User](User_id) ON DELETE CASCADE,[Game_id] [int] FOREIGN KEY REFERENCES Games(Game_id) ON DELETE CASCADE) ON [PRIMARY]"
+                    //"CREATE TABLE [iScream].[dbo].[Links]([User_id] [int] NOT NULL,[Game_id] [int] NOT NULL) ON [PRIMARY]"
                 };
 
 
