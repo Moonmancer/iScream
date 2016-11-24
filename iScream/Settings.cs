@@ -28,7 +28,7 @@ namespace iScream
         }
 
 
-        private static string sqlUsername = Kryptographie.Verschlüsseln("sa");
+        private static string sqlUsername = Cryptography.Encrypt("sa");
         public static string SqlUsername
         {
             get { return sqlUsername; }

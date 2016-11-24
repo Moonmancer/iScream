@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    static class Kryptographie
+    static class Cryptography
     {
-        //für erstellung benutzt: http://www.unit-conversion.info/texttools/random-string-generator/
+        //used for creation: http://www.unit-conversion.info/texttools/random-string-generator/
         private static string Key = "x4j3gnnhos6hzxeq4kvsczp67i90q6c9"; //32 chars -> 256 bit
         private static string IV = "gikz1lwg0yiz70tm"; //16 chars -> 128 bit
 
-        public static string Entschlüsseln(string verschlüsselterText)
+        public static string Decrypt(string encryptedText)
         {
-            if (String.IsNullOrEmpty(verschlüsselterText))
+            if (String.IsNullOrEmpty(encryptedText))
                 return null;
 
-            byte[] encryptedbytes = Convert.FromBase64String(verschlüsselterText);
+            byte[] encryptedbytes = Convert.FromBase64String(encryptedText);
             AesCryptoServiceProvider acsp = new AesCryptoServiceProvider();
 
             acsp.BlockSize = 128;
@@ -37,12 +37,12 @@ namespace iScream
             return ASCIIEncoding.ASCII.GetString(encryptedBytes);
         }
 
-        public static string Verschlüsseln(string text)
+        public static string Encrypt(string decryptedText)
         {
-            if (String.IsNullOrEmpty(text))
+            if (String.IsNullOrEmpty(decryptedText))
                 return null;
 
-            byte[] textbytes = ASCIIEncoding.ASCII.GetBytes(text);
+            byte[] textbytes = ASCIIEncoding.ASCII.GetBytes(decryptedText);
             AesCryptoServiceProvider acsp = new AesCryptoServiceProvider();
 
             acsp.BlockSize = 128;

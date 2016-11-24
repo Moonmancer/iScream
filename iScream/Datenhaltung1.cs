@@ -426,9 +426,9 @@ namespace iScream
 
         static bool useWinAuth = Settings.SqlUseWinAuth;
 
-        static string defaultUsername = Kryptographie.Entschlüsseln(Settings.SqlUsername);
+        static string defaultUsername = Cryptography.Decrypt(Settings.SqlUsername);
 
-        static string defaultPassword = Kryptographie.Entschlüsseln(Settings.SqlPassword);
+        static string defaultPassword = Cryptography.Decrypt(Settings.SqlPassword);
         #endregion
 
         static string CONNECTIONSTRING;
