@@ -9,7 +9,7 @@ namespace iScream
 {
     public static class Settings
     {
-        internal static string SettingsXmlPath = @".\iScream.cfg";
+        internal static string SettingsXmlPath = @".\iScream.xml";
 
         private static string sqlInstance = ".";
         public static string SqlInstance

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatenhaltungExtras.cs" />
     <Compile Include="DHTUI.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="Datenhaltung1.cs" />
