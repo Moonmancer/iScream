@@ -49,7 +49,10 @@
     <Compile Include="Datenhaltung1.cs" />
     <Compile Include="Datenhaltung2.cs" />
     <Compile Include="Cryptography.cs" />
+    <Compile Include="ISort.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SortAscending.cs" />
+    <Compile Include="SortDescending.cs" />
     <Compile Include="Tests\DatenhaltungTests.cs" />
     <Compile Include="Fachkonzept1.cs" />
     <Compile Include="Fachkonzept2.cs" />
