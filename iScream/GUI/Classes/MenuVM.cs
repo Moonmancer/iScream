@@ -12,19 +12,21 @@ namespace iScream.GUI.Classes
     class MenuVM : PropertyNotify
     {
         private ContentControl _container;
+        private IFachkonzept _fachkonzept;
 
-        public MenuVM(ContentControl container)
+        public MenuVM(ContentControl container, IFachkonzept fachkonzept)
         {
             CloseApplicationCommand = new SimpleCommand(ExecuteCloseApplicationCommand);
             DisplayUserCommand = new SimpleCommand(ExecuteDisplayUserCommand);
             DisplayGameCommand = new SimpleCommand(ExecuteDisplayGameCommand);
             _container = container;
+            _fachkonzept = fachkonzept;
         }
         private void ExecuteDisplayUserCommand(object obj)
         {
             //View DisplayUser
             var control = new UserDisplay();
-            control.DataContext = new DisplayUserVM(_container);
+            control.DataContext = new DisplayUserVM(_container, _fachkonzept);
             _container.Content = control;
         }
 
@@ -32,7 +34,7 @@ namespace iScream.GUI.Classes
         {
             //View DisplayGroup
             var control = new GameDisplay();
-            control.DataContext = new DisplayGameVM(_container);
+            control.DataContext = new DisplayGameVM(_container, _fachkonzept);
             _container.Content = control;
         }
         
@@ -46,5 +48,4 @@ namespace iScream.GUI.Classes
         public ICommand DisplayGameCommand { get; private set; }
 
     }
-}
 }
