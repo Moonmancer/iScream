@@ -1,0 +1,7 @@
+1.2 Allgemein: Unser Design-Pattern
+
+	Wir haben uns für das Strategy-Pattern entschieden.
+	Hierbei handelt es sich um ein verhaltensmuseter, welche eine Familie von Algorithmen definiert
+
+	Dabei werden Klassen mit unterschiedlichem Verhalten , durch eine Schnittstelle angesprochen.
+	Dies erlaubt uns das verhlaten zur laufzeit zu verändern.
