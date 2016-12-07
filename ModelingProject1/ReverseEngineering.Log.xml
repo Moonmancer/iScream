@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Codegenerierungs-/Texttransformationsprotokoll">
+  <MessageClass Name="Message" Label="Meldung" Option="Informationsmeldungen anzeigen" />
+  <MessageClass Name="Warning" Label="Warnung" Option="Warnungen anzeigen" />
+  <MessageClass Name="Error" Label="Fehler" Option="Fehler anzeigen" />
+  <MessageClass Name="Property" Label="Eigenschaft" Option="Metadaten anzeigen" />
+  <MessageClass Name="Diagnostic" Label="Meldung" Option="Diagnosemeldungen anzeigen" />
+  <Message Timestamp="2016-12-07T09:26:47" Importance="High" Text="Reverse Engineering gestartet." />
+  <Error Timestamp="2016-12-07T09:26:57" Importance="High" Text="Reverse Engineering-Prozess für Die Länge darf nicht kleiner als 0 (null) sein.&#xD;&#xA;Parametername: length wurde angehalten." />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'de4e398f-b5e7-4043-858e-831cbad8b7d4' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream' -  (Package)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Medium" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container' -  (Class)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container::Container' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container::Container::games' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container::Container::users' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container::Game' -  (Property)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container::Games' -  (Property)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container::User' -  (Property)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Container::Users' -  (Property)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Medium" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Cryptography' -  (Class)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Cryptography::Decrypt' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Cryptography::Decrypt::encryptedText' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Cryptography::Encrypt' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Cryptography::Encrypt::decryptedText' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Cryptography::IV' -  (Property)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Cryptography::Key' -  (Property)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::Datenhaltung1' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetGame' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetGame::game_id' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetGame::name' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetLink' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetLink::game_id' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetLink::user_id' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetNextGame_id' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetNextUser_id' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetUser' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Datenhaltung1::GetUser::user_id' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Medium" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI' -  (Class)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::AllGames' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::AllUsers' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::dh' -  (Property)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::DHTUI' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::DHTUI::dh' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::GameDetails' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::GameDetails::game' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::GetInput' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::GetInput::allowedChars' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::GetInput::allowedStrings' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::GetInputBlacklist' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::GetInputBlacklist::blacklist' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::Run' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::SearchUser' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::SearchUser::firstname' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::SearchUser::lastname' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowAddGameMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowAddLinkMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowAddMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowAddUserMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowDeleteMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowGamesOfUser' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowGamesOfUser::userid' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowGameSubMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowMainMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowShowGameMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowShowGamesOfUserMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowShowUserMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowShowUserOfGamesMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowUpdateMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowUserOfGame' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowUserOfGame::game' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::ShowUserSubMenu' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::UserDetails' -  (Operation)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::DHTUI::UserDetails::user' -  (Parameter)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Game' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::IDatenhaltung' -  (Interface) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::Link' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::iScream::User' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System' -  (Package)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Char' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Collections::Generic::List' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Collections::Generic::List&lt;Char‎&gt;' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Collections::Generic::List&lt;Game‎&gt;' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Collections::Generic::List&lt;String‎&gt;' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'ModelingProject1::System::Collections::Generic::List&lt;User‎&gt;' -  (Class) (Reverse Engineering teilweise durchgeführt - Definition nicht aktualisiert) " />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering des Elements in das UML-Modell: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering der Beziehung in das UML-Modell: ModelingProject1::iScream::Container nach ModelingProject1::iScream::Game (Association)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="Diagnostic" Text="Reverse Engineering der Beziehung in das UML-Modell: ModelingProject1::iScream::Container nach ModelingProject1::iScream::User (Association)" />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="High" Text="Vollständiges Reverse Engineering für (3) Type(n)." />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="High" Text="Reverse Engineering für (11) Type(n) teilweise durchgeführt. Diese Typen waren nicht in der ursprünglichen Auswahl enthalten, sodass kein Reverse Engineering für deren vollständige Definitionen durchgeführt wurde. Stattdessen wurde bei diesem oberflächlichen Vorgang lediglich sichergestellt, dass diese Typen im UML-Modell vorhanden sind, da diese erforderlich sind, um andere Elemente vollständig zu beschreiben." />
+  <Message Timestamp="2016-12-07T09:26:58" Importance="High" Text="Der Reverse Engineering-Vorgang wurde mit (1) Fehler(n) und (0) Warnung(en) abgeschlossen." />
+</Log>
