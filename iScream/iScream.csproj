@@ -55,15 +55,20 @@
     <Compile Include="Cryptography.cs" />
     <Compile Include="GUI\Classes\DisplayGameVM.cs" />
     <Compile Include="GUI\Classes\DisplayUserVM.cs" />
+    <Compile Include="GUI\Classes\GameAddUserVM.cs" />
     <Compile Include="GUI\Classes\GameAddVM.cs" />
     <Compile Include="GUI\Classes\GameDetailVM.cs" />
     <Compile Include="GUI\Classes\GameSearchVM.cs" />
     <Compile Include="GUI\Classes\PropertyNotify.cs" />
+    <Compile Include="GUI\Classes\UserAddGameVM.cs" />
     <Compile Include="GUI\Classes\UserAddVM.cs" />
     <Compile Include="GUI\Classes\UserDetailVM.cs" />
     <Compile Include="GUI\Classes\UserSearchVM.cs" />
     <Compile Include="GUI\GameAdd.xaml.cs">
       <DependentUpon>GameAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GameAddUser.xaml.cs">
+      <DependentUpon>GameAddUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\GameDetails.xaml.cs">
       <DependentUpon>GameDetails.xaml</DependentUpon>
@@ -84,6 +89,9 @@
     <Compile Include="GUI\Classes\SimpleCommand.cs" />
     <Compile Include="GUI\UserAdd.xaml.cs">
       <DependentUpon>UserAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserAddGames.xaml.cs">
+      <DependentUpon>UserAddGames.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserDetails.xaml.cs">
       <DependentUpon>UserDetails.xaml</DependentUpon>
@@ -121,6 +129,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\GameAddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\GameDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\UserAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\UserAddGames.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
