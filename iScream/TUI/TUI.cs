@@ -19,6 +19,13 @@ namespace iScream.TUI
             MainMenu();
         }
 
+        public void Run()
+        {
+            //Console.Clear();
+
+            MainMenu();
+        }
+
         public void MainMenu()
         {
             Console.Clear();
@@ -28,7 +35,7 @@ namespace iScream.TUI
             Console.WriteLine(" Nutzer suchen \t \t \t (b)");
             Console.WriteLine(" Nutzer hinzufügen \t \t (c)");
             Console.WriteLine(" Nutzer bearbeiten \t \t (d)");
-            Console.WriteLine(" Nutzer löschen \t \t \t (e)");
+            Console.WriteLine(" Nutzer löschen \t \t (e)");
             Console.WriteLine(" --------------------------------------");
             Console.WriteLine(" Spiele anzeigen \t \t (f)");
             Console.WriteLine(" Spiel suchen \t \t \t (g)");
@@ -40,7 +47,7 @@ namespace iScream.TUI
             Console.WriteLine(" Beziehung löschen \t \t (l)");
             Console.WriteLine(" Beenden \t \t \t (x)");
 
-            Console.WindowWidth = 40;
+            Console.WindowWidth = 60;
 
             var auswahl = Convert.ToChar(Console.ReadLine());
 
@@ -112,12 +119,15 @@ namespace iScream.TUI
             foreach (var user in userList)
             {
                 Console.WriteLine("Die ausgewählten Userdaten:");
-                Console.WriteLine(user.Name + "\r" + user.User_id + "\n");
+                Console.WriteLine(user.Lastname + " " + user.Firstname + " " + user.User_id + "\n");
             }
             Console.WriteLine("Beenden \t \t (x)");
+            
             var end = Convert.ToChar(Console.ReadLine());
             if (end == 'x')
+            {
                 MainMenu();
+            }
 
         }
 
@@ -133,7 +143,7 @@ namespace iScream.TUI
             foreach (var user in userList)
             {
                 Console.WriteLine("Die ausgewählten Userdaten:");
-                Console.WriteLine(user.Name + "\r" + user.User_id + "\n");
+                Console.WriteLine(user.Name + " " + user.User_id + "\n");
             }
             Console.WriteLine("Beenden \t \t (x)");
             var end = Convert.ToChar(Console.ReadLine());
@@ -202,7 +212,7 @@ namespace iScream.TUI
             foreach (var game in gameList)
             {
                 Console.WriteLine("Die ausgewählten Userdaten:");
-                Console.WriteLine(game.Name + "\r" + game.Game_id + "\n");
+                Console.WriteLine(game.Name + " " + game.Game_id + "\n");
             }
             Console.WriteLine("Beenden \t \t (x)");
             var end = Convert.ToChar(Console.ReadLine());
@@ -219,7 +229,7 @@ namespace iScream.TUI
             foreach (var game in gameList)
             {
                 Console.WriteLine("Die ausgewählten Userdaten:");
-                Console.WriteLine(game.Name + "\r" + game.Game_id);
+                Console.WriteLine(game.Name + " " + game.Game_id);
             }
             Console.WriteLine("Beenden \t \t (x)");
             var end = Convert.ToChar(Console.ReadLine());

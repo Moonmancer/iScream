@@ -20,9 +20,12 @@ namespace iScream
             DatenhaltungExtras.ImportCSV(".\\iScreamExport", new Datenhaltung2());
 
             Datenhaltung2 dh2 = new Datenhaltung2();
-            DHTUI dhtui = new DHTUI(dh2);
+            Fachkonzept1 fh1 = new Fachkonzept1(dh2);
+            //DHTUI dhtui = new DHTUI(dh2);
+            TUI.TUI tuitest = new TUI.TUI(fh1, dh2);
 
-            dhtui.Run();
+            tuitest.Run();
+            //dhtui.Run();
 
             //Main should always end with Settings.Save()
             DatenhaltungExtras.ExportCSV(dh2, ".\\iScreamExport");
