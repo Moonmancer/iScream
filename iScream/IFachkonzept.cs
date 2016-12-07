@@ -22,6 +22,7 @@ namespace iScream
 
         bool createUser(User user);
         bool createGame(Game game);
+        bool createLink(Link link);
 
         #endregion
 
@@ -33,6 +34,8 @@ namespace iScream
         bool deleteGame(Game game);
         bool deleteGame(int game_id);
 
+        bool deleteLink(Link link);
+        bool deleteLink(int user_id, int game_id);
         #endregion
 
         #region Search
