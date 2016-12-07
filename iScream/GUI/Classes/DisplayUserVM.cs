@@ -27,7 +27,7 @@ namespace iScream.GUI.Classes
             DetailCommand = new SimpleCommand(ExecuteDetailCommand);
             _container = container;
             _fachkonzept = fachkonzept;
-            //DisplayedList = _fachkonzept. //TODO: Alle User ausgeben!
+            DisplayedList = _fachkonzept.getUsers();
         }
 
         public string Firstname
@@ -93,18 +93,16 @@ namespace iScream.GUI.Classes
 
         private void ExecuteDetailCommand(object obj)
         {
-            var userDetailWin = new UserDetailVM(SelectedItem);
+            var userDetailWin = new UserDetailVM(SelectedItem, _fachkonzept);
             var window = new UserDetails();
             window.DataContext = userDetailWin;
 
             if (window.ShowDialog().Value)
             {
-
-                //TODO: Update User
                 Firstname = userDetailWin.Firstname;
                 Lastame = userDetailWin.Lastname;
                 Id = userDetailWin.ID;
-                //DisplayedList = _fachkonzept.
+                _fachkonzept.updateUser(Id, Firstname, Lastame);
             }
         }
 

@@ -26,6 +26,7 @@ namespace iScream.GUI.Classes
             DetailCommand = new SimpleCommand(ExecuteDetailCommand);
             _container = container;
             _fachkonzept = fachkonzept;
+            DisplayedList = _fachkonzept.getGames();
         }
 
         public int Id
@@ -85,10 +86,9 @@ namespace iScream.GUI.Classes
 
             if (window.ShowDialog().Value)
             {
-                //TODO: Update Game
                 Name = gameDetailWin.Name;
                 Id = gameDetailWin.ID;
-                //DisplayedList = _fachkonzept.
+                _fachkonzept.updateGame(Id, Name);
             }
         }
 

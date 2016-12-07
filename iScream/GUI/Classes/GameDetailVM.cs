@@ -13,20 +13,37 @@ namespace iScream.GUI.Classes
         private int _id;
         private Game _game;
         private IFachkonzept _fachkonzept;
+        private List<User> _userList;
+        private User _selectedItem;
 
         public GameDetailVM(Game game, IFachkonzept fachkonzept)
         {
             _fachkonzept = fachkonzept;
             UserAddCommand = new SimpleCommand(ExecuteUserAddCommand);
+            UserDeleteCommand = new SimpleCommand(ExecuteUserDeleteCommand);
             _game = game;
             Name = game.Name;
             ID = game.Game_id;
-            //TODO:Add user list
+            UserListFiles = _fachkonzept.detailsGame(game).Users;
+        }
+
+        private void ExecuteUserDeleteCommand(object obj)
+        {
+            _fachkonzept.deleteLink(SelectedItem.User_id, ID);
         }
 
         private void ExecuteUserAddCommand(object obj)
         {
-            throw new NotImplementedException();
+            var gameAddUserWin = new GameAddUserVM();
+            var window = new GameAddUser();
+            window.DataContext = gameAddUserWin;
+
+            if (window.ShowDialog().Value)
+            {
+                var NewGameID = gameAddUserWin.ID;
+                var link = new Link(NewGameID, ID);
+                _fachkonzept.createLink(link);
+            }
         }
 
         public string Name
@@ -53,7 +70,33 @@ namespace iScream.GUI.Classes
                 }
             }
         }
+        public List<User> UserListFiles
+        {
+            get { return _userList; }
+            set
+            {
+                if (_userList != value)
+                {
+                    _userList = value;
+                    NotifyPropertyChanged("UserListFiles");
+                }
+            }
+        }
+        public User SelectedItem
+        {
+            get { return _selectedItem; }
+            set
+            {
+                if (_selectedItem != value)
+                {
+                    _selectedItem = value;
+                    NotifyPropertyChanged("SelectedItem");
+                }
+            }
+        }
+
 
         public ICommand UserAddCommand { get; private set; }
+        public ICommand UserDeleteCommand { get; private set; }
     }
 }

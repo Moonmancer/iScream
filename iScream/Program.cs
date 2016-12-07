@@ -20,10 +20,10 @@ namespace iScream
             DatenhaltungExtras.ImportCSV(".\\iScreamExport", new Datenhaltung2());
 
             Datenhaltung2 dh2 = new Datenhaltung2();
-            TUI.TUI UI = new TUI.TUI(new Fachkonzept1(dh2), dh2);
-            //GUI.GUI UI = new GUI.GUI(new Fachkonzept1(dh2),dh2);
+            //TUI.TUI UI = new TUI.TUI(new Fachkonzept1(dh2));
+            GUI.GUIMain UI = new GUI.GUIMain(new Fachkonzept1(dh2));
 
-            UI.MainMenu();
+            UI.Activate();
 
             //Main should always end with Settings.Save()
             DatenhaltungExtras.ExportCSV(dh2, ".\\iScreamExport");
