@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    class SortAscending : ISort
+    public class SortAscending : ISort
     {
         Container sorted;
-        Container sort(Container unsorted)
+        public Container sort(Container unsorted)
         {
             sorted = unsorted;
             sorted.Games.Sort((x, y) => x.Name.CompareTo(y.Name));
