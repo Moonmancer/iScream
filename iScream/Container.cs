@@ -18,5 +18,27 @@ namespace iScream
 
             this.Games = games;
         }
+
+        public Game Game
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="655a7dde-5ea3-4844-8ef9-0b98eee97008" name="UMLClassDiagram1" linkedPackageId="45aa61b0-c211-42c3-bac6-e5b1f2319e6a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b57398c7-4ad7-4918-a4ba-b170256ee2e7">
+      <profileInstance Id="19623c8c-37f6-453a-a8e7-69c64b3815a7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="61e24854-9353-42d8-8438-c68b8e85c965">
+      <profileInstance Id="e4ce8649-1edc-4c3d-a476-ac50c99623b3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b59bf3d1-d53a-4cc6-9b56-e0b5e4c6352f">
+      <profileInstance Id="959f0ba4-5b42-4a1d-af54-e265754f501c" name="CSharpProfile">
+        <elementDefinition Id="a2ab7ddc-7330-40ce-9d10-e5c474c00d66" />
+      </profileInstance>
+      <elementDefinition Id="dbef0814-cd9c-410b-9a78-7c00a4d17eda" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="136b7ad4-bd26-48dc-ac17-de463d032c95" name="Container" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="1799c436-daac-440b-8afb-df4c755c5e76" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer" tag="ViewCode">
+            <elementDefinition Id="4af59ee7-7879-4219-a39c-88036851f321" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="59d6641b-5067-4fc3-988a-52f0e2754d66" name="class" profile="CSharpProfile">
+            <elementDefinition Id="564edca4-057d-42bd-8d55-c2434afa829e" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="84e48db4-9e83-4c5a-9eca-f6336c94c508">
+                <propertyInstance Id="741617fb-0f75-4a1f-ae65-2556fe8cbbbb" name="ClrAttributes">
+                  <elementDefinition Id="66d8882c-8feb-44ff-bacc-a9ed3fe7ea10" />
+                </propertyInstance>
+                <elementDefinition Id="135169df-cd19-4b0c-9ade-1d0ee486d90c" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="f66a80a0-f311-45a5-8250-2b18f93f7c81">
+                <propertyInstance Id="9a1a23f4-2e5d-4e70-940b-028dd3fd563b" name="IsPartial" value="false">
+                  <elementDefinition Id="44c78d2d-7dba-4913-8080-2a9ce1126843" />
+                </propertyInstance>
+                <elementDefinition Id="36203ee7-6eee-4edb-a048-5fb6d7e77bb4" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="2076c904-6bf6-4c94-ada7-b2c81c7200e1">
+                <propertyInstance Id="04c86a56-dd9c-4719-bd42-4587f8b01ff1" name="IsStatic" value="False">
+                  <elementDefinition Id="c2715e55-6863-41f3-a5c9-02f125a6a9ef" />
+                </propertyInstance>
+                <elementDefinition Id="125bcfef-47bd-4241-ba33-781bb0692c3b" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="e3a21f18-2d5c-47fa-873e-ff35dcdca94a">
+                <propertyInstance Id="e8362f28-1ded-475a-8bf2-c8e6cd29a583" name="IsUnsafe" value="false">
+                  <elementDefinition Id="7492f7e5-9da8-4ec2-a1ff-76c230bf654e" />
+                </propertyInstance>
+                <elementDefinition Id="96f173f0-02b3-42ee-963b-1c9a2ba66f9d" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="bd0754f8-ee61-485e-80fd-e6e911ed11b4">
+                <propertyInstance Id="78d63f51-47f6-439a-9a00-4447cf5541e5" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="7abaf818-24e5-4c24-a3ca-762999b1c5ce" />
+                </propertyInstance>
+                <elementDefinition Id="b37ea08b-dbad-4c23-8700-4e042764ba98" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="be12cb78-2028-405f-9cef-2dfc9037c448" />
+        <ownedAttributesInternal>
+          <property Id="e3327a9c-1b92-4b77-8bdb-9f0eb804d9dc" name="Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="8b3fd6c0-b5de-4a5e-b223-aa369dd27cc4" handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer Member%3DGame" tag="ViewCode">
+                <elementDefinition Id="fbcc85d1-8cb7-4c6f-8250-1ed0b29bc35f" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c8e221a3-453c-42cb-81e1-ab7c27765ea3" name="property" profile="CSharpProfile">
+                <elementDefinition Id="12c2d3d2-aae7-42c7-9c96-95e9d5b5682e" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3cd6b68c-5e1e-4f20-91a4-5d0859997b31">
+                    <propertyInstance Id="15cf17a0-d12d-484d-b851-a52dcdc28f83" name="ClrAttributes">
+                      <elementDefinition Id="ccafb36c-2882-4708-a383-a7b53d5cb29e" />
+                    </propertyInstance>
+                    <elementDefinition Id="94185922-b134-4138-a8de-c01a81388a77" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b6b47063-d720-46bf-b5c5-8d9a16d57c20">
+                    <propertyInstance Id="932495ac-38f9-45c1-93b2-e6b6bf66eb6e" name="Get" value="public">
+                      <elementDefinition Id="5ad1820b-449b-475a-b91b-4505fb7b62cd" />
+                    </propertyInstance>
+                    <elementDefinition Id="e6101207-f9b3-4802-86d5-2549a1d7eb20" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="18cc969b-ccc6-4637-8063-e14f10b14291">
+                    <propertyInstance Id="188cffcb-ba08-4672-b780-7975005be052" name="HasBody" value="false">
+                      <elementDefinition Id="57437f82-ab26-4d06-b44a-df6b488b0d30" />
+                    </propertyInstance>
+                    <elementDefinition Id="5b93c3a7-9221-4cdc-8365-b3f51e35e19c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2a7b28ad-0298-4e7c-b659-a95ee409c91a">
+                    <propertyInstance Id="920ce7ba-3750-4dbf-b269-2c30e20f6a32" name="IsUnsafe" value="false">
+                      <elementDefinition Id="a5242ef8-21fb-4363-aa76-4914b13c1c38" />
+                    </propertyInstance>
+                    <elementDefinition Id="7bc26c6f-339b-4d11-b518-88f0cc13a34c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="75859117-e86e-4849-9c99-9ed728265489">
+                    <propertyInstance Id="35955c44-de9d-4ce1-bc3f-56a2e5e3b03a" name="Inheritance" value="none">
+                      <elementDefinition Id="2f0b383a-1109-43e4-bf32-b53ba6d23486" />
+                    </propertyInstance>
+                    <elementDefinition Id="530c1128-60e2-4d73-a672-69b4533b5207" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="95d6e9d3-2fb8-44ef-ac9a-cca1624cb09b">
+                    <propertyInstance Id="10a36dbd-ee23-4fda-b46b-f61e60ea52e0" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="77be665d-07ef-4613-b4c5-7307fbf74e01" />
+                    </propertyInstance>
+                    <elementDefinition Id="33155afa-382e-421f-ba36-c34bd2dcc416" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9bd390db-4683-44db-8273-9e37145657fd">
+                    <propertyInstance Id="20a1b13a-90f1-4e11-abb9-b0f2cb6334d7" name="Set" value="public">
+                      <elementDefinition Id="84087b2f-11ab-41bd-9b96-37d2ae7196e4" />
+                    </propertyInstance>
+                    <elementDefinition Id="55a81fa5-9a4e-4d2a-bc47-9dfb21344622" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="9ca212a0-4b3b-4409-ad4b-835e615fb2ab" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="855058ff-8da5-4eaf-9be1-d95a12899578" LastKnownName="Game" />
+            </type_NamedElement>
+          </property>
+          <property Id="9830e990-5d1b-4669-b8cf-9e8c6b6d6bfd" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="98c24536-6437-4944-8036-103d3a4673d5" handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer Member%3DUser" tag="ViewCode">
+                <elementDefinition Id="f624aa51-6aa0-4cd0-ab2b-5544348c144d" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="2ba31239-85fe-425b-a01c-1077a054b8ac" name="property" profile="CSharpProfile">
+                <elementDefinition Id="5377d7f4-ad6c-41e7-9b1f-c7a953582eb2" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="49a1dba5-f05b-4c15-8080-62db5b8a290e">
+                    <propertyInstance Id="fb5cee1c-0197-4028-aa81-b45f2f7e4ff0" name="ClrAttributes">
+                      <elementDefinition Id="aea36f22-18d6-4822-a0dd-108993cec4c5" />
+                    </propertyInstance>
+                    <elementDefinition Id="0d74d261-4250-42f2-8494-dcdffe850132" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4a7734eb-eff6-49d3-af55-49a0f2634f43">
+                    <propertyInstance Id="82ee14fd-2743-4f93-9a4a-b9a246a6e293" name="Get" value="public">
+                      <elementDefinition Id="14628799-c4ef-4d3e-8fda-d76cab66e97b" />
+                    </propertyInstance>
+                    <elementDefinition Id="d89a4654-2aa4-44fc-9445-032144fa3ebc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cb7fb76b-3145-4e35-943e-06c4b10fad1b">
+                    <propertyInstance Id="8f3a60d8-fdc5-47ac-876d-6ca22f724429" name="HasBody" value="false">
+                      <elementDefinition Id="71364862-dd8f-410c-a1cb-a3fc3841598c" />
+                    </propertyInstance>
+                    <elementDefinition Id="39b7687b-bdd6-4581-9c9e-91333279abe2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="94b6c44e-f751-4119-8de2-479e8369f9bb">
+                    <propertyInstance Id="57fbe343-aa97-4063-aa81-1ecfc1372ebc" name="IsUnsafe" value="false">
+                      <elementDefinition Id="5fb1723e-7c4b-4330-9830-d9ae4e59bcf7" />
+                    </propertyInstance>
+                    <elementDefinition Id="ecdce852-2eca-4173-a642-b3e980eee811" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="66054a30-2263-4747-aa26-ad750d665755">
+                    <propertyInstance Id="8756973d-6c9a-4bbb-bf52-4b5b56e01c73" name="Inheritance" value="none">
+                      <elementDefinition Id="91ab3786-7516-42b8-b1c8-3f8ac35c9ea4" />
+                    </propertyInstance>
+                    <elementDefinition Id="4f5c917a-cdfb-4dfb-b76e-b23045792a98" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ee130a34-4e54-4082-8548-a2ad2613db68">
+                    <propertyInstance Id="230ba7c7-d1c2-40a8-8ecd-9a413d306996" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="115a2b7b-fd61-4408-b460-e7e77b59ba65" />
+                    </propertyInstance>
+                    <elementDefinition Id="735d8b5e-4c05-4cd0-aa3e-a780125df9f8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c73d3ec1-5c29-4268-84c2-1b9acee92e27">
+                    <propertyInstance Id="7de7006a-d145-4a44-a3cd-2c3d5a3baaf6" name="Set" value="public">
+                      <elementDefinition Id="302a86fd-d0c3-45e7-90da-cc04a0e5e595" />
+                    </propertyInstance>
+                    <elementDefinition Id="c19cef83-f865-4b16-9c18-78012f7a9fe6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="ae9887d3-1974-45eb-977f-355bbfdbcc27" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3ce910fc-b194-44ab-a95f-e883ac2291f1" LastKnownName="User" />
+            </type_NamedElement>
+          </property>
+          <property Id="a3a2ef13-89b2-4452-8865-e310b8c6f1e6" name="Users" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="85e391cc-95fa-4d9c-8d03-a8080fd2a9fc" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer Member%3DUsers" tag="ViewCode">
+                <elementDefinition Id="008bd255-2865-4a97-8296-0f7b25ddca19" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="2804466d-c4f3-4680-bb78-ebfca8dab403" name="field" profile="CSharpProfile">
+                <elementDefinition Id="834c7a29-1e28-49ee-909c-0727ff0edd0e" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="17a28e2b-3e91-4b07-aba4-91176563e8fd">
+                    <propertyInstance Id="0775599d-3dd2-482a-a1b2-ebc70f8364c7" name="ClrAttributes">
+                      <elementDefinition Id="5fac62b4-815b-4b80-8879-8eb5dce9cb06" />
+                    </propertyInstance>
+                    <elementDefinition Id="684c3718-9d02-4d75-95be-b0d2a884d2f2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3593fc50-9726-4d4b-b403-0b227b94d711">
+                    <propertyInstance Id="65a276a2-bd77-4bd0-9f2d-4ede5e947383" name="IsConst" value="false">
+                      <elementDefinition Id="b0e26f8e-33a6-42c5-b5ac-30b389e96a8c" />
+                    </propertyInstance>
+                    <elementDefinition Id="3542cd07-f688-4d70-8a73-b2e227aa9d60" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aea1f0f7-92f6-4083-860b-b681826b0f19">
+                    <propertyInstance Id="dab1d759-ccb1-4473-a2a2-0d2bdfca27b4" name="IsNullable" value="false">
+                      <elementDefinition Id="3265f540-2608-4865-b65b-cd082a8832ae" />
+                    </propertyInstance>
+                    <elementDefinition Id="0881e779-3bb0-4370-80e3-faf7b73b4871" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bfa965e7-8029-4a1b-a128-f528f6d39081">
+                    <propertyInstance Id="fcfbc208-acb3-4856-8fdf-0ce77d71d8ae" name="IsVolatile" value="false">
+                      <elementDefinition Id="2ce6b033-d13a-4497-bd75-19323d1ad660" />
+                    </propertyInstance>
+                    <elementDefinition Id="87200c42-7e8c-43cd-8d83-3a8612dff611" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d159e0e3-8657-47e4-9144-ecf7bde7b827">
+                    <propertyInstance Id="b1a1e52d-9bf1-4520-9aec-ddb9bd681912" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="28e9df61-f57c-432c-b469-9b0a6134295e" />
+                    </propertyInstance>
+                    <elementDefinition Id="fb197f6b-337c-495f-944b-8f28333aa282" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="65c6dc8e-8691-4bd0-85e7-5e92a7dfd9aa" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b86ed54a-d2cb-42bc-85ae-7a7fc29cea23" LastKnownName="List&lt;User‎&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="d853ab84-973e-450f-bf3d-9723fd585d69" name="Games" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="662aaa91-fe95-446e-94be-5478b824fa78" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer Member%3DGames" tag="ViewCode">
+                <elementDefinition Id="44204f03-a0d9-4830-aca1-03f0c52c0652" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="7bba3200-eb85-4091-8cd2-a526d76f2770" name="field" profile="CSharpProfile">
+                <elementDefinition Id="0ce91b92-841c-4f4c-923d-7146cd8c8d7d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="29a0f34d-630f-497f-b463-d818276e1a13">
+                    <propertyInstance Id="ffc7e522-8bc7-42a7-8d82-48190557807c" name="ClrAttributes">
+                      <elementDefinition Id="eb16fb51-e880-4aee-b5b3-60c60e088893" />
+                    </propertyInstance>
+                    <elementDefinition Id="bc3d3b84-8c0a-4ed5-bff9-bf49f205f340" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="decc8fdb-7c7e-478e-9192-c9d734b569ee">
+                    <propertyInstance Id="dbe5e878-1caa-4051-ad0a-e2d36b29934e" name="IsConst" value="false">
+                      <elementDefinition Id="1d8dd2c1-52a3-4788-a118-ee3b5e7d4690" />
+                    </propertyInstance>
+                    <elementDefinition Id="a073df05-46c2-453b-b965-61c881961198" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4977a3ec-c8c6-4c61-a0b5-d571dc9064c0">
+                    <propertyInstance Id="f52e884f-8e74-4c9a-b9da-bbc288696ba9" name="IsNullable" value="false">
+                      <elementDefinition Id="9ad11bd6-1cfd-4b9b-9bac-1213e86fc69a" />
+                    </propertyInstance>
+                    <elementDefinition Id="401e381d-ffce-4999-aa2d-b0807aa09cbf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="78409df9-298b-4ce8-9549-f87fe576c7ef">
+                    <propertyInstance Id="131c0199-95a8-447d-a57f-5d388fd20653" name="IsVolatile" value="false">
+                      <elementDefinition Id="f6d923d0-7e1f-4792-bc86-874696efc16c" />
+                    </propertyInstance>
+                    <elementDefinition Id="5dc4dcce-9f9a-4c30-ba36-5af519ce488a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="45561d00-a24e-41d7-af9a-baad21c28e27">
+                    <propertyInstance Id="4c2a7b76-ce1b-432e-b8f6-2792ccb8675d" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="fcef4fd9-8886-47ce-947a-b23a4ad795b8" />
+                    </propertyInstance>
+                    <elementDefinition Id="3249ce0d-19d6-4104-b7f0-3030f617d768" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="26a4f6a2-cf08-46d5-8aeb-9ef3371bd769" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f7b0e874-064e-444b-a2fb-3354e42054ed" LastKnownName="List&lt;Game‎&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="af50d771-3173-46ba-ac65-af3749b85df1" name="Container" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="c8c978bd-16aa-41bb-8456-43b2b6f77d12" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DUser)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DGame)]))])" tag="ViewCode">
+                <elementDefinition Id="8f81f391-56cb-4705-b4f9-597faef07bd1" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="7a810142-5e94-421a-80d2-f0d1c81133e1" name="method" profile="CSharpProfile">
+                <elementDefinition Id="401a8aca-991a-4b40-85f1-aa0bda945e57" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b1d3f140-4df4-43e1-b42f-464eae32e035">
+                    <propertyInstance Id="fceb2a81-f13a-45c8-ae63-f620b0fad89b" name="ClrAttributes">
+                      <elementDefinition Id="d2f25c07-c53f-4138-b1c5-5dab9d76fa59" />
+                    </propertyInstance>
+                    <elementDefinition Id="eb1023c4-9d8d-461d-b22e-61cc24ec0327" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="29c1e42e-db67-410d-8b2f-cb700be50d31">
+                    <propertyInstance Id="6bc4cad2-aae0-4ce9-b15b-91e046b602da" name="IsPartial" value="false">
+                      <elementDefinition Id="8fec250e-0cfa-4ab5-a59e-14309b09e2ea" />
+                    </propertyInstance>
+                    <elementDefinition Id="4a285cec-7375-49e0-8b1b-dad7acb6b739" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="48d409e1-d05c-455e-8eea-84676846704b">
+                    <propertyInstance Id="86cd89b4-f7d5-40c7-b6e1-9849d9460531" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f56d77cc-5171-4933-b756-466911d65f16" />
+                    </propertyInstance>
+                    <elementDefinition Id="4185bc4b-b813-45cc-95e7-197e8e7c816f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dad48d5c-f4b8-4d9b-8353-ed69fe9ba68e">
+                    <propertyInstance Id="cbf88a4e-b42d-41dc-b8c0-642bcd877880" name="Inheritance" value="none">
+                      <elementDefinition Id="7b315daa-be9a-4226-8feb-845605fb78e5" />
+                    </propertyInstance>
+                    <elementDefinition Id="d0ea4a8c-91d0-435d-a299-125c48117b4a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d80a74e9-01a2-4390-86b0-4285f0196976">
+                    <propertyInstance Id="a46757c4-7261-43dd-9170-cf16bf4a9686" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="d31c6582-f699-4c21-bcfd-ba43649829e1" />
+                    </propertyInstance>
+                    <elementDefinition Id="cbd2c246-158c-4013-b33d-c1c57fd9e5d5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a1d28610-6832-4b90-bf22-2b6a6474bf53">
+                    <propertyInstance Id="4f6c54f6-37a6-44ee-846a-054cd4b5910f" name="params" value="false">
+                      <elementDefinition Id="90983bf6-9550-4cd5-9090-84eed6938652" />
+                    </propertyInstance>
+                    <elementDefinition Id="1ddc531c-6b87-4db7-8f81-e81bcd69862e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0b09a4c8-7e3c-4146-9d23-eb1b85408835" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="23e981be-7328-40d3-a459-ad5639bd74d7" name="users" direction="In">
+                  <referencesInternal>
+                    <reference Id="a3ddbc65-7ded-43f6-b90e-3359fd3f0a3b" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DUser)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DGame)]))]) ParameterIdentifier%3Dusers" tag="ViewCode">
+                      <elementDefinition Id="e9745297-2b6a-4c91-a154-6cfc3d367ae9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="e42e83b3-e547-4b4e-a8a1-feffdbab87a2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b86ed54a-d2cb-42bc-85ae-7a7fc29cea23" LastKnownName="List&lt;User‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5f798b5-9312-49cc-be05-9cd267db570a" name="games" direction="In">
+                  <referencesInternal>
+                    <reference Id="a8bd372b-0c8e-450f-9eb4-007329d0aee4" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DContainer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DUser)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DGame)]))]) ParameterIdentifier%3Dgames" tag="ViewCode">
+                      <elementDefinition Id="966969ba-c057-4b77-94bf-983b98aedeac" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="21108925-f144-4dc1-bbf6-4cf1b7ed0e9e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f7b0e874-064e-444b-a2fb-3354e42054ed" LastKnownName="List&lt;Game‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="855058ff-8da5-4eaf-9be1-d95a12899578" name="Game" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::iScream::Game">
+        <elementDefinition Id="0b543d4d-fd9b-494e-ae95-b342ca16d6cd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3ce910fc-b194-44ab-a95f-e883ac2291f1" name="User" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::iScream::User">
+        <elementDefinition Id="5059f953-1d5b-42fa-ac81-6f5ec92fbcdc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b86ed54a-d2cb-42bc-85ae-7a7fc29cea23" name="List&lt;User‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Collections::Generic::List&lt;User‎&gt;">
+        <elementDefinition Id="36278869-88a6-42dc-b043-0fbf7d8bed17" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f7b0e874-064e-444b-a2fb-3354e42054ed" name="List&lt;Game‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Collections::Generic::List&lt;Game‎&gt;">
+        <elementDefinition Id="266f3bba-2040-4c5a-890e-51de249f06a8" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="45aa61b0-c211-42c3-bac6-e5b1f2319e6a" name="ModelingProject1">
+    <elementDefinition Id="4624a4e8-39e1-435e-bb49-a3d796bc002f" />
+  </package>
+</logicalClassDesignerModel>
