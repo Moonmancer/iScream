@@ -11,6 +11,24 @@ namespace iScream
         //doesnt work:
         //IFachkonzept(IDatenhaltung datenhaltung);
 
+        #region List
+
+        List<User> getUsers();
+        List<Game> getGames();
+        List<Link> getLinks();
+
+        #endregion
+
+        #region Update
+
+        bool updateUser(int user_id, string firstname, string lastname);
+        bool updateUser(User user);
+
+        bool updateGame(int game_id, string name);
+        bool updateGame(Game game);
+
+        #endregion
+
         #region Details
 
         Container detailsUser(User user);

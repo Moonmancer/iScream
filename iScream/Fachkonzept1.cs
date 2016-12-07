@@ -116,5 +116,47 @@ namespace iScream
         }
 
         #endregion
+
+        #region List
+
+        public List<User> getUsers()
+        {
+            return datenhaltung.GetUser();
+        }
+
+        public List<Game> getGames()
+        {
+            return datenhaltung.GetGame();
+        }
+
+        public List<Link> getLinks()
+        {
+            return datenhaltung.GetLink();
+        }
+
+        #endregion
+
+        #region Update
+
+        public bool updateUser(int user_id, string firstname, string lastname)
+        {
+            return datenhaltung.UpdateUser(user_id, firstname, lastname);
+        }
+
+        public bool updateUser(User user)
+        {
+            return datenhaltung.UpdateUser(user);
+        }
+
+        public bool updateGame(int game_id, string name)
+        {
+            return datenhaltung.UpdateGame(game_id, name);
+        }
+
+        public bool updateGame(Game game)
+        {
+            return datenhaltung.UpdateGame(game);
+        }
+        #endregion
     }
 }
