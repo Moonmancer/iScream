@@ -10,6 +10,7 @@ namespace iScream
     {
         //sortiert
         IDatenhaltung datenhaltung;
+        Sorter SortHandler = new Sorter();
         private bool sortDescending
         {
             get
@@ -18,7 +19,15 @@ namespace iScream
             }
             set
             {
-                sortDescending = value;
+                this.sortDescending = value;
+                if (value == true)
+                {
+                    SortHandler.SetSortAlgorithm( new SortDescending());
+                }
+                else
+                {
+                    SortHandler.SetSortAlgorithm(new SortAscending());
+                }
             }
         }
 
@@ -45,7 +54,8 @@ namespace iScream
             games = datenhaltung.GetGamesOfUser(user);
 
             details = new Container(users, games);
-            games.Sort();
+
+            
 
             return details;
         }

@@ -8,6 +8,17 @@ namespace iScream
 {
     class Fachkonzept1 : IFachkonzept
     {
+        private bool sortDescending
+        {
+            get
+            {
+                return sortDescending;
+            }
+            set
+            {
+                Console.WriteLine("Fachkonzept1 unterstützt keine sortierung.");
+            }
+        }
         // unsortiert
         IDatenhaltung datenhaltung;
         public Fachkonzept1(IDatenhaltung datenhaltung)

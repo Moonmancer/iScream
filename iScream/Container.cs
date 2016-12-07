@@ -8,37 +8,15 @@ namespace iScream
 {
     public class Container
     {
-        List<User> Users;
+        public List<User> Users;
 
-        List<Game> Games;
+        public List<Game> Games;
 
         public Container(List<User> users, List<Game> games)
         {
             this.Users = users;
 
             this.Games = games;
-        }
-
-        public Game Game
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public User User
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
         }
     }
 }

@@ -86,6 +86,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="SortAscending.cs" />
     <Compile Include="SortDescending.cs" />
+    <Compile Include="Sorter.cs" />
     <Compile Include="Tests\DatenhaltungTests.cs" />
     <Compile Include="Fachkonzept1.cs" />
     <Compile Include="Fachkonzept2.cs" />

@@ -8,12 +8,14 @@ namespace iScream
 {
     class SortAscending : ISort
     {
-
-        List<User> users = new List<User>();
-        List<Game> games = new List<Game>();
+        Container sorted;
         Container sort(Container unsorted)
         {
-            return new Container(users, games);
+            sorted = unsorted;
+            sorted.Games.Sort((x, y) => x.Name.CompareTo(y.Name));
+            sorted.Users.Sort((x, y) => x.Name.CompareTo(y.Name));
+
+            return unsorted;
         }
     }
 }
