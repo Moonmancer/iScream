@@ -18,11 +18,17 @@ namespace iScream.GUI
     /// <summary>
     /// Interaction logic for GameAdd.xaml
     /// </summary>
-    public partial class GameAdd : UserControl
+    public partial class GameAdd : Window
     {
         public GameAdd()
         {
             InitializeComponent();
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+            this.Close();
         }
     }
 }
