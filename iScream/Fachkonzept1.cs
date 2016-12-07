@@ -158,5 +158,10 @@ namespace iScream
             return datenhaltung.UpdateGame(game);
         }
         #endregion
+
+        void changeSortOrder()
+        {
+            sortDescending = !sortDescending;
+        }
     }
 }

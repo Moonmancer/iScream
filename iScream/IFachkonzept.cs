@@ -63,5 +63,6 @@ namespace iScream
 
         #endregion
 
+        void changeSortOrder();
     }
 }

@@ -177,6 +177,9 @@ namespace iScream
         }
         #endregion
 
-        
+        void changeSortOrder()
+        {
+            sortDescending = !sortDescending;
+        }
     }
 }
