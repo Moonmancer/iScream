@@ -22,23 +22,25 @@ namespace iScream.TUI
         public void MainMenu()
         {
             Console.Clear();
-            Console.WriteLine("Hauptmenu: \r\nBitte Wählen Sie eine Funktion aus:\r\n");
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("Nutzer anzeigen \t \t (a)");
-            Console.WriteLine("Nutzer suchen \t \t (b)");
-            Console.WriteLine("Nutzer hinzufügen \t \t (c)");
-            Console.WriteLine("Nutzer bearbeiten \t \t (d)");
-            Console.WriteLine("Nutzer löschen \t \t (e)");
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("Spiele anzeigen \t \t (f)");
-            Console.WriteLine("Spiel suchen \t \t (g)");
-            Console.WriteLine("Spiel hinzufügen \t \t (h)");
-            Console.WriteLine("Spiel bearbeiten \t \t (i)");
-            Console.WriteLine("Spiel löschen \t \t (j)");
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("Spiel hinzufügen \t \t (k)");
-            Console.WriteLine("Spiel löschen \t \t (l)");
-            Console.WriteLine("Beenden \t \t (x)");
+            Console.WriteLine(" Hauptmenu: \r\n Bitte Wählen Sie eine Funktion aus:\r\n");
+            Console.WriteLine(" --------------------------------------");
+            Console.WriteLine(" Nutzer anzeigen \t \t (a)");
+            Console.WriteLine(" Nutzer suchen \t \t \t (b)");
+            Console.WriteLine(" Nutzer hinzufügen \t \t (c)");
+            Console.WriteLine(" Nutzer bearbeiten \t \t (d)");
+            Console.WriteLine(" Nutzer löschen \t \t \t (e)");
+            Console.WriteLine(" --------------------------------------");
+            Console.WriteLine(" Spiele anzeigen \t \t (f)");
+            Console.WriteLine(" Spiel suchen \t \t \t (g)");
+            Console.WriteLine(" Spiel hinzufügen \t \t (h)");
+            Console.WriteLine(" Spiel bearbeiten \t \t (i)");
+            Console.WriteLine(" Spiel löschen \t \t \t (j)");
+            Console.WriteLine(" --------------------------------------");
+            Console.WriteLine(" Beziehung hinzufügen \t \t (k)");
+            Console.WriteLine(" Beziehung löschen \t \t (l)");
+            Console.WriteLine(" Beenden \t \t \t (x)");
+
+            Console.WindowWidth = 40;
 
             var auswahl = Convert.ToChar(Console.ReadLine());
 
@@ -86,11 +88,11 @@ namespace iScream.TUI
                     break;
                 case 'k':
                     Console.Clear();
-                    Console.Write("Wieviel Liter moechten Sie einfuellen: ");
+                    RelationAdd();
                     break;
                 case 'l':
                     Console.Clear();
-                    Console.Write("Wieviel Liter moechten Sie einfuellen: ");
+                    RelationCut();
                     break;
                 case 'x':
                     Console.Clear();
