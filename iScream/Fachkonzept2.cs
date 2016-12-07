@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    class Fachkonzept2
+    class Fachkonzept2:IFachkonzept
     {
         //sortiert
         IDatenhaltung datenhaltung;

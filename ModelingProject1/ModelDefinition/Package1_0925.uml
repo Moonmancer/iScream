@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="c84071d6-8735-4026-bd41-724da9a60d4e"
+  name="TUI"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a3e60c06-58a9-44d2-91f1-510b47322190"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DiScream.TUI"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="81f0497d-f562-452e-8e90-b8eba01a96f1">
+      <profileInstance
+        Id="d34474ce-eb61-4705-90e4-39b1edc49326"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="0210886c-02c0-4366-bdf9-951e9a61f0c4"
+        name="TUI"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cdf0c2da-41dd-417a-96c2-b7327ea43822"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7cebe7de-00b1-41cf-96c3-fe4cfca4ba61"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2dc6eee5-5055-4923-b6f4-d220bacfa164">
+                <propertyInstance
+                  Id="f9c92165-7cbb-4685-abf6-6ee0e36e436e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1bd74af9-bbdd-4f52-81c7-a4660033071d">
+                <propertyInstance
+                  Id="fcb0cd3f-f989-4ffb-a001-d54bb042565c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b757b367-eb5a-4aaa-9eff-55203c6996dc">
+                <propertyInstance
+                  Id="01da6a2a-d068-40a7-8385-3b603bc8ddc9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e2bae217-2d30-40b4-8635-f518e5f4b762">
+                <propertyInstance
+                  Id="a1b05c06-ad1f-4651-af97-21341ff26aed"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a84e6646-27a8-47fe-9a58-4b04e0423bf2">
+                <propertyInstance
+                  Id="de56fd28-3459-4d8c-9388-8443c1a88f4e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="034c5197-0ec5-485e-99ec-581a94f132b6"
+            name="_fachkonzept"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ef1ebe6b-3714-47d2-aadf-db8f6ec50b27"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3D_fachkonzept"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a2416872-67f8-4f8b-9890-4173d6f7fa98"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08e7a9fd-b2b2-45dd-b8d6-c3a6ac0b4f15">
+                    <propertyInstance
+                      Id="cab0ce8a-b552-44e3-9b6e-b0b7832507ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a7a4150-b66e-4a9a-9269-1e3aa560d844">
+                    <propertyInstance
+                      Id="2673caa9-ae0f-4b8f-8320-6ee25091bb6f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6179f7af-f3a8-4ceb-a485-5da4ebc4745f">
+                    <propertyInstance
+                      Id="13a616b4-d2eb-4105-afa1-6831e196a746"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b5db935-de10-435e-9813-d15308bdedbd">
+                    <propertyInstance
+                      Id="dcb33c8b-3b32-4969-b827-57fb69d81870"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58e631e0-ad73-40ba-8ab0-a96b753fd2e7">
+                    <propertyInstance
+                      Id="d7bbef55-e1d6-4eed-9ce3-e37d108da585"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="186bf55c-c49d-4a30-ad56-c6801962bc2b"
+                LastKnownName="IFachkonzept"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f9bb5da9-6e84-4c6d-bde0-85d9bb624932"
+            name="_datenhaltung"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e25dbe59-3cb9-4a0d-ba6c-0c811606d48f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3D_datenhaltung"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0fce9034-af53-4c7e-bd1b-cbe2a7935deb"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e320a00-6a19-4ce9-a979-572adf262093">
+                    <propertyInstance
+                      Id="20bba7b6-8eb9-4287-8449-297497eeed09"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed0a3def-1888-402d-b309-dfb3a0c8a585">
+                    <propertyInstance
+                      Id="e9218f64-664d-4e20-830c-352437ef925c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d04703af-e1c0-4b9a-8d09-31bf1a0dcb7b">
+                    <propertyInstance
+                      Id="8f2f654d-288f-49cf-ba61-2818cad115b0"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42eb75de-dff0-40e6-931f-0e9404eff0be">
+                    <propertyInstance
+                      Id="9d9e7232-199d-4078-9e9e-de2775250f4e"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf8daff4-e385-48c1-825a-2b4237ec2a43">
+                    <propertyInstance
+                      Id="0c56402f-56fd-4565-83cf-a8deadedc22f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="c3e5f4f3-c007-428f-a067-3ff38ece1c77"
+                LastKnownName="IDatenhaltung"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f1d9dbf7-c5d1-40c9-8aee-8f78603050cf"
+            name="TUI"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="43410fd7-71fa-4d97-8a5b-82ae7b26fffb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DIFachkonzept)%2C(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DIDatenhaltung)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="47ceb277-9c3e-4594-b12f-0e9b76015bab"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="712cb2b8-802d-4d6b-be25-247b5f5d854c">
+                    <propertyInstance
+                      Id="4d68ad83-9bc8-4562-b2f6-126bb78345a6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c552ec1-0d1f-41b7-80ca-1e159a50fa20">
+                    <propertyInstance
+                      Id="6e0cd526-eb85-4273-8518-ec52a402959e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe8239f9-0660-4d9f-8ee7-0cf08cf7a999">
+                    <propertyInstance
+                      Id="eaa19ccf-2d3e-4607-b369-6d12447a26b9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae95bf47-ad1c-4f18-a4d8-f638405fbb14">
+                    <propertyInstance
+                      Id="94e95b4d-65ef-415c-a07d-c7c0792b4aab"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25b6c6c5-5490-4224-ae78-695dd42c1511">
+                    <propertyInstance
+                      Id="f994fbcb-eab2-4534-b76f-d29261a1c688"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09aca61f-3586-45da-b252-bbbd1830e46f">
+                    <propertyInstance
+                      Id="4006879f-9835-4e4b-8df2-2174fbf56bea"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="07b98646-2c6e-440e-b223-a3d63f4380f6"
+                  name="fachkonzept"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="da663c41-5df9-4ec4-a596-528a130ebe34"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DIFachkonzept)%2C(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DIDatenhaltung)]) ParameterIdentifier%3Dfachkonzept"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="186bf55c-c49d-4a30-ad56-c6801962bc2b"
+                      LastKnownName="IFachkonzept"
+                      LastKnownLocation="Package_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f851215-cf60-43ff-8caf-25a437ad08ee"
+                  name="datenhaltung"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1eba12b0-7680-4a10-b0b7-1f1ddc53a800"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DIFachkonzept)%2C(Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream Type%3DIDatenhaltung)]) ParameterIdentifier%3Ddatenhaltung"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="c3e5f4f3-c007-428f-a067-3ff38ece1c77"
+                      LastKnownName="IDatenhaltung"
+                      LastKnownLocation="Package_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="31fe9fed-2589-4dd8-bbd4-9b347b0eea3c"
+            name="MainMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6e9cab8f-5a2f-4b20-b466-2eca07dd4b02"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DMainMenu"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4d3450d2-d0d7-45f1-b594-43e1022a45a1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27f84010-e5c7-4d98-a31b-63d36d34d1c3">
+                    <propertyInstance
+                      Id="4b091d84-d39e-4cdb-bfb7-51946955c187"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee9eae08-fab5-4fcb-a421-1bc390c09580">
+                    <propertyInstance
+                      Id="23bd0e50-5e08-4a99-ae50-d86762dc6100"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="863c40f8-c2f7-465f-82eb-536d25e1d1d0">
+                    <propertyInstance
+                      Id="84031641-884a-4c14-adf6-2b41b162f129"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70549b44-d59d-41bc-a631-c4137bbbb48c">
+                    <propertyInstance
+                      Id="21ea86e6-9bd6-405a-90ef-00b0519d0fa0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ac43435-479b-4919-ae42-3651c95b08f9">
+                    <propertyInstance
+                      Id="d39d7fe0-3dfd-46da-8ce8-97579dc68ba2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1299d26d-16ad-48ff-8b19-7b90931af056">
+                    <propertyInstance
+                      Id="34261bbc-931d-4685-bf97-2f4f94d780ae"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4b8c3d46-44f1-49d4-9f5a-cf927101632b"
+            name="UserDisplay"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1d5c426f-462a-41da-a938-b27d20f03066"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DUserDisplay"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="decfcd97-5882-4437-8c9e-b3452d73a746"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66f0832d-6582-4336-9348-661cf869c76e">
+                    <propertyInstance
+                      Id="dcb6936f-c769-4d25-84cd-b4780ed64df5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c01885f3-226b-442e-b360-9968d26f42e2">
+                    <propertyInstance
+                      Id="ab1974be-a148-4226-88a4-09c5700786d9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbf6afc5-5e45-4061-af3c-73214aa303b6">
+                    <propertyInstance
+                      Id="d0773e10-3855-405d-a88f-f74cc07eb3c9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e693d03-cf32-444f-bfdc-4a7e479a0349">
+                    <propertyInstance
+                      Id="f39c5ab9-5dba-4497-b615-52b6847ece3c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0130326f-e076-4bfe-8dcb-bc1fe86d1bff">
+                    <propertyInstance
+                      Id="ccdfc51b-39a5-4ef2-b374-2990fe9af35d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="727d4c58-cd56-488c-a464-6e86b03917cf">
+                    <propertyInstance
+                      Id="1122d668-10b4-4a0a-93fc-3d60c8ef33ba"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="91e9ae91-91b8-41b4-9f96-7cce6b65905c"
+            name="UserSearch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="43d16c9f-04c4-48ad-aecf-75c30a38ce1a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DUserSearch"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="649ff047-f2cc-457e-a52b-0911ae201fce"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fb693d8-15f1-4984-be04-6f4f425d9aaa">
+                    <propertyInstance
+                      Id="147f2a96-4ec5-46e8-9efc-5bcf4dae19e6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="692c3703-7e22-454c-b82b-201d88a16e48">
+                    <propertyInstance
+                      Id="96c32cfc-c224-4db1-acea-029ac459ad3b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f39194d3-3af3-4f37-8afb-f1d5ffb5129a">
+                    <propertyInstance
+                      Id="0a27f4c8-3bba-40e5-bd66-40563f5c130f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="124b9eee-025c-4de3-b774-ed6790b999cb">
+                    <propertyInstance
+                      Id="a51d2f13-31ca-41fb-bb15-38d37aadc67b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7d4b56c-524c-4f57-9bf5-9ee909569811">
+                    <propertyInstance
+                      Id="4b933804-fa5e-49f0-87ee-74dca52260af"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a73c73a0-fd7e-4acb-a235-c871f6d02eda">
+                    <propertyInstance
+                      Id="7b5be9c9-2038-40a9-a080-da90ff228047"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f5e5bfc4-b4b3-4a28-beb9-e5416eb6c5b0"
+            name="UserAdd"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fe8b135a-d981-4a30-b825-d3d53715af81"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DUserAdd"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aad0acfe-894e-4501-b042-4a56207ee3eb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="365f3c81-f7c3-452b-b62e-bf729cec72e1">
+                    <propertyInstance
+                      Id="9d7fbfef-4442-441c-b201-9b651ee220ae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef66b054-6273-490a-af88-d43811eec9d3">
+                    <propertyInstance
+                      Id="318b6e14-1dde-4af8-aa69-958181c24a9b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8dc15a18-e0a0-44bb-8cd1-31b1a52e7f57">
+                    <propertyInstance
+                      Id="59d49b3c-848d-47bd-9620-4a9040022bc1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51df7863-d829-46dc-a890-6ee4af411f8a">
+                    <propertyInstance
+                      Id="ed9248fc-f170-4924-be08-33d5abecdf12"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7918b31f-d0dd-432c-9cb5-74cc39da4247">
+                    <propertyInstance
+                      Id="69c6d74d-8981-4383-9606-28d349c904d4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae199549-cf72-4eb6-b9b2-1a7bcd33d105">
+                    <propertyInstance
+                      Id="d3249fe9-38c2-4e9c-a968-bf98a86939cf"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="8fac058e-f85b-42cd-b0c1-ccaf5b652cc8"
+            name="UserChange"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="63d317d7-ebf5-46d9-b7bc-3932872a855b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DUserChange"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c064c94a-ebb4-461c-9ebb-50b87d4bfb40"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="224d8f1d-62a7-4928-af7f-553735c593b6">
+                    <propertyInstance
+                      Id="b0fffeab-cb23-423c-837d-c73d4e1dfe77"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54fe7c0c-baf6-47eb-b087-385e2c098dd6">
+                    <propertyInstance
+                      Id="8d85d71f-3b82-47f4-bcc8-cf61e18cbfde"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6085991d-6c10-42d0-bc8b-8971544acc57">
+                    <propertyInstance
+                      Id="a91a2ed2-6a0b-47ae-bf5a-2ae491a6e87a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0042b03c-5e7f-4d7f-9039-9ad08e495cd1">
+                    <propertyInstance
+                      Id="5d5432bd-1404-4474-abf1-cd2f92ff84ab"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afc324bf-8810-405e-913c-c3f22bdba3cc">
+                    <propertyInstance
+                      Id="f446945a-6709-4c28-83a5-172314b49a1f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d770a95-abce-4dcb-806f-389f02b7a62c">
+                    <propertyInstance
+                      Id="1aa23475-4e1d-47f6-87ca-f103b78caad7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="8787c6ab-4fb4-4112-9c49-c477183aeea9"
+            name="UserDelete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7d59d92d-7aef-4ee8-8bce-9714e0e6851b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DUserDelete"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b9eb1bd2-7eea-4362-bb65-facff1005549"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c026c12-9f71-4bc3-88e6-bbc0d4a62bba">
+                    <propertyInstance
+                      Id="f10676dc-076b-4bb6-bd6e-d7048fda6f08"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95589a22-f4c9-43b4-b1a9-9c0e457f468a">
+                    <propertyInstance
+                      Id="18e43cb9-eb74-45bd-a87e-6f92b2b15950"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5e5c165-d1ba-4364-8d04-b18050180608">
+                    <propertyInstance
+                      Id="ff3e5caf-b653-4291-b12b-b70593c5ce21"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14b54c23-a7a7-4ee0-8ea3-7a950d4b5705">
+                    <propertyInstance
+                      Id="9311ba4a-5cf5-44a0-b4f1-7623a6ea2360"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0f4ffbf-3df7-4881-93ce-a54d980f730c">
+                    <propertyInstance
+                      Id="40011f73-1491-4c02-9f08-a332354cc1e6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35c7ec50-0233-4ec8-8835-dc7219a22dab">
+                    <propertyInstance
+                      Id="2312593f-c43e-457e-9bc3-8a94648645b6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="00af0b58-95e4-4d21-b6a5-f361cc9f04ba"
+            name="GameDisplay"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c933bc89-838e-4890-861f-5ff7bc91c789"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DGameDisplay"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5ec6ae85-706f-4b46-bb74-016541de0797"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57076b62-1c34-4fc9-a74d-22213534168a">
+                    <propertyInstance
+                      Id="4899d906-4177-4e8e-b8e2-4813576c3572"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d27a0069-e90b-46be-b0e5-2bd38fb6024d">
+                    <propertyInstance
+                      Id="978d3ac9-5747-47aa-9f3d-87f7e3c509db"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16472d62-8bf1-491b-8760-17cc21ed807a">
+                    <propertyInstance
+                      Id="4e3d6bdb-9061-401c-8e68-faad51bb9665"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a999260-9b75-467e-9bf0-793f3681dbfd">
+                    <propertyInstance
+                      Id="b9ef9ddc-014a-4f8e-a3bc-fccf17d31f80"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e993175c-525f-47b5-a0ba-476bb2031af7">
+                    <propertyInstance
+                      Id="e7d68e1f-b7f5-4c0d-9484-345f7cd37477"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1097dc3-3da1-4d57-88a4-71a67e94daf2">
+                    <propertyInstance
+                      Id="013464f9-d71a-4247-b3b2-caa48af13474"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="5f41d964-f597-4197-a87a-58d80e3f9218"
+            name="GameSearch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1ad672c5-e5f9-478c-bb49-426f89be246f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DGameSearch"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4b48a194-ea19-44a9-a40f-5d3cedf4a654"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f9f3972-c2cc-4e25-afd3-736d0210b404">
+                    <propertyInstance
+                      Id="70adbd32-81f9-485c-ac15-425c919a0de4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d9a8cac-8bf5-4986-8aea-cb1c5ca08c18">
+                    <propertyInstance
+                      Id="b4372f8a-84ed-4b0b-a97a-0c14e9f5e0dd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53360473-0977-45dd-8f46-f842003b1e2b">
+                    <propertyInstance
+                      Id="99497f53-2403-42b3-98db-1b37353df26f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a58d9e68-3ecb-4a2f-845b-c7249d101f2b">
+                    <propertyInstance
+                      Id="5dc39bc1-dda7-49fb-a2ea-1a98e82b23ea"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="843cf3c4-e68f-4720-954f-338f47030d6c">
+                    <propertyInstance
+                      Id="5310d28a-b9cd-42a3-bf1c-eea79a895ca7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="283b72e8-f6db-47ba-b87b-c0dc8e12668c">
+                    <propertyInstance
+                      Id="f1d9b995-bfd5-4d43-846e-4ea1f4eab6c9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="c44e381e-5e58-48f9-9daf-8f38e9d7d7b0"
+            name="GameAdd"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d335ab15-c9be-4c13-a5a9-95b481701777"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DGameAdd"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="de34567f-172a-4515-81d7-921b8e3de5bf"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c91469d-d903-4de5-a31d-18dcb2e6592b">
+                    <propertyInstance
+                      Id="0762f522-8ebb-49bd-9d01-de30eb516423"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e44d835-6911-4578-8cde-31bee64f1242">
+                    <propertyInstance
+                      Id="16ea68c5-8bc0-41fd-a85f-bcca3c6d6c9d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="345a1882-5069-4cc8-8e37-59bd7f77ad3b">
+                    <propertyInstance
+                      Id="06ceff16-70c7-4bd7-8816-8601f62739d1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00a0da41-2156-4a95-b1ba-ccfa8fd0ad3a">
+                    <propertyInstance
+                      Id="8ee80b8c-4578-4f43-a0f6-723b1c3b6a1b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47a5a9f7-8690-445c-9e3e-dbad3a93ca58">
+                    <propertyInstance
+                      Id="d6d6b127-fde0-4be0-9417-91df86e01062"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d38d1099-16db-4b64-b46a-09bf96128dd5">
+                    <propertyInstance
+                      Id="516f08e2-f2ab-41fd-a169-43cab7b9fd3a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="6b2ede72-3484-4195-9c9a-405d78ee1e68"
+            name="GameChange"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="03c443e8-c9b4-4ea9-bca1-1b93de201523"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DGameChange"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="abae7547-1fd0-42c0-9fdf-e0a3309f18db"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2b40101-b5e1-4d17-b953-e2cc0ca72e49">
+                    <propertyInstance
+                      Id="8e91f4df-b979-4c77-b1cb-1a035f12f7c0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29fdcfe5-b84f-4c1f-8762-8c9b516143f5">
+                    <propertyInstance
+                      Id="813e396d-22a3-4140-937d-47fcf4521cd3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b708f53-e421-4c99-b839-f38d19293466">
+                    <propertyInstance
+                      Id="8f01ef2f-90f6-413c-aac4-d1863c48a965"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2611451-c258-495a-919e-19000f1eced7">
+                    <propertyInstance
+                      Id="f34a7677-9c1e-442c-84d6-be2cdd2ddd5e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4208f337-b430-4e3c-81af-a54ec381efbc">
+                    <propertyInstance
+                      Id="ef35f820-e4c2-4b15-bb05-40c8a7c9873c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d91d6c63-da02-49bd-a9dc-dca5410f1825">
+                    <propertyInstance
+                      Id="834f22f2-6236-4c16-8791-b76bf7e64df1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="e9f2f914-2260-4403-bd72-d68b9135f3b3"
+            name="GameDelete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="13c1c6d7-8413-4db5-9a69-aeaf35980499"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DGameDelete"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="027f1f10-d71a-42f6-a25f-175d2791df0e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ca20dc7-2707-43f6-89f6-9c785c7bf4e4">
+                    <propertyInstance
+                      Id="90d78781-b92c-4bf9-8b4e-0129ed567aaa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f2a50f2-4708-47c0-9d89-a50b0f93a13b">
+                    <propertyInstance
+                      Id="03b6f662-5d60-4471-aaa7-f7cf146b3df8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="557fee42-9ca7-4e71-a04e-0a1e23025d37">
+                    <propertyInstance
+                      Id="2f95cb51-664e-478b-a04e-c58dd70d7bff"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d82da328-5dc1-411e-8e12-bf33ec5b6b06">
+                    <propertyInstance
+                      Id="a502a8af-2342-454c-ad5a-de6864e43175"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d231c419-3f53-4f05-a70b-62295cd1cdab">
+                    <propertyInstance
+                      Id="561e5208-1290-4b9c-9d1b-fb1f4ed86b06"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59fc2aef-2c0c-43a2-a6f2-e5dac7067640">
+                    <propertyInstance
+                      Id="57871726-d1f4-445c-8630-e4d5d2c3cf46"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="a869ce70-ab36-4d58-92bb-5d3e3dbae256"
+            name="RelationAdd"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="30f8fd4c-0708-42a6-a5c9-9e0d76c98699"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DRelationAdd"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fd8c0acd-b565-49d1-8ecb-274f1e100953"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90e552cc-6b95-435e-9ebd-45d7d1a9799b">
+                    <propertyInstance
+                      Id="eb799db0-8fb0-494d-8df2-6c60ef8e7deb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf28d191-c099-4b0d-b2b1-da8b47f4d195">
+                    <propertyInstance
+                      Id="f64c8794-0f48-4607-89b7-a7cc5d2a5e8d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6741595c-9ffa-4fec-9cc9-00482dac5bed">
+                    <propertyInstance
+                      Id="5f01c3f1-2229-482b-8232-032f722bace1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75565dfe-6253-42b4-b856-388be998803f">
+                    <propertyInstance
+                      Id="e505e55c-6464-448f-a676-6fb23fe9dd3f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c581000-7c93-4f0e-ab5c-cc3757f30400">
+                    <propertyInstance
+                      Id="c39d4d78-b25a-4299-a4fe-4c5c4cc895b5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5003bdca-79a2-44e0-a553-3462b6bbc111">
+                    <propertyInstance
+                      Id="b2ab056d-f4d4-40b5-a696-ed307542d378"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="9b22f212-1378-4cce-88dc-6b89ef5fb878"
+            name="RelationCut"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b2e24f80-20bb-40fe-869b-bfde3d5a4594"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DiScream.TUI Type%3DTUI Member%3DRelationCut"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d8b5b836-0511-4c9c-835f-069f27676c1b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5648757-6b1d-46a6-9798-d527505b644a">
+                    <propertyInstance
+                      Id="fef502b0-43a8-4eab-9425-f19d56480d62"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17b0da81-9ee9-4489-900e-a42523c0c7b7">
+                    <propertyInstance
+                      Id="9e12c131-1043-40cf-95c0-77d22afe1ae1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b64d611d-9de5-44c5-a516-7fafe2f82056">
+                    <propertyInstance
+                      Id="8d99cec2-96fd-4675-baa8-2a9f56300257"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd81102a-10f7-4234-b578-00f97f633f68">
+                    <propertyInstance
+                      Id="c23c753b-e732-43b9-a3db-ee54ab6fc379"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ec10650-a909-4a06-99f0-835a90d80084">
+                    <propertyInstance
+                      Id="1f7ce876-c228-490f-ad8e-eef2ce796629"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bede6c39-cf91-4e27-880a-028d3911f82d">
+                    <propertyInstance
+                      Id="add32f2b-32f3-499d-bd99-e775279ba0f4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

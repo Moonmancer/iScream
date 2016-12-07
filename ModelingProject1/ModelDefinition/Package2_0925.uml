@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b2807bfa-2030-4c67-9bc0-7bf11b83c5b4"
+  name="XamlGeneratedNamespace"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="11a63bff-8f98-42d5-a5ab-1fbeaebdc20c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DXamlGeneratedNamespace"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="9dda4113-f9a7-40a4-8658-b2ee4436aac7">
+      <profileInstance
+        Id="9450284c-c4e5-4460-8810-844cc528634d"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="b7ea0cab-0060-4ef1-9862-2da002390f17"
+        name="GeneratedInternalTypeHelper"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="12959ff5-9c95-4979-9588-0ae0ac6f6b6b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b2f531fd-2e9e-4e3a-b51b-b9030a961b64"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4d71dba-8bf9-48cb-83db-eb8beddad835">
+                <propertyInstance
+                  Id="0c7659de-7610-404f-b7e5-5a899b090be4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1538cb2-cdee-4f17-b8f0-8be0fbfb7491">
+                <propertyInstance
+                  Id="51ae2b8f-5fc0-4d80-885f-d2ac4c3a3dad"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22f636ed-dcda-41e9-bc56-c9b83a76fccf">
+                <propertyInstance
+                  Id="a74a1325-bd60-4dd3-8bb7-526b4efe3c42"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c38040f-fb32-4fe0-ae71-7aa26ef271e3">
+                <propertyInstance
+                  Id="c4048900-96b2-4ee3-b365-802785f2d89a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c82f702b-07be-40c7-a0f5-0273a0477697">
+                <propertyInstance
+                  Id="ab83c049-eb07-47be-90cb-b4e59b32bac9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="25c50c26-f498-45f4-82c4-4b3645a8369e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0ed1e44d-d914-4858-8f13-8b2bd8172f62"
+              LastKnownName="InternalTypeHelper"
+              LastKnownLocation="Package7_0925.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0dfdc5fd-8c67-4feb-9c22-9b8262bd4b30"
+            name="CreateInstance"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f35c6d39-3650-4522-bf3b-4601bfa6de18"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DCreateInstance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="16230634-2f37-4e3a-aadb-244f8c6be2f7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cb356f3-77e0-45de-82b3-14c85d98605f">
+                    <propertyInstance
+                      Id="411bfc7f-86bd-4c81-a7d3-80216390058f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3a3530c-d953-4675-8da2-61f1e908bd8d">
+                    <propertyInstance
+                      Id="32954cbb-aee0-4450-818b-75e46498ab3c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a67ede8b-bc04-4220-aad7-db1dc8420763">
+                    <propertyInstance
+                      Id="63a91cd9-6e12-438a-a68e-e9a95983c614"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bdbdaa5-d28d-460c-8bf5-b7a7da6e3e8a">
+                    <propertyInstance
+                      Id="ef51d1cc-4ca8-41e9-8a35-917c219dbef8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af4113fc-21e8-42ef-a2ab-d9d7bb1adb7b">
+                    <propertyInstance
+                      Id="00a354d7-1908-403f-ab11-3dc6f0356c3e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9aa0088-5542-4bf7-b248-77553a17771b">
+                    <propertyInstance
+                      Id="dd9f9a3d-b9c1-4ec3-8fd3-32adb9ea85ae"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ae8d3500-8814-4e67-b83d-7d17d458e908"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3402a1eb-8022-449e-a28a-241e14312c4c"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4367d074-497e-4b4f-b8dd-2d5a43c31012"
+                  name="type"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1e2e5019-8dab-4afe-800a-035a552f1d2b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DCreateInstance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dtype"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="445f109e-ca2d-49a4-a792-f64b32d957f2"
+                      LastKnownName="Type"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4457dfa7-94ce-42a8-9cd3-95289c837664"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="46218167-8e83-447a-a8a0-3dc7f79353d0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DCreateInstance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dculture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e149d0c3-1c63-4ff6-af91-03323ac0fdf9"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package4_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="beb21122-97dd-44b0-a7f9-316ae2e14344"
+            name="GetPropertyValue"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4107a351-7a2f-4c26-b315-1f54abc0722d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DGetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="96cf3a92-fe28-467a-b758-328846fdcdc1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c89f580-b0d0-4c05-a984-33fdd9e8928b">
+                    <propertyInstance
+                      Id="35a7e228-a03e-4111-9d7a-cbf47e5c15b3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="773dc5ac-13f9-4972-84f7-8146935376e7">
+                    <propertyInstance
+                      Id="0ac885f1-9c88-4ab8-9794-0b103a4e93d0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba312596-eb83-4a18-9057-e187af1a511a">
+                    <propertyInstance
+                      Id="af959c8a-ff49-45a1-9346-622240a3fb1a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d23273e1-3b51-4e47-8d85-0235209b46cb">
+                    <propertyInstance
+                      Id="58f71ebf-b47b-4ad5-9a09-0bc4181b0512"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71487512-ab8a-4644-9490-cfa1c4275216">
+                    <propertyInstance
+                      Id="cb805c6c-768d-42c3-96d2-6c43ea947945"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77c3c7e6-2d38-4531-b166-56b04a0f59bc">
+                    <propertyInstance
+                      Id="a5f03cc2-b857-47c6-835f-b2d1fecd3393"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="89447b8d-5c3f-477b-8de3-cf1805da4b63"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3402a1eb-8022-449e-a28a-241e14312c4c"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a2b1d23-5d11-4a22-86d1-0011e007e311"
+                  name="propertyInfo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="07d6b4a5-648b-4a7e-9028-2bb714191f6f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DGetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3DpropertyInfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="07c27c8c-267d-434f-91fd-39b1c877ffb7"
+                      LastKnownName="PropertyInfo"
+                      LastKnownLocation="Package5_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="016a9ef4-0cdb-4971-9941-e41004f862f9"
+                  name="target"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4b0d8f78-78bd-4eec-b74d-9e0f2c55941f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DGetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dtarget"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3402a1eb-8022-449e-a28a-241e14312c4c"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ae1d6ec8-81c3-4265-addf-ed952bf0e8c7"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="aaf87db9-bfd9-4fdc-b286-925500a9afb8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DGetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dculture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e149d0c3-1c63-4ff6-af91-03323ac0fdf9"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package4_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="41c84cbd-bf3b-4c4b-8769-013aab50266f"
+            name="SetPropertyValue"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="07b02a38-b508-4b14-bc6f-5299ff974f7d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DSetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="97e8d691-b159-4bff-b658-aa7f451a4d8e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a8d7da8-4f90-482a-bad9-6023d313b7b4">
+                    <propertyInstance
+                      Id="464fb03a-7486-4c92-b078-1b48fedcaf10"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="630a81c7-d50a-4cde-bf88-31d846459008">
+                    <propertyInstance
+                      Id="c06fb866-a6a0-4ef0-9af2-c69d1097a28d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c974ea05-c56d-4d5d-b7dc-ead977e0b0d1">
+                    <propertyInstance
+                      Id="5930a7df-ce8a-4ea9-bb5b-e522f38dcee9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8741787e-208a-40a5-95b0-aea81ef1e761">
+                    <propertyInstance
+                      Id="a52dbf73-5ccd-4199-ad4c-1ef1d26bd6c6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cfe1b991-81e2-4603-ac77-630cb43ec5d1">
+                    <propertyInstance
+                      Id="71be1046-ed43-47c0-99a1-529440c1260b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6757af2-adfe-41f3-aca0-cbfb4cf5f7f3">
+                    <propertyInstance
+                      Id="de3ff24f-cf64-4557-a48c-c3de01cc1917"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="06576a8a-7e9c-4764-8cc1-afa790909def"
+                  name="propertyInfo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2174eaf2-ee8e-445b-b31f-24dddcc05d30"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DSetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3DpropertyInfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="07c27c8c-267d-434f-91fd-39b1c877ffb7"
+                      LastKnownName="PropertyInfo"
+                      LastKnownLocation="Package5_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4b99e2b8-0a2f-4724-a995-f2ce5f5b061e"
+                  name="target"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2b7547e4-2e9a-4f56-abbc-f04bc86560b3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DSetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dtarget"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3402a1eb-8022-449e-a28a-241e14312c4c"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0bbe1e61-da18-4761-a0c4-51edbdb0d54b"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="53ba17c9-e991-4a8d-bfd8-3d02c941ba8c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DSetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3402a1eb-8022-449e-a28a-241e14312c4c"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="41453fa4-7594-49ea-94bc-f993f04c4d9a"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8cd204f6-b5fd-4a68-9434-2f28ac1bbafe"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DSetPropertyValue OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DPropertyInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dculture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e149d0c3-1c63-4ff6-af91-03323ac0fdf9"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package4_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fcb5d71b-69f6-45e9-a9af-ca0279fb29d0"
+            name="CreateDelegate"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b4c88267-50e4-4c73-87f0-7cd016e0a1ea"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DCreateDelegate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="59df8b07-9a83-40cc-88b2-7ce626bbf07d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a84a4205-a7dc-4620-b814-9b7e11dc644a">
+                    <propertyInstance
+                      Id="0fadc594-83d9-48b6-8b1f-b211d335a67d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb9c7581-890b-4037-b5d3-d2b815278e4a">
+                    <propertyInstance
+                      Id="c73b4e53-2747-4281-900e-bac1f4ab4006"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ce4ef45-b189-4c08-975b-fc72af4dec92">
+                    <propertyInstance
+                      Id="0bd72748-d65d-4f6e-ab25-2231c3656cdd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1c1941f-d1ab-4a0a-b8a2-580b54091992">
+                    <propertyInstance
+                      Id="b75cc0b3-1bbe-4c22-9dab-d4d6eb7a05d4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="514e1178-ad43-4f8e-bd27-291591abe5af">
+                    <propertyInstance
+                      Id="e47f83f6-8de8-4971-a1ef-5e33bd67b0a7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="808773aa-4319-4d92-893c-0ad33824c989">
+                    <propertyInstance
+                      Id="1097b985-fd1b-433a-8fa9-58f3cb04601a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b4ebafa2-0e3b-4490-a207-ee342f77727d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="04c318bc-5ae6-48c8-89c5-24faf3b2c2f9"
+                      LastKnownName="Delegate"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="859b6a4d-dd4c-4bd6-b889-d0e81be69b05"
+                  name="delegateType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9d70cd96-7a65-463c-89f3-dabc115a32df"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DCreateDelegate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DdelegateType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="445f109e-ca2d-49a4-a792-f64b32d957f2"
+                      LastKnownName="Type"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9b793a87-93ba-4bee-b4d6-7b78d73ea924"
+                  name="target"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ea3b14ce-96fd-4daf-9d5d-b7e3123dd1dc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DCreateDelegate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtarget"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3402a1eb-8022-449e-a28a-241e14312c4c"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="594e6d47-cd93-49ce-a774-f18851eb861d"
+                  name="handler"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="df534903-f4f0-46da-abe8-03aa8bc31b6f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DCreateDelegate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dhandler"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b63f90a3-1050-49c0-8715-7a2145af06f4"
+            name="AddEventHandler"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2b566dbe-7e1a-4751-8ed5-dd6f2bb1cef2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DAddEventHandler OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DEventInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDelegate)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f55eeb75-696c-4065-ace1-3a36caa0dbef"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f6007c2-7e9a-42b8-ba15-d9e81afc852c">
+                    <propertyInstance
+                      Id="9a2e2a31-4b9b-4244-b12b-34bfd9d9c1f6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0fc5ced-22da-498b-8041-8953d047ddbe">
+                    <propertyInstance
+                      Id="64485a0b-eecf-4655-988c-be9c146310e5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a87c410c-90ef-474d-ba6f-83a15c254347">
+                    <propertyInstance
+                      Id="279e48da-76aa-4b99-9dbf-cb01bbc18c34"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe2f4c48-e290-4fa3-b5dd-c0f23be77067">
+                    <propertyInstance
+                      Id="6f1d5962-2cc5-4fcd-af86-0b10024c1954"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c15c9a5-d2f2-4534-a9d5-463c8f1a33ca">
+                    <propertyInstance
+                      Id="9ddc8d4a-5a13-4d79-a222-e8897d42c4b2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc5c29ba-2315-4792-a2e7-941b16a3f314">
+                    <propertyInstance
+                      Id="d9e36038-e838-4199-8dae-69c5deb815f0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9747cc47-c05a-48ce-a764-26a61b613f50"
+                  name="eventInfo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c9e035d5-a6e2-4bfe-b74c-1f96b32d3113"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DAddEventHandler OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DEventInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDelegate)]) ParameterIdentifier%3DeventInfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b2ec3bc7-e75c-4552-a0b6-28169b1bcb53"
+                      LastKnownName="EventInfo"
+                      LastKnownLocation="Package5_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f5d9fe8-7a0b-47da-a571-4fff4eef123d"
+                  name="target"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="56c7c06f-ae13-4649-be8c-eeef8af8f17d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DAddEventHandler OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DEventInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDelegate)]) ParameterIdentifier%3Dtarget"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3402a1eb-8022-449e-a28a-241e14312c4c"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f41f9077-aa2e-4510-a5cb-39ffafc0ffb0"
+                  name="handler"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a361094c-eba6-4bb8-aa73-08401a4f2115"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D(Name%3DAddEventHandler OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Reflection Type%3DEventInfo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDelegate)]) ParameterIdentifier%3Dhandler"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="04c318bc-5ae6-48c8-89c5-24faf3b2c2f9"
+                      LastKnownName="Delegate"
+                      LastKnownLocation="Package3_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a10dfba4-b0dc-4e25-8a5f-1bb692da6f13"
+            name="GeneratedInternalTypeHelper"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0a8d51da-c6e9-46f6-bb26-887ebdee3256"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FZ:%2FiScream%2FiScream%2Fbin%2FDebug%2FiScream.exe Namespace%3DXamlGeneratedNamespace Type%3DGeneratedInternalTypeHelper Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1660a4ec-704f-4fd9-a699-32da80ee7e97"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2815e4fc-e37b-4191-a9d9-2f2672f44ca1">
+                    <propertyInstance
+                      Id="c179c9c1-10e6-4f8d-ad96-ac87d14cacb1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d8b2b01-f660-43de-93d0-616aa7c36dd9">
+                    <propertyInstance
+                      Id="ece89946-deac-4394-85c5-a7cf40467228"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b358cfd2-c64c-41ec-98e6-71c53398f8d4">
+                    <propertyInstance
+                      Id="9bfa0184-4ef9-4b9f-8b9d-01eca54cc406"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7431baa-0d28-46fe-8d66-320359704371">
+                    <propertyInstance
+                      Id="41429e3c-f05b-4361-89c2-fd122843c9e0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca24f0c3-44ac-424f-ad21-a7b3e53c6c9a">
+                    <propertyInstance
+                      Id="eadda9ef-f16e-43ec-a070-2ac77b6ddfbd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71a2f358-c2df-4571-b7d8-e85a2ed9f408">
+                    <propertyInstance
+                      Id="000e1baf-db14-4b5a-b5f2-0319295749f3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

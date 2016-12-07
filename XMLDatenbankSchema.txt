@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="XMLDatabase">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="UserData">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="User">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Firstname" type="xsd:string" />
+                    <xsd:element name="Lastname" type="xsd:string" />
+                    <xsd:element name="User_id" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="GameData">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Game">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Name" type="xsd:string" />
+                    <xsd:element name="Game_id" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Links">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Link">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="User_id" type="xsd:unsignedByte" />
+                    <xsd:element name="Game_id" type="xsd:unsignedByte" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>
