@@ -16,16 +16,16 @@ using System.Windows.Shapes;
 namespace iScream.GUI
 {
     /// <summary>
-    /// Interaction logic for UserAdd.xaml
+    /// Interaction logic for GameSearch.xaml
     /// </summary>
-    public partial class UserAdd : Window
+    public partial class GameSearch : Window
     {
-        public UserAdd()
+        public GameSearch()
         {
             InitializeComponent();
         }
 
-        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
             this.Close();

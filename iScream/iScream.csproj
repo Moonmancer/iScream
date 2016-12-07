@@ -55,7 +55,13 @@
     <Compile Include="Cryptography.cs" />
     <Compile Include="GUI\Classes\DisplayGameVM.cs" />
     <Compile Include="GUI\Classes\DisplayUserVM.cs" />
+    <Compile Include="GUI\Classes\GameAddVM.cs" />
+    <Compile Include="GUI\Classes\GameDetailVM.cs" />
+    <Compile Include="GUI\Classes\GameSearchVM.cs" />
     <Compile Include="GUI\Classes\PropertyNotify.cs" />
+    <Compile Include="GUI\Classes\UserAddVM.cs" />
+    <Compile Include="GUI\Classes\UserDetailVM.cs" />
+    <Compile Include="GUI\Classes\UserSearchVM.cs" />
     <Compile Include="GUI\GameAdd.xaml.cs">
       <DependentUpon>GameAdd.xaml</DependentUpon>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="GUI\GameDisplay.xaml.cs">
       <DependentUpon>GameDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GameSearch.xaml.cs">
+      <DependentUpon>GameSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUIMain.xaml.cs">
       <DependentUpon>GUIMain.xaml</DependentUpon>
@@ -81,6 +90,9 @@
     </Compile>
     <Compile Include="GUI\UserDisplay.xaml.cs">
       <DependentUpon>UserDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserSearch.xaml.cs">
+      <DependentUpon>UserSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="ISort.cs" />
     <Compile Include="Settings.cs" />
@@ -117,6 +129,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\GameSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\GUIMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -134,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\UserDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\UserSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

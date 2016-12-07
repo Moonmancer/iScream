@@ -24,5 +24,11 @@ namespace iScream.GUI
         {
             InitializeComponent();
         }
+
+        private void UpdateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+            this.Close();
+        }
     }
 }
