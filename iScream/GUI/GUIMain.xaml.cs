@@ -23,8 +23,13 @@ namespace iScream.GUI
         public GUIMain()
         {
             InitializeComponent();
+            //GUIfachkonzept = fachkonzept;
         }
 
+
         public MenuControl MenuControl { get { return Menu; } }
+
+        //static IFachkonzept GUIfachkonzept { get; set; }
+
     }
 }

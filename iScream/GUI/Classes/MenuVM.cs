@@ -21,6 +21,7 @@ namespace iScream.GUI.Classes
             DisplayGameCommand = new SimpleCommand(ExecuteDisplayGameCommand);
             _container = container;
             _fachkonzept = fachkonzept;
+            _fachkonzept = GUIStartup.GUIfachkonzept;
         }
         private void ExecuteDisplayUserCommand(object obj)
         {
