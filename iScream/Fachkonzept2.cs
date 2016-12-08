@@ -26,7 +26,7 @@ namespace iScream
                 }
                 else
                 {
-                    SortHandler.SetSortAlgorithm(new SortAscending());
+                    SortHandler.SetSortAlgorithm( new SortAscending());
                 }
             }
         }
