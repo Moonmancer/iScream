@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    interface IFachkonzept
+    public interface IFachkonzept
     {
         //doesnt work:
         //IFachkonzept(IDatenhaltung datenhaltung);

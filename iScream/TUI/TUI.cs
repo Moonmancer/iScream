@@ -16,6 +16,11 @@ namespace iScream.TUI
             _fachkonzept = fachkonzept;
             MainMenu();
         }
+
+        public void Run()
+        {
+            MainMenu();
+        }
         
         public void MainMenu()
         {

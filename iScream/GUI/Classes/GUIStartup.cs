@@ -12,13 +12,13 @@ namespace iScream.GUI.Classes
 
         public GUIStartup(IFachkonzept fachkonzept)
         {
-            GUIfachkonzept = fachkonzept;
+            //GUIfachkonzept = fachkonzept;
         }
 
         public static IFachkonzept GUIfachkonzept { get; set; }
 
         [STAThread]
-        public void RunGUI()
+        public void Run()
         {
             //GUIMain GUI = new GUIMain();
             //GUI.Activate();

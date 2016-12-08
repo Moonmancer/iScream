@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -20,8 +21,13 @@ namespace iScream.GUI.Classes
             DisplayUserCommand = new SimpleCommand(ExecuteDisplayUserCommand);
             DisplayGameCommand = new SimpleCommand(ExecuteDisplayGameCommand);
             _container = container;
-            _fachkonzept = fachkonzept;
+            //_fachkonzept = fachkonzept;
+            //TODO: Nicht richtig geregelt!!
+            //IDatenhaltung haltung = new Datenhaltung1();
+            //ifachkonzept konzept = new fachkonzept1(haltung);
+            //_fachkonzept = konzept;
             _fachkonzept = GUIStartup.GUIfachkonzept;
+            MessageBox.Show("keks");
         }
         private void ExecuteDisplayUserCommand(object obj)
         {
