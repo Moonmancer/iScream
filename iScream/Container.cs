@@ -12,6 +12,11 @@ namespace iScream
 
         public List<Game> Games;
 
+        public Container()
+        {
+            Users = new List<User>();
+            Games = new List<Game>();
+        }
         public Container(List<User> users, List<Game> games)
         {
             this.Users = users;

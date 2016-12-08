@@ -159,7 +159,7 @@ namespace iScream
         }
         #endregion
 
-        void changeSortOrder()
+        public void changeSortOrder()
         {
             sortDescending = !sortDescending;
         }

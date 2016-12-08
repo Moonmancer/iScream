@@ -13,9 +13,9 @@ namespace iScream
         {
             sorted = unsorted;
             sorted.Games.Sort((x, y) => y.Name.CompareTo(x.Name));
-            sorted.Users.Sort((x, y) => y.Name.CompareTo(x.Name));
+            sorted.Users.Sort((x, y) => y.Lastname.CompareTo(x.Lastname));
 
-            return unsorted;
+            return sorted;
         }
     }
 }

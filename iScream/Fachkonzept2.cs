@@ -34,6 +34,7 @@ namespace iScream
         public Fachkonzept2(IDatenhaltung datenhaltung)
         {
             this.datenhaltung = datenhaltung;
+            SortHandler.SetSortAlgorithm(new SortAscending());
         }
         public Fachkonzept2(IDatenhaltung datenhaltung, bool sortDescending)
         {
@@ -54,8 +55,6 @@ namespace iScream
             games = datenhaltung.GetGamesOfUser(user);
 
             details = new Container(users, games);
-
-            
 
             return details;
         }
@@ -139,7 +138,13 @@ namespace iScream
 
         public List<User> getUsers()
         {
-            return datenhaltung.GetUser();
+            Container details = new Container();
+
+            details.Users = datenhaltung.GetUser();
+
+            details = SortHandler.sort(details);
+
+            return details.Users;
         }
 
         public List<Game> getGames()
@@ -177,7 +182,7 @@ namespace iScream
         }
         #endregion
 
-        void changeSortOrder()
+        public void changeSortOrder()
         {
             sortDescending = !sortDescending;
         }

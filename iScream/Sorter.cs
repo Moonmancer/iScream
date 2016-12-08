@@ -21,7 +21,7 @@ namespace iScream
             }
         }
 
-        Container sort(Container unsorted)
+        public Container sort(Container unsorted)
         {
 
             return strategy.sort(unsorted);
