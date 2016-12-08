@@ -4,4 +4,9 @@
 	Hierbei handelt es sich um ein verhaltensmuseter, welche eine Familie von Algorithmen definiert
 
 	Dabei werden Klassen mit unterschiedlichem Verhalten , durch eine Schnittstelle angesprochen.
-	Dies erlaubt uns das verhlaten zur laufzeit zu verändern.
+	Dies erlaubt uns das verhalten zur laufzeit zu verändern.
+
+2.5 
+	Das Strategy-Pattern wurde benutzt um die Sortierreihenfolge zu ändern.
+	Wir haben einen Controller der Steuert welcher Algorithmus benutzt wird, sowie 2 verschiedenen Algorithmen
+	die Auf- und Absteigend sortieren. Das Verhalten kann durch den Aufruf einer einzelenen Funktion geändert werden.
