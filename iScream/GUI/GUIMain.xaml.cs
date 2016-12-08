@@ -26,5 +26,6 @@ namespace iScream.GUI
         }
 
         public MenuControl MenuControl { get { return Menu; } }
+        //public IFachkonzept Fachkonzept { get; set; }
     }
 }

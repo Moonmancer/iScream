@@ -8,7 +8,6 @@ namespace iScream.TUI
 {
     class TUI
     {
-        //TODO: Ich darf nicht auf die IDatenhaltung zugreifen!!!
         private IFachkonzept _fachkonzept;
 
         public TUI(IFachkonzept fachkonzept)

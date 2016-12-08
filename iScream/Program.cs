@@ -10,8 +10,6 @@ namespace iScream
 {
     class Program
     {
-
-
         static void Main(string[] args)
         {
             //Main should always start with Settings.Load()
@@ -21,9 +19,9 @@ namespace iScream
 
             Datenhaltung2 dh2 = new Datenhaltung2();
             //TUI.TUI UI = new TUI.TUI(new Fachkonzept1(dh2));
-            GUI.GUIMain UI = new GUI.GUIMain(new Fachkonzept1(dh2));
-
-            UI.Activate();
+            GUI.Classes.GUIStartup UI = new GUI.Classes.GUIStartup(new Fachkonzept1(dh2));
+            //UI.MainMenu();
+            UI.RunGUI();
 
             //Main should always end with Settings.Save()
             DatenhaltungExtras.ExportCSV(dh2, ".\\iScreamExport");

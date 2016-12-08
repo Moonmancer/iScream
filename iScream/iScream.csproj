@@ -59,6 +59,7 @@
     <Compile Include="GUI\Classes\GameAddVM.cs" />
     <Compile Include="GUI\Classes\GameDetailVM.cs" />
     <Compile Include="GUI\Classes\GameSearchVM.cs" />
+    <Compile Include="GUI\Classes\GUIStartup.cs" />
     <Compile Include="GUI\Classes\PropertyNotify.cs" />
     <Compile Include="GUI\Classes\UserAddGameVM.cs" />
     <Compile Include="GUI\Classes\UserAddVM.cs" />
