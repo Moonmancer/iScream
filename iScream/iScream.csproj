@@ -88,6 +88,9 @@
     </Compile>
     <Compile Include="GUI\Classes\MenuVM.cs" />
     <Compile Include="GUI\Classes\SimpleCommand.cs" />
+    <Compile Include="GUI\StartupDisplay.xaml.cs">
+      <DependentUpon>StartupDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserAdd.xaml.cs">
       <DependentUpon>UserAdd.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\MenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\StartupDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

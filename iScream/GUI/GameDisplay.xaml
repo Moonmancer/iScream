@@ -19,12 +19,12 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
-        <Button x:Name="AddBtn" Content="Anlegen" Grid.Column="0"  Grid.Row="4" Margin="4" Command="{Binding ImportCommand}" />
-        <Button x:Name="DeleteBtn" Content="Löschen" Grid.Column="1"  Grid.Row="4" Margin="4" Command="{Binding CancelCommand}" />
+        <Button x:Name="AddBtn" Content="Anlegen" Grid.Column="0"  Grid.Row="4" Margin="4" Command="{Binding AddCommand}" />
+        <Button x:Name="DeleteBtn" Content="Löschen" Grid.Column="1"  Grid.Row="4" Margin="4" Command="{Binding DeleteCommand}" />
         <Label x:Name="DescriptionLbl" Content="Spieleverwaltung:" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" />
-        <Button x:Name="SearchBtn" Content="Suchen" Grid.Column="1" Grid.Row="3" Margin="4" Command="{Binding PartitionCommand}"/>
-        <Button x:Name="DetailBtn" Content="Detail" Grid.Column="0" Grid.Row="3" Margin="4" Command="{Binding ImportFileCommand}"/>
-        <ListBox x:Name="UserListLB" Grid.Row="2" Grid.ColumnSpan="2" Margin="4" ItemsSource="{Binding ImportFiles}" SelectedItem="{Binding SelectedFile}" />
+        <Button x:Name="SearchBtn" Content="Suchen" Grid.Column="1" Grid.Row="3" Margin="4" Command="{Binding SearchCommand}"/>
+        <Button x:Name="DetailBtn" Content="Detail" Grid.Column="0" Grid.Row="3" Margin="4" Command="{Binding DetailCommand}"/>
+        <ListBox x:Name="UserListLB" Grid.Row="2" Grid.ColumnSpan="2" Margin="4" ItemsSource="{Binding DisplayedList}" SelectedItem="{Binding SelectedItem}" />
 
     </Grid>
 </UserControl>

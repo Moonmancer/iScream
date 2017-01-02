@@ -30,7 +30,7 @@
         <Button x:Name="UserDeleteBtn" Content="User verweisen" Grid.Column="0" Grid.Row="7" Margin="4" Command="{Binding UserDeleteCommand}"/>
 
         <Label x:Name="SpielIDLbl" Content="ID:" Grid.Row="2" />
-        <TextBox x:Name="SpielIDTB" Grid.Row="2" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Id}" />
+        <TextBox x:Name="SpielIDTB" Grid.Row="2" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ID}" />
 
         <Label x:Name="SpielNameLbl" Content="Name:" Grid.Row="3" />
         <TextBox x:Name="SpielNameTB" Grid.Row="3" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Name}"/>

@@ -23,7 +23,7 @@ namespace iScream
             Datenhaltung2 dh2 = new Datenhaltung2();
             //TUI.TUI UI = new TUI.TUI(new Fachkonzept2(dh2));
             GUI.Classes.GUIStartup UI = new GUI.Classes.GUIStartup(new Fachkonzept1(dh2));
-            
+
 
             UI.Run();
 

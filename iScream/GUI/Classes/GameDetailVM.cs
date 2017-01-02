@@ -37,6 +37,8 @@ namespace iScream.GUI.Classes
             var gameAddUserWin = new GameAddUserVM();
             var window = new GameAddUser();
             window.DataContext = gameAddUserWin;
+            window.MaxHeight = 120;
+            window.MaxWidth = 300;
 
             if (window.ShowDialog().Value)
             {

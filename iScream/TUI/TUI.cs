@@ -8,7 +8,6 @@ namespace iScream.TUI
 {
     class TUI
     {
-        //TODO: Ich darf nicht auf die IDatenhaltung zugreifen!!!
         private IFachkonzept _fachkonzept;
 
         public TUI(IFachkonzept fachkonzept)
@@ -39,13 +38,16 @@ namespace iScream.TUI
             Console.WriteLine(" Spiel bearbeiten \t \t (i)");
             Console.WriteLine(" Spiel löschen \t \t \t (j)");
             Console.WriteLine(" --------------------------------------");
-            Console.WriteLine(" Beziehung hinzufügen \t \t (k)");
-            Console.WriteLine(" Beziehung löschen \t \t (l)");
+            Console.WriteLine(" Beziehung Anzeigen \t \t (k)");
+            Console.WriteLine(" Beziehung hinzufügen \t \t (l)");
+            Console.WriteLine(" Beziehung löschen \t \t (m)");
             Console.WriteLine(" Beenden \t \t \t (x)");
 
-            Console.WindowWidth = 60;
+            Console.WindowWidth = 65;
 
-            var auswahl = Convert.ToChar(Console.ReadLine());
+            try
+            {
+                var auswahl = Convert.ToChar(Console.ReadLine());
 
             switch (auswahl)
             {
@@ -91,9 +93,13 @@ namespace iScream.TUI
                     break;
                 case 'k':
                     Console.Clear();
-                    RelationAdd();
+                    RelationDisplay();
                     break;
                 case 'l':
+                    Console.Clear();
+                    RelationAdd();
+                    break;
+                case 'm':
                     Console.Clear();
                     RelationCut();
                     break;
@@ -106,9 +112,16 @@ namespace iScream.TUI
                     Console.ReadKey();
                     break;
             }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         #region User Functions
+
         public void UserDisplay()
         {
             Console.WriteLine("Darstellung aller User:");
@@ -181,14 +194,18 @@ namespace iScream.TUI
 
         public void UserDelete()
         {
-            Console.WriteLine("Zum entfernen eines Users werden einige Daten benötigt:");
-            Console.WriteLine("Bitte geben Sie einen Vornamen ein:");
-            var firstname = Console.ReadLine();
-            Console.WriteLine("Bitte geben Sie einen Nachnamen ein:");
-            var lastname = Console.ReadLine();
-            var user = new User(firstname, lastname);
+            //Console.WriteLine("Zum entfernen eines Users werden einige Daten benötigt:");
+            //Console.WriteLine("Bitte geben Sie einen Vornamen ein:");
+            //var firstname = Console.ReadLine();
+            //Console.WriteLine("Bitte geben Sie einen Nachnamen ein:");
+            //var lastname = Console.ReadLine();
+            //var user = new User(firstname, lastname);
+            Console.WriteLine("Zum entfernen eines Users wird die User-ID benötigt:");
+            Console.WriteLine("Bitte geben Sie die UserID ein:");
+            var userid = Convert.ToInt32(Console.ReadLine());
 
-            if (_fachkonzept.deleteUser(user) == true)
+
+            if (_fachkonzept.deleteUser(userid) == true)
             {
                 Console.WriteLine("Der ausgewählte User wurde entfernt.");
                 MainMenu();
@@ -264,11 +281,13 @@ namespace iScream.TUI
 
         public void GameDelete()
         {
-            Console.WriteLine("Zum entfernen eines Spiels wird der Name benötigt:");
-            var name = Console.ReadLine();
-            var game = new Game(name);
+            //Console.WriteLine("Zum entfernen eines Spiels wird der Name benötigt:");
+            //var name = Console.ReadLine();
+            //var game = new Game(name);
+            Console.WriteLine("Zum entfernen eines Spiels wird die ID benötigt:");
+            var gameid = Convert.ToInt32(Console.ReadLine());
 
-            if (_fachkonzept.deleteGame(game) == true)
+            if (_fachkonzept.deleteGame(gameid) == true)
             {
                 Console.WriteLine("Das ausgewählte Spiel wurde entfernt.");
                 MainMenu();
@@ -285,13 +304,21 @@ namespace iScream.TUI
         
         public void RelationAdd()
         {
-            Console.WriteLine("Zum hinzufügen einer Bezeihung werden die eindeutigen IDs benötigt:");
-            Console.WriteLine("Bitte geben Sie die User ID an:");
-            var userID = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Bitte geben Sie die Spiele ID an:");
-            var gameID = Convert.ToInt32(Console.ReadLine());
-            var link = new Link(userID, gameID);
-            _fachkonzept.createLink(link);
+            try
+            {
+                Console.WriteLine("Zum hinzufügen einer Bezeihung werden die eindeutigen IDs benötigt:");
+                Console.WriteLine("Bitte geben Sie die User ID an:");
+                var userID = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Bitte geben Sie die Spiele ID an:");
+                var gameID = Convert.ToInt32(Console.ReadLine());
+                var link = new Link(userID, gameID);
+                _fachkonzept.createLink(link);
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Beim erstellen der Beziehung ist ein fehler unterlaufen.");
+                MainMenu();
+            }
         }
 
         public void RelationCut()
@@ -302,6 +329,23 @@ namespace iScream.TUI
             Console.WriteLine("Bitte geben Sie die Spiele ID an:");
             var gameID = Convert.ToInt32(Console.ReadLine());
             _fachkonzept.deleteLink(userID, gameID);
+        }
+
+        public void RelationDisplay()
+        {
+            Console.WriteLine("Darstellung aller Beziehungen:");
+            var linkList = _fachkonzept.getLinks();
+            Console.WriteLine("Die ausgewählten Beziehungen:");
+            foreach (var link in linkList)
+            {
+                //TODO: No Game and User details only the IDs are visible
+                //_fachkonzept.detailsGame()
+                Console.WriteLine("Spiel ID: " + link.Game_id + ", User ID: " + link.User_id + "\n");
+            }
+            Console.WriteLine("Beenden \t \t (x)");
+            var end = Convert.ToChar(Console.ReadLine());
+            if (end == 'x')
+                MainMenu();
         }
         #endregion
     }

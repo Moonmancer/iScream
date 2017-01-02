@@ -12,7 +12,7 @@ namespace iScream.GUI.Classes
 
         public GUIStartup(IFachkonzept fachkonzept)
         {
-            //GUIfachkonzept = fachkonzept;
+            GUIfachkonzept = fachkonzept;
         }
 
         public static IFachkonzept GUIfachkonzept { get; set; }
@@ -24,8 +24,11 @@ namespace iScream.GUI.Classes
             //GUI.Activate();
             Application app = new Application();
             //Threading.Thread.CurrentThread.ApartmentState = Threading.ApartmentState.STA;
-            GUI.GUIMain UI = new GUI.GUIMain();
-            app.Run(UI);
+            GUI.GUIMain UI = new GUI.GUIMain(GUIfachkonzept);
+            //app.Run(UI);
+            //UI.MaxHeight = 500;
+            //UI.MaxWidth = 500;
+            UI.ShowDialog();
         }
 
     }

@@ -8,13 +8,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel LastChildFill="True">
-            <Menu x:Name="menu" DockPanel.Dock="Top" DataContext="{Binding MenuVm}">
+        <Menu x:Name="menu" DockPanel.Dock="Top"><!--DataContext="{Binding MenuVM}">-->
                 <MenuItem x:Name="User" Header="User" Command="{Binding DisplayUserCommand}"/>
                 <MenuItem x:Name="Games" Header="Spiele" Command="{Binding DisplayGameCommand}"/>
                 <MenuItem x:Name="Close" Header="Beenden" Command="{Binding CloseApplicationCommand}" />
             </Menu>
-            <ContentControl x:Name="FirstControl" DockPanel.Dock="Top" DataContext="{Binding DisplayUserVM}">
-                    <local:UserDisplay x:Name="userDisplay"/>
+            <ContentControl x:Name="FirstControl" DockPanel.Dock="Top">
+                    <local:StartupDisplay x:Name="userDisplay"/>
             </ContentControl>
         </DockPanel>
 </UserControl>

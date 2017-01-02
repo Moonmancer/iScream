@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:iScream.GUI"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="300" Title="Spiel hinzufügen">
+             d:DesignHeight="100" d:DesignWidth="300" Title="Spiel hinzufügen" ResizeMode="NoResize">
     <Grid>
 
         <Grid.ColumnDefinitions>

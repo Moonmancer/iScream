@@ -109,6 +109,8 @@ namespace iScream.GUI.Classes
             var gameSearchWin = new GameSearchVM();
             var window = new GameSearch();
             window.DataContext = gameSearchWin;
+            window.MaxHeight = 120;
+            window.MaxWidth = 300;
 
             if (window.ShowDialog().Value)
             {
@@ -122,6 +124,8 @@ namespace iScream.GUI.Classes
             var gameAddWin = new GameAddVM();
             var window = new GameAdd();
             window.DataContext = gameAddWin;
+            window.MaxHeight = 120;
+            window.MaxWidth = 300;
 
             if (window.ShowDialog().Value)
             {
