@@ -1,5 +1,4 @@
-﻿using iScream.GUI.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,20 +16,19 @@ using System.Windows.Shapes;
 namespace iScream.GUI
 {
     /// <summary>
-    /// Interaction logic for GUIMain.xaml
+    /// Interaction logic for UserAddGames.xaml
     /// </summary>
-    public partial class GUIMain : Window
+    public partial class UserAddGames : Window
     {
-        public GUIMain(IFachkonzept fachkonzept)
+        public UserAddGames()
         {
             InitializeComponent();
-            Menu.DataContext = new MenuVM(Menu.Container, fachkonzept);
         }
 
-
-        public MenuControl MenuControl { get { return Menu; } }
-
-        //static IFachkonzept GUIfachkonzept { get; set; }
-
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+            this.Close();
+        }
     }
 }

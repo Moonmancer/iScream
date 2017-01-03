@@ -10,6 +10,7 @@ namespace iScream
     {
         //sortiert
         IDatenhaltung datenhaltung;
+        Sorter SortHandler = new Sorter();
         private bool sortDescending
         {
             get
@@ -18,13 +19,22 @@ namespace iScream
             }
             set
             {
-                sortDescending = value;
+                this.sortDescending = value;
+                if (value == true)
+                {
+                    SortHandler.SetSortAlgorithm( new SortDescending());
+                }
+                else
+                {
+                    SortHandler.SetSortAlgorithm( new SortAscending());
+                }
             }
         }
 
         public Fachkonzept2(IDatenhaltung datenhaltung)
         {
             this.datenhaltung = datenhaltung;
+            SortHandler.SetSortAlgorithm(new SortAscending());
         }
         public Fachkonzept2(IDatenhaltung datenhaltung, bool sortDescending)
         {
@@ -45,7 +55,6 @@ namespace iScream
             games = datenhaltung.GetGamesOfUser(user);
 
             details = new Container(users, games);
-            games.Sort();
 
             return details;
         }
@@ -74,7 +83,10 @@ namespace iScream
         {
             return datenhaltung.AddGame(game);
         }
-
+        public bool createLink(Link link)
+        {
+            return datenhaltung.AddLink(link.User_id, link.Game_id);
+        }
         #endregion
 
         #region Delete
@@ -98,6 +110,15 @@ namespace iScream
             return datenhaltung.DeleteGame(game_id);
         }
 
+        public bool deleteLink(Link link)
+        {
+            return datenhaltung.DeleteLink(link);
+        }
+
+        public bool deleteLink(int user_id, int game_id)
+        {
+            return datenhaltung.DeleteLink(user_id, game_id);
+        }
         #endregion
 
         #region Search
@@ -112,5 +133,58 @@ namespace iScream
         }
 
         #endregion
+
+        #region List
+
+        public List<User> getUsers()
+        {
+            Container details = new Container();
+
+            details.Users = datenhaltung.GetUser();
+
+            details = SortHandler.sort(details);
+
+            return details.Users;
+        }
+
+        public List<Game> getGames()
+        {
+            return datenhaltung.GetGame();
+        }
+
+        public List<Link> getLinks()
+        {
+            return datenhaltung.GetLink();
+        }
+
+        #endregion
+
+        #region Update
+
+        public bool updateUser(int user_id, string firstname, string lastname)
+        {
+            return datenhaltung.UpdateUser(user_id, firstname, lastname);
+        }
+
+        public bool updateUser(User user)
+        {
+            return datenhaltung.UpdateUser(user);
+        }
+
+        public bool updateGame(int game_id, string name)
+        {
+            return datenhaltung.UpdateGame(game_id, name);
+        }
+
+        public bool updateGame(Game game)
+        {
+            return datenhaltung.UpdateGame(game);
+        }
+        #endregion
+
+        public void changeSortOrder()
+        {
+            sortDescending = !sortDescending;
+        }
     }
 }

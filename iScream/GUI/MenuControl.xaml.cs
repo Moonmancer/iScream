@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iScream.GUI.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace iScream.GUI
     {
         public MenuControl()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         public ContentControl Container { get { return FirstControl; } }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -15,15 +16,18 @@ namespace iScream.GUI.Classes
         private int _id;
         private string _lastname;
         private User _selectedItem;
+        private IFachkonzept _fachkonzept;
+        private List<User> _displayedList;
 
-        public DisplayUserVM(ContentControl container)
+        public DisplayUserVM(ContentControl container, IFachkonzept fachkonzept)
         {
             AddCommand = new SimpleCommand(ExecuteAddCommand);
             SearchCommand = new SimpleCommand(ExecuteSearchCommand);
             DeleteCommand = new SimpleCommand(ExecuteDeleteCommand);
             DetailCommand = new SimpleCommand(ExecuteDetailCommand);
             _container = container;
-            var UserList = 
+            _fachkonzept = fachkonzept;
+            DisplayedList = _fachkonzept.getUsers();
         }
 
         public string Firstname
@@ -74,25 +78,76 @@ namespace iScream.GUI.Classes
                 }
             }
         }
+        public List<User> DisplayedList
+        {
+            get { return _displayedList; }
+            set
+            {
+                if(_displayedList != value)
+                {
+                    _displayedList = value;
+                    NotifyPropertyChanged("DisplayedList");
+                }
+            }
+        }
 
         private void ExecuteDetailCommand(object obj)
         {
-            throw new NotImplementedException();
+            var userDetailWin = new UserDetailVM(SelectedItem, _fachkonzept);
+            var window = new UserDetails();
+            window.DataContext = userDetailWin;
+
+            if (window.ShowDialog().Value)
+            {
+                Firstname = userDetailWin.Firstname;
+                Lastame = userDetailWin.Lastname;
+                Id = userDetailWin.ID;
+                _fachkonzept.updateUser(Id, Firstname, Lastame);
+            }
         }
 
         private void ExecuteDeleteCommand(object obj)
         {
-            throw new NotImplementedException();
+           if(_fachkonzept.deleteUser(SelectedItem))
+            {
+                MessageBox.Show("Der ausgewählte User wurde entfernt.");
+            }else
+            {
+                MessageBox.Show("Der ausgewählte User konnte nicht entfernt werden.");
+            }
         }
 
         private void ExecuteSearchCommand(object obj)
         {
-            throw new NotImplementedException();
+            var userSearchWin = new UserSearchVM();
+            var window = new UserSearch();
+            window.DataContext = userSearchWin;
+            window.MaxHeight = 120;
+            window.MaxWidth = 300;
+
+            if (window.ShowDialog().Value)
+            {
+                var UserFirstName = userSearchWin.Firstname;
+                var UserLastName = userSearchWin.Lastname;
+                DisplayedList = _fachkonzept.searchUser(UserFirstName, UserLastName);                
+            }
         }
 
         private void ExecuteAddCommand(object obj)
         {
-            throw new NotImplementedException();
+            var userAddWin = new UserAddVM();
+            var window = new UserAdd();
+            window.DataContext = userAddWin;
+            window.MaxHeight = 120;
+            window.MaxWidth = 300;
+
+            if (window.ShowDialog().Value)
+            {
+                var NewUserFirstName = userAddWin.Firstname;
+                var NewUserLastName = userAddWin.Lastname;
+                var user = new User(NewUserFirstName, NewUserLastName);
+                _fachkonzept.createUser(user);             
+            }
         }
 
         public ICommand AddCommand { get; private set; }

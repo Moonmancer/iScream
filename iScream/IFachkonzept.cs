@@ -6,10 +6,28 @@ using System.Threading.Tasks;
 
 namespace iScream
 {
-    interface IFachkonzept
+    public interface IFachkonzept
     {
         //doesnt work:
         //IFachkonzept(IDatenhaltung datenhaltung);
+
+        #region List
+
+        List<User> getUsers();
+        List<Game> getGames();
+        List<Link> getLinks();
+
+        #endregion
+
+        #region Update
+
+        bool updateUser(int user_id, string firstname, string lastname);
+        bool updateUser(User user);
+
+        bool updateGame(int game_id, string name);
+        bool updateGame(Game game);
+
+        #endregion
 
         #region Details
 
@@ -22,6 +40,7 @@ namespace iScream
 
         bool createUser(User user);
         bool createGame(Game game);
+        bool createLink(Link link);
 
         #endregion
 
@@ -33,6 +52,8 @@ namespace iScream
         bool deleteGame(Game game);
         bool deleteGame(int game_id);
 
+        bool deleteLink(Link link);
+        bool deleteLink(int user_id, int game_id);
         #endregion
 
         #region Search
@@ -42,5 +63,6 @@ namespace iScream
 
         #endregion
 
+        void changeSortOrder();
     }
 }

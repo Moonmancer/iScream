@@ -23,6 +23,6 @@
         <Label x:Name="DescriptionLbl" Content="Nutzerverwaltung:" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" />
         <Button x:Name="SearchBtn" Content="Suchen" Grid.Column="1" Grid.Row="3" Margin="4" Command="{Binding SearchCommand}"/>
         <Button x:Name="DetailBtn" Content="Detail" Grid.Column="0" Grid.Row="3" Margin="4" Command="{Binding DetailCommand}"/>
-        <ListBox x:Name="UserListLB" Grid.Row="2" Grid.ColumnSpan="2" Margin="4" ItemsSource="{Binding UserList}" SelectedItem="{Binding SelectedItem}" />
+        <ListBox x:Name="UserListLB" Grid.Row="2" Grid.ColumnSpan="2" Margin="4" ItemsSource="{Binding DisplayedList}" SelectedItem="{Binding SelectedItem}" />
     </Grid>
 </UserControl>

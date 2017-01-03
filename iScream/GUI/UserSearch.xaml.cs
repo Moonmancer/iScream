@@ -1,5 +1,4 @@
-﻿using iScream.GUI.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,20 +16,19 @@ using System.Windows.Shapes;
 namespace iScream.GUI
 {
     /// <summary>
-    /// Interaction logic for GUIMain.xaml
+    /// Interaction logic for UserSearch.xaml
     /// </summary>
-    public partial class GUIMain : Window
+    public partial class UserSearch : Window
     {
-        public GUIMain(IFachkonzept fachkonzept)
+        public UserSearch()
         {
             InitializeComponent();
-            Menu.DataContext = new MenuVM(Menu.Container, fachkonzept);
         }
 
-
-        public MenuControl MenuControl { get { return Menu; } }
-
-        //static IFachkonzept GUIfachkonzept { get; set; }
-
+        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+            this.Close();
+        }
     }
 }

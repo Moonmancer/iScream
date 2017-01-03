@@ -20,13 +20,16 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label x:Name="DescriptionLbl" Content="Userübersicht:" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" />
-        <Button x:Name="CancelBtn" Content="Abbrechen" Grid.Column="1" Grid.Row="7" Margin="4" Command="{Binding CancelCommand}"/>
-        <Button x:Name="GameAddBtn" Content="Weiteres spiel zuweisen" Grid.Column="0" Grid.Row="7" Margin="4" Command="{Binding GameAddCommand}"/>
+        <Button x:Name="UpdateBtn" Content="Update" Grid.Column="1" Grid.Row="7" Margin="4" Click="UpdateBtn_Click"/>
+        <Button x:Name="CancelBtn" Content="Abbrechen" Grid.Column="1" Grid.Row="8" Margin="4" IsCancel="True"/>
+        <Button x:Name="GameAddBtn" Content="Weiteres spiel zuweisen" Grid.Column="0" Grid.Row="8" Margin="4" Command="{Binding GameAddCommand}"/>
+        <Button x:Name="GameDeleteBtn" Content="Spiel verweisen" Grid.Column="0" Grid.Row="7" Margin="4" Command="{Binding GameDeleteCommand}"/>
 
         <Label x:Name="UserIDLbl" Content="ID:" Grid.Row="2" />
-        <TextBox x:Name="UserIDTB" Grid.Row="2" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Id}" />
+        <TextBox x:Name="UserIDTB" Grid.Row="2" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ID}" />
 
         <Label x:Name="UserFirstNameLbl" Content="Vorname:" Grid.Row="3" />
         <TextBox x:Name="UserFirstNameTB" Grid.Row="3" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Firstname}"/>
@@ -34,7 +37,7 @@
         <TextBox x:Name="UserLastNameTB" Grid.Row="4" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Lastname}" />
 
         <Label x:Name="RelationLbl" Content="Spiele des Users:" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Center" />
-        <ListBox x:Name="UserListLB" Grid.Row="6" Grid.ColumnSpan="2" Margin="4" ItemsSource="{Binding GameListFiles}" SelectedItem="{Binding SelectedFile}" />
+        <ListBox x:Name="UserListLB" Grid.Row="6" Grid.ColumnSpan="2" Margin="4" ItemsSource="{Binding GameListFiles}" SelectedItem="{Binding SelectedItem}" />
 
     </Grid>
 </Window>

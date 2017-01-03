@@ -1,25 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="iScream.Container" Collapsed="true">
-    <Position X="5" Y="1.5" Width="1.5" />
+    <Position X="3.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAABACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Container.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Game" />
-      <Property Name="User" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="iScream.Cryptography" Collapsed="true">
-    <Position X="0.5" Y="8.75" Width="1.5" />
+    <Position X="0.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
       <FileName>Cryptography.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.Datenhaltung1" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="8" Width="1.5" />
+    <Position X="2.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAqCAAAAAAAAAEEAAAAAAAwAQQAABAgEAEAAABAIAA=</HashCode>
       <FileName>Datenhaltung1.cs</FileName>
@@ -27,14 +23,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="iScream.SQL" Collapsed="true">
-    <Position X="2.25" Y="8.75" Width="1.5" />
+    <Position X="2.25" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAFEAACAACIAAIAABEAIACAlhAAAAAAACQACAAAA=</HashCode>
       <FileName>Datenhaltung1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.Datenhaltung2" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="4" Y="8" Width="1.5" />
+    <Position X="4" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAqCAAAAAAAAAFEAAAAAAAwAQQAABAgEAEAAABAIAA=</HashCode>
       <FileName>Datenhaltung2.cs</FileName>
@@ -42,88 +38,74 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="iScream.XMLDatabase" Collapsed="true">
-    <Position X="4" Y="8.75" Width="1.5" />
+    <Position X="4" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAgIAAAAAAAAAAAAAAAQAAAAEIAAAACABAAAAIAAA=</HashCode>
       <FileName>Datenhaltung2.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="iScream.DatenhaltungExtras" Collapsed="true">
-    <Position X="6.25" Y="8.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAgAAAAAAAAAAAAAAAQAAAAQABACABAAAAAAA=</HashCode>
-      <FileName>DatenhaltungExtras.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="iScream.DHTUI" Collapsed="true">
-    <Position X="0.5" Y="10.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQIAAABAAQQAEAgAAAAAAIAgIACEAAACBCIAAABkIhI=</HashCode>
-      <FileName>DHTUI.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="iScream.Fachkonzept1" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6" Y="8" Width="1.5" />
+    <Position X="6.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAIAAAAQAAEAABAAAAAAAAIAIAAAABAAAAAAQ=</HashCode>
+      <HashCode>AAACACAQYQAAQQAAEACJAAAAAAAAIAIEgAABAAAAAAQ=</HashCode>
       <FileName>Fachkonzept1.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.166" />
   </Class>
   <Class Name="iScream.Fachkonzept2" Collapsed="true">
-    <Position X="7.75" Y="8" Width="1.5" />
+    <Position X="8.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAIAAAAQAAEACBAAAAAAAAIAIAAAABAAAAAAQ=</HashCode>
+      <HashCode>AAACACAQYQAAQQAAEACJAAAAAAAAIAIEgAAJAAAAAAQ=</HashCode>
       <FileName>Fachkonzept2.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="iScream.Game" Collapsed="true">
-    <Position X="4" Y="3" Width="1.5" />
+    <Position X="1.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAEAAAAAAQAAAAEAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.Link" Collapsed="true">
-    <Position X="3.75" Y="4.5" Width="1.5" />
+    <Position X="5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAA=</HashCode>
       <FileName>Link.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.Program" Collapsed="true">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="5.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.Settings" Collapsed="true">
-    <Position X="0.5" Y="8" Width="1.5" />
+    <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAkIBAABEAAAABAAAMAAAAAAAAAEAAJAAAECQAABA=</HashCode>
       <FileName>Settings.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.SortAscending" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="8" Width="1.5" />
+    <Position X="10.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>SortAscending.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="iScream.SortDescending" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="11.5" Y="8" Width="1.5" />
+    <Position X="12" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>SortDescending.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="iScream.User" Collapsed="true">
-    <Position X="5.75" Y="3" Width="1.5" />
+    <Position X="3.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAEAgAAhAAAAMAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>User.cs</FileName>
@@ -132,14 +114,14 @@
   <Class Name="iScream.GUI.Classes.DisplayGameVM" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAQgAgAECAAAIACAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>EAACIAEAAwgAgAECAABIACQQAQAAAAAAIBAAAAAAAAA=</HashCode>
       <FileName>GUI\Classes\DisplayGameVM.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.Classes.DisplayUserVM" Collapsed="true">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAEEBAQgAgAECAAFIACAAAQAAAAAAIBAAAAAAAAA=</HashCode>
+      <HashCode>EAACAEEBAwgAgAECAAFIACAQAQAAAAAAIBAAAAAAAAA=</HashCode>
       <FileName>GUI\Classes\DisplayUserVM.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -152,7 +134,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="iScream.GUI.Classes.SimpleCommand" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="1.5" Y="3.5" Width="1.5" />
+    <Position X="7" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAEEAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>GUI\Classes\SimpleCommand.cs</FileName>
@@ -160,91 +142,84 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="iScream.GUI.GameAdd" Collapsed="true">
-    <Position X="13.5" Y="6" Width="1.5" />
+    <Position X="11.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>GUI\GameAdd.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.GameDetails" Collapsed="true">
-    <Position X="13.5" Y="5.25" Width="1.5" />
+    <Position X="11.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>GUI\GameDetails.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.GameDisplay" Collapsed="true">
-    <Position X="13.5" Y="4.5" Width="1.5" />
+    <Position X="11.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GUI\GameDisplay.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.GUIMain" Collapsed="true">
-    <Position X="13.5" Y="0.75" Width="1.5" />
+    <Position X="11.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GUI\GUIMain.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.MenuControl" Collapsed="true">
-    <Position X="13.5" Y="1.5" Width="1.5" />
+    <Position X="11.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GUI\MenuControl.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.UserAdd" Collapsed="true">
-    <Position X="13.5" Y="3.75" Width="1.5" />
+    <Position X="11.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>GUI\UserAdd.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.UserDetails" Collapsed="true">
-    <Position X="13.5" Y="3" Width="1.5" />
+    <Position X="11.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>GUI\UserDetails.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iScream.GUI.UserDisplay" Collapsed="true">
-    <Position X="13.5" Y="2.25" Width="1.5" />
+    <Position X="11.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GUI\UserDisplay.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="iScream.Tests.DatenhaltungTests" Collapsed="true">
-    <Position X="0.5" Y="9.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>BgAAAgAAAAABAAAAEQgAAAQGAAAAAAAAAAIIAAAAAgI=</HashCode>
-      <FileName>Tests\DatenhaltungTests.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="iScream.TUI.TUI" Collapsed="true">
-    <Position X="11.75" Y="0.75" Width="1.5" />
+    <Position X="9.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>FCCAAAAAABAAAAAAACABQIAQAACAAABAAEAACIAAAAA=</HashCode>
+      <HashCode>FCCAAAAAABAAAAAAACABQIAQAACAAABAAEAAAIAAAAA=</HashCode>
       <FileName>TUI\TUI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="iScream.IDatenhaltung" Collapsed="true">
-    <Position X="3.25" Y="7" Width="1.5" />
+    <Position X="3.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAqCAAAAAAAAAEEAAAAAAAwAQQAABAgEAEAAABAIAA=</HashCode>
       <FileName>IDatenhaltung.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="iScream.IFachkonzept" Collapsed="true">
-    <Position X="7" Y="7" Width="1.5" />
+    <Position X="7.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAIAAAAAAAEAABAAAAAAAAIAIAAAABAAAAAAQ=</HashCode>
+      <HashCode>AAACACAQYQAAQAAAEAAJAAAAAAAAIAIEgAABAAAAAAQ=</HashCode>
       <FileName>IFachkonzept.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="iScream.ISort" Collapsed="true">
-    <Position X="10.5" Y="7" Width="1.5" />
+    <Position X="11" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISort.cs</FileName>
