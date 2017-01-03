@@ -10,15 +10,12 @@ namespace iScream
 {
     class Program
     {
-
-
         [STAThread]
         static void Main(string[] args)
         {
             //Main should always start with Settings.Load()
             Settings.Load();
 
-            DatenhaltungExtras.ImportCSV(".\\iScreamExport", new Datenhaltung2());
 
             Datenhaltung2 dh2 = new Datenhaltung2();
             //TUI.TUI UI = new TUI.TUI(new Fachkonzept2(dh2));
@@ -28,7 +25,6 @@ namespace iScream
             UI.Run();
 
             //Main should always end with Settings.Save()
-            DatenhaltungExtras.ExportCSV(dh2, ".\\iScreamExport");
             Settings.Save();
         }
     }
