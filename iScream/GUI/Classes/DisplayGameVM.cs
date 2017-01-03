@@ -91,6 +91,10 @@ namespace iScream.GUI.Classes
                     Name = gameDetailWin.Name;
                     Id = gameDetailWin.ID;
                     _fachkonzept.updateGame(Id, Name);
+
+                    var control = new GameDisplay();
+                    control.DataContext = new DisplayGameVM(_container, _fachkonzept);
+                    _container.Content = control;
                 }
             }
             catch (Exception)
@@ -104,6 +108,9 @@ namespace iScream.GUI.Classes
             if (_fachkonzept.deleteGame(SelectedItem))
             {
                 MessageBox.Show("Das ausgewählte Spiel wurde entfernt.");
+                var control = new GameDisplay();
+                control.DataContext = new DisplayGameVM(_container, _fachkonzept);
+                _container.Content = control;
             }
             else
             {
@@ -139,6 +146,9 @@ namespace iScream.GUI.Classes
                 var NewGameName = gameAddWin.Name;
                 var game = new Game(NewGameName);
                 _fachkonzept.createGame(game);
+                var control = new GameDisplay();
+                control.DataContext = new DisplayGameVM(_container, _fachkonzept);
+                _container.Content = control;
             }
         }
 

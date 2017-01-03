@@ -105,6 +105,10 @@ namespace iScream.GUI.Classes
                     Lastame = userDetailWin.Lastname;
                     Id = userDetailWin.ID;
                     _fachkonzept.updateUser(Id, Firstname, Lastame);
+
+                    var control = new UserDisplay();
+                    control.DataContext = new DisplayUserVM(_container, _fachkonzept);
+                    _container.Content = control;
                 }
             }
             catch(Exception)
@@ -118,7 +122,12 @@ namespace iScream.GUI.Classes
            if(_fachkonzept.deleteUser(SelectedItem))
             {
                 MessageBox.Show("Der ausgewählte User wurde entfernt.");
-            }else
+
+                var control = new UserDisplay();
+                control.DataContext = new DisplayUserVM(_container, _fachkonzept);
+                _container.Content = control;
+            }
+            else
             {
                 MessageBox.Show("Der ausgewählte User konnte nicht entfernt werden.");
             }
@@ -153,7 +162,11 @@ namespace iScream.GUI.Classes
                 var NewUserFirstName = userAddWin.Firstname;
                 var NewUserLastName = userAddWin.Lastname;
                 var user = new User(NewUserFirstName, NewUserLastName);
-                _fachkonzept.createUser(user);             
+                _fachkonzept.createUser(user);
+
+                var control = new UserDisplay();
+                control.DataContext = new DisplayUserVM(_container, _fachkonzept);
+                _container.Content = control;
             }
         }
 
