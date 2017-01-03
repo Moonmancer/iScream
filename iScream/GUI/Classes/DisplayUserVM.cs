@@ -93,16 +93,23 @@ namespace iScream.GUI.Classes
 
         private void ExecuteDetailCommand(object obj)
         {
-            var userDetailWin = new UserDetailVM(SelectedItem, _fachkonzept);
-            var window = new UserDetails();
-            window.DataContext = userDetailWin;
-
-            if (window.ShowDialog().Value)
+            try
             {
-                Firstname = userDetailWin.Firstname;
-                Lastame = userDetailWin.Lastname;
-                Id = userDetailWin.ID;
-                _fachkonzept.updateUser(Id, Firstname, Lastame);
+                var userDetailWin = new UserDetailVM(SelectedItem, _fachkonzept);
+                var window = new UserDetails();
+                window.DataContext = userDetailWin;
+
+                if (window.ShowDialog().Value)
+                {
+                    Firstname = userDetailWin.Firstname;
+                    Lastame = userDetailWin.Lastname;
+                    Id = userDetailWin.ID;
+                    _fachkonzept.updateUser(Id, Firstname, Lastame);
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Bitte wählen sie einen User aus um die Details anzuschauen.");
             }
         }
 

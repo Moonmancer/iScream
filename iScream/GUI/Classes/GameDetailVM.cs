@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace iScream.GUI.Classes
@@ -29,7 +30,14 @@ namespace iScream.GUI.Classes
 
         private void ExecuteUserDeleteCommand(object obj)
         {
-            _fachkonzept.deleteLink(SelectedItem.User_id, ID);
+            try
+            {
+                _fachkonzept.deleteLink(SelectedItem.User_id, ID);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bitte wählen sie ein User zum entfernen aus");
+            }
         }
 
         private void ExecuteUserAddCommand(object obj)

@@ -323,29 +323,43 @@ namespace iScream.TUI
 
         public void RelationCut()
         {
-            Console.WriteLine("Zum entfernen einer Bezeihung werden die eindeutigen IDs benötigt:");
-            Console.WriteLine("Bitte geben Sie die User ID an:");
-            var userID = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Bitte geben Sie die Spiele ID an:");
-            var gameID = Convert.ToInt32(Console.ReadLine());
-            _fachkonzept.deleteLink(userID, gameID);
+            try
+            {
+                Console.WriteLine("Zum entfernen einer Bezeihung werden die eindeutigen IDs benötigt:");
+                Console.WriteLine("Bitte geben Sie die User ID an:");
+                var userID = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Bitte geben Sie die Spiele ID an:");
+                var gameID = Convert.ToInt32(Console.ReadLine());
+                _fachkonzept.deleteLink(userID, gameID);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Beim entfernen der Beziehung ist ein fehler unterlaufen.");
+                MainMenu();
+            }
         }
 
         public void RelationDisplay()
         {
-            Console.WriteLine("Darstellung aller Beziehungen:");
-            var linkList = _fachkonzept.getLinks();
-            Console.WriteLine("Die ausgewählten Beziehungen:");
-            foreach (var link in linkList)
+            try
             {
-                //TODO: No Game and User details only the IDs are visible
-                //_fachkonzept.detailsGame()
-                Console.WriteLine("Spiel ID: " + link.Game_id + ", User ID: " + link.User_id + "\n");
+                Console.WriteLine("Darstellung aller Beziehungen:");
+                var linkList = _fachkonzept.getLinks();
+                Console.WriteLine("Die ausgewählten Beziehungen:");
+                foreach (var link in linkList)
+                {
+                    Console.WriteLine("Spiel ID: " + link.Game_id + ", User ID: " + link.User_id + "\n");
+                }
+                Console.WriteLine("Beenden \t \t (x)");
+                var end = Convert.ToChar(Console.ReadLine());
+                if (end == 'x')
+                    MainMenu();
             }
-            Console.WriteLine("Beenden \t \t (x)");
-            var end = Convert.ToChar(Console.ReadLine());
-            if (end == 'x')
+            catch (Exception)
+            {
+                Console.WriteLine("Beim anzeigen der Beziehungen ist ein fehler unterlaufen.");
                 MainMenu();
+            }
         }
         #endregion
     }

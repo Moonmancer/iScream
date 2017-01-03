@@ -25,6 +25,7 @@ namespace iScream.GUI
         {
             InitializeComponent();
             Menu.DataContext = new MenuVM(Menu.Container, fachkonzept);
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
 

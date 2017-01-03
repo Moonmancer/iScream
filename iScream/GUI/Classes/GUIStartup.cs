@@ -22,7 +22,7 @@ namespace iScream.GUI.Classes
         {
             //GUIMain GUI = new GUIMain();
             //GUI.Activate();
-            Application app = new Application();
+            //Application app = new Application();
             //Threading.Thread.CurrentThread.ApartmentState = Threading.ApartmentState.STA;
             GUI.GUIMain UI = new GUI.GUIMain(GUIfachkonzept);
             //app.Run(UI);

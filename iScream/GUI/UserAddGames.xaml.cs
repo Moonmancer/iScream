@@ -23,6 +23,7 @@ namespace iScream.GUI
         public UserAddGames()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)

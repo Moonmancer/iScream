@@ -80,15 +80,22 @@ namespace iScream.GUI.Classes
 
         private void ExecuteDetailCommand(object obj)
         {
-            var gameDetailWin = new GameDetailVM(SelectedItem, _fachkonzept);
-            var window = new GameDetails();
-            window.DataContext = gameDetailWin;
-
-            if (window.ShowDialog().Value)
+            try
             {
-                Name = gameDetailWin.Name;
-                Id = gameDetailWin.ID;
-                _fachkonzept.updateGame(Id, Name);
+                var gameDetailWin = new GameDetailVM(SelectedItem, _fachkonzept);
+                var window = new GameDetails();
+                window.DataContext = gameDetailWin;
+
+                if (window.ShowDialog().Value)
+                {
+                    Name = gameDetailWin.Name;
+                    Id = gameDetailWin.ID;
+                    _fachkonzept.updateGame(Id, Name);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bitte wählen sie ein Spiel aus um die Details anzuschauen.");
             }
         }
 

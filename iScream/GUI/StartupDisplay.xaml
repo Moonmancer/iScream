@@ -18,7 +18,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />            
         </Grid.RowDefinitions>
-        <Label x:Name="Title" Content="A Produkt by" Grid.Row="1" Grid.Column="1" />
-        <Label x:Name="label" Content=" Levin Vollnhals, Mathias Wandrei, Marcel Reichelt" Grid.Row="2" Grid.ColumnSpan="3" />
+        <Label x:Name="Title" Content="A Produkt by" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" />
+        <Label x:Name="label" Content=" Levin Vollnhals, Mathias Wandrei, Marcel Reichelt" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" />
     </Grid>
 </UserControl>

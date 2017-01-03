@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace iScream.GUI.Classes
@@ -32,7 +33,14 @@ namespace iScream.GUI.Classes
 
         private void ExecuteGameDeleteCommand(object obj)
         {
-            _fachkonzept.deleteLink(ID, SelectedItem.Game_id);
+            try
+            {
+                _fachkonzept.deleteLink(ID, SelectedItem.Game_id);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bitte wählen sie ein Spiel zum entfernen aus");
+            }
         }
 
         private void ExecuteGameAddCommand(object obj)
